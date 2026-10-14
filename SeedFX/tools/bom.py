@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Produce variant-aware purchasing and assembly lists from the reference BOM."""
-import csv, json, xml.etree.ElementTree as ET, zipfile
+import csv, json, re, xml.etree.ElementTree as ET, zipfile
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 XLSX=ROOT.parent/'Hardware/GuitarPedal125b/pcb/BOM_JLCSMT_DaisySeedGuitarPedal125b.xlsx'
@@ -17,15 +17,27 @@ with zipfile.ZipFile(XLSX) as z:
             elif c.get('t')=='inlineStr':value=''.join(t.text or '' for t in c.findall('.//s:t',ns))
             fields.append(value)
         if fields:rows.append(fields)
+# Source spreadsheet uses ranges (R9-12); assembly houses need explicit refs.
+def expand_designators(value):
+    refs=set()
+    for token in value.split(','):
+        token=token.strip()
+        match=re.fullmatch(r'([A-Za-z]+)(\d+)-(?:[A-Za-z]+)?(\d+)',token)
+        if match:
+            prefix,start,end=match.groups()
+            if int(end)<int(start):raise ValueError('Reversed reference range: '+token)
+            refs.update(prefix+str(number) for number in range(int(start),int(end)+1))
+        elif token:refs.add(token)
+    return refs
 with (ROOT/'hardware/mainboard/assembly-bom.csv').open('w') as f:
-    w=csv.writer(f);w.writerow(['Comment','Designator','Footprint','LCSC_part','Populate_SeedFX'])
+    w=csv.writer(f);w.writerow(['Comment','Designator','Footprint','LCSC_part','Populate_SeedFX','Quantity'])
     for row in rows[1:]:
-        row=(row+['']*4)[:4];refs={r.strip() for r in row[1].split(',')};populate=not refs<=DNP
+        row=(row+['']*4)[:4];refs=expand_designators(row[1])
         # Reference rows can contain multiple parts; don't suppress needed parts.
         kept=sorted(refs-DNP)
-        if kept:w.writerow([row[0],','.join(kept),row[2],row[3],'yes'])
+        if kept:w.writerow([row[0],','.join(kept),row[2],row[3],'yes',len(kept)])
         omitted=sorted(refs&DNP)
-        if omitted:w.writerow([row[0],','.join(omitted),row[2],row[3],'DNP'])
+        if omitted:w.writerow([row[0],','.join(omitted),row[2],row[3],'DNP',len(omitted)])
 # These are planning allowances, not live prices or supplier quotations.
 parts=[
  ['Daisy Seed Rev7',1,'Electro-Smith Daisy Seed, fitted 2 x 20 pin headers','https://electro-smith.com/products/daisy-seed',240,360,'Audio MCU, codec, SDRAM and QSPI included'],

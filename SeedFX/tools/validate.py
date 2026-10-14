@@ -27,6 +27,7 @@ def main():
     run('hardware',['bash','tools/export_hardware.sh'])
     cad_env=dict(os.environ,XDG_CACHE_HOME=str(TOOLS/'kicad/cache'))
     run('mechanical',[str(TOOLS/'dev-python/bin/python'),'tools/mechanical.py'],cad_env)
+    run('procurement-datums',['/usr/bin/python3','tools/check_procurement.py'])
     output=run('audio-and-core',['make','test','audio'])
     run('browser',['node','tests/browser.cjs'])
     sdk=TOOLS/'esp-idf';env=dict(os.environ,IDF_TOOLS_PATH=str(TOOLS/'esp-tools'),IDF_PYTHON_CHECK_CONSTRAINTS='no')
@@ -68,7 +69,7 @@ def main():
                   warmStart=dict(models=5,samples=15360,maxAbsoluteError=float(re.search(r'max absolute error ([\deE.+-]+)',output).group(1).rstrip('.'))),
                   daisyMemory=memory,espApp=dict(sizeBytes=(ROOT/'firmware/wireless/build/seedfx_wireless.bin').stat().st_size,partitionBytes=0x100000),
                   pcb=board_results,mechanical=json.loads((ROOT/'mechanical/fit-check.json').read_text()),cost=json.loads((ROOT/'hardware/cost-plan.json').read_text()),
-                  physicalTestsExecuted=False,unverified=['USB flashing','analog audio and listening','round-trip latency and callback time','switch time','power ripple and thermal behavior','RF range/noise','actual supplier component fit and tolerances','power-cut during physical flash write'])
+                  physicalTestsExecuted=False,procurementReady=False,procurementStatus='See docs/PROCUREMENT_READINESS.md: complete component fit, ERC annotation review and supplier quotes pending',unverified=['USB flashing','analog audio and listening','round-trip latency and callback time','switch time','power ripple and thermal behavior','RF range/noise','actual supplier component fit and tolerances','power-cut during physical flash write'])
     (ROOT/'docs/validation.json').write_text(json.dumps(evidence,ensure_ascii=False,indent=2)+'\n')
     print('Saved docs/validation.json. Physical tests are explicitly unexecuted.',flush=True)
 if __name__=='__main__':

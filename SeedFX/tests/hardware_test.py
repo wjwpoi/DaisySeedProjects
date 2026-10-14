@@ -1,4 +1,5 @@
 """Check firmware I/O against independently exported KiCad electrical netlists."""
+import csv
 import re
 import unittest
 import xml.etree.ElementTree as ET
@@ -29,6 +30,18 @@ class HardwareTests(unittest.TestCase):
         self.assertIn(('FB1','1'),wiring['/5V_SOURCE']);self.assertIn(('FB1','2'),wiring['/5V_WIFI'])
         self.assertIn(('J2','1'),wiring['/5V_WIFI'])
         for ref in ('C1','C2','C3'):self.assertIn((ref,'2'),wiring['/GND'])
+    def test_assembly_bom_matches_exported_component_refs(self):
+        document=ET.parse(ROOT/'hardware/reports/mainboard-netlist.xml')
+        known={c.get('ref') for c in document.findall('.//components/comp')}
+        seen=set()
+        for row in csv.DictReader((ROOT/'hardware/mainboard/assembly-bom.csv').open()):
+            references={token.strip() for token in row['Designator'].split(',')}
+            self.assertTrue(references<=known)
+            self.assertFalse(seen & references)
+            self.assertEqual(len(references),int(row['Quantity']))
+            self.assertEqual(row['Populate_SeedFX']=='DNP',references<={'J3','J5','U4','D2','R17','R18','R19','R20','C17'})
+            seen.update(references)
+        self.assertTrue({f'R{i}' for i in range(1,30)}<=seen)
     def test_monophonic_output_avoids_trs_phase_cancellation(self):
         source=(ROOT/'firmware/audio/main.cpp').read_text()
         self.assertRegex(source,r'out\[1\]\[i\] = 0.0f;')

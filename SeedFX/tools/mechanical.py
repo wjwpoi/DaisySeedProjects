@@ -14,6 +14,7 @@ holes=[('POT1',13,17,7.2,'INPUT'),('POT2',33,17,7.2,'BASS'),('POT3',53,17,7.2,'M
        ('POT4',13,40.5,7.2,'TREBLE'),('POT5',33,40.5,7.2,'LEVEL'),('POT6',53,40.5,7.2,'USER'),
        ('ENC1',33,81.275,7.2,'EDIT'),('LED1',15,87.5,3.2,'ON'),('LED2',51,87.5,3.2,'CLIP'),
        ('FS1',15,106.5,12.2,'BYPASS / TUNER'),('FS2',51,106.5,12.2,'TAP / PRESET')]
+power_inlet_x=42.57  # Rev6 J1 F.Fab body axis, transformed to front view.
 window=dict(x=21.5,y=53.0,width=23.0,height=12.0)
 body_depth=D-T-2
 case=cq.Workplane('XY').center(W/2,H/2).rect(W,H).extrude(body_depth).edges('|Z').fillet(4)
@@ -24,7 +25,7 @@ case=case.cut(cq.Workplane('XY').center(window['x']+window['width']/2,window['y'
 # Audio sockets: reuse the Rev6 enclosure's center lines, 13 mm bores.
 for x in [-1,W-2*T]:case=case.cut(cq.Workplane('YZ',origin=(x,0,0)).center(87.5,22).circle(6.5).extrude(2*T+2))
 # PCB-mounted DC-005 inlet: rectangular clearance, not a panel-mount substitute.
-case=case.cut(cq.Workplane('XZ',origin=(0,2,0)).center(33,22).rect(10.0,9.0).extrude(4))
+case=case.cut(cq.Workplane('XZ',origin=(0,2,0)).center(power_inlet_x,22).rect(10.0,9.0).extrude(4))
 # Service access on input side for Daisy's USB/reset, separate from audio jack.
 case=case.cut(cq.Workplane('YZ',origin=(-1,0,0)).center(47,22).rect(12,8).extrude(T+2))
 # Concealed side radio window: non-metallic patch plus external IPEX antenna.
@@ -54,7 +55,7 @@ for x,y in adapter_holes:
     tray=tray.union(cq.Workplane('XY').workplane(offset=tray_z-2).center(x,y).circle(2).extrude(2))
     tray=tray.cut(cq.Workplane('XY').workplane(offset=tray_z-3).center(x,y).circle(1.05).extrude(5))
 placements=[dict(name='radio_adapter',x=5,y=55.5,z=tray_z-9.6,width=32,length=28,height=7.6),
-            dict(name='xiao_esp32c3',x=38.5,y=55.5,z=tray_z-5,width=21,length=17.5,height=4),
+            dict(name='xiao_esp32c3',x=38.5,y=55.5,z=tray_z-5,width=21,length=17.8,height=4),
             dict(name='mini360',x=39.5,y=76,z=tray_z-5,width=18,length=14,height=4)]
 for name,obj in [('case',case),('lid',lid),('lid-spacer',spacer),('rf-window',rf),('insulating-tray',tray)]:
     cq.exporters.export(obj,str(OUT/f'seedfx-{name}.step'));cq.exporters.export(obj,str(OUT/f'seedfx-{name}.stl'))
@@ -93,7 +94,7 @@ with (OUT/'front-drill.csv').open('w') as f:
     w=csv.writer(f);w.writerow(['Reference','X_mm_from_left','Y_mm_from_top','Through_diameter_mm','Label'])
     w.writerows(holes)
 layout={'units':'mm','body':{'width':W,'height':H,'depth':D,'wall':T,'bareBodyDepth':body_depth,'lidThickness':T,'lidSpacerThickness':2},'frontHoles':[dict(ref=r,x=x,y=y,diameter=d,label=l) for r,x,y,d,l in holes],
-        'display':window,'radioWindow':{'side':'right','y':24,'z':20,'length':40,'height':17},
+        'display':window,'powerInlet':{'x':power_inlet_x,'depth':22,'width':10,'height':9,'datum':'Rev6 J1 F.Fab body axis; vertical placement still needs exact mounted-part stack'},'radioWindow':{'side':'right','y':24,'z':20,'length':40,'height':17},
         'pcbTransform':{'x':'175 - pcb_x','y':'pcb_y - 37.5','z':14.5},
         'accessoryEnvelopes':placements,'adapterMountHoles':adapter_holes,'trayDepth':tray_z,
         'assemblyAssumptions':{'seedKeepoutDepthMax':28,'accessoryLayerDepthMin':29.7,'needsPhysicalFitCheck':True}}
@@ -118,7 +119,7 @@ def artwork(template=False):
 (OUT/'panel-design.svg').write_text(artwork());(OUT/'panel-print.svg').write_text(artwork().replace('id="drill-guides"','id="drill-guides" style="display:none"'));(OUT/'panel-artwork-template.svg').write_text(artwork(True))
 with (OUT/'side-drill.csv').open('w') as f:
     w=csv.writer(f);w.writerow(['Face','Feature','Along_axis_mm','Depth_from_front_mm','Shape','Diameter_or_width_mm','Height_mm'])
-    w.writerows([['left','Audio input',87.5,22,'circle',13,13],['right','Audio output',87.5,22,'circle',13,13],['top','DC-005 power inlet',33,22,'rectangle',10,9],['left','USB service access',47,22,'rectangle',12,8],['right','RF dielectric window',44,28.5,'rectangle',40,17]])
+    w.writerows([['left','Audio output (J4)',87.5,22,'circle',13,13],['right','Audio input (J2)',87.5,22,'circle',13,13],['top','DC-005 power inlet',power_inlet_x,22,'rectangle',10,9],['left','USB service access',47,22,'rectangle',12,8],['right','RF dielectric window',44,28.5,'rectangle',40,17]])
 with (OUT/'accessory-placement.csv').open('w') as f:
     w=csv.DictWriter(f,fieldnames=placements[0].keys());w.writeheader();w.writerows(placements)
 print('Generated enclosure STEP/STL, RF insert, tray, drill DXF/CSV and editable panel SVGs')

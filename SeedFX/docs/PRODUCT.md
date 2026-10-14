@@ -1,4 +1,6 @@
-# 产品设计冻结：SeedFX v1
+# 产品设计：SeedFX v1
+
+状态：软件与数字工程可构建；采购冻结待完成，见 [采购前复核](PROCUREMENT_READINESS.md)。
 
 ## 用途与范围
 

@@ -89,5 +89,5 @@ Generate board full shape.
 Writing STEP file
 STEP file '/workspace/DaisySeedProjects/SeedFX/mechanical/mainboard.step' created.
 
-Export time 0.374 s
+Export time 0.289 s
 Both boards: no DRC errors/unconnected/parity issues; no ERC errors.

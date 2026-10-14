@@ -59,6 +59,7 @@ def main():
                     if p.is_file():z.write(p,p.relative_to(cam))
     refs=[ROOT/'../Software/GuitarPedal/Effect-Modules/Nam/nam_a2_runtime.h',ROOT/'../Software/GuitarPedal/Effect-Modules/Nam/model_data_nam_a2.h',ROOT/'../Software/GuitarPedal/Effect-Modules/ImpulseResponse/ir_data.h',ROOT/'../Software/GuitarPedal/Effect-Modules/ImpulseResponse/ir_data.cpp']
     manifest=dict(version='v1-engineering',generatedAt=datetime.datetime.now(datetime.timezone.utc).isoformat(),referenceRepository='wjwpoi/DaisySeedProjects',referenceCommit=REF,physicalTestsExecuted=False,
+                  procurementReady=validation.get('procurementReady',False),
                   buildQuantity=json.loads((ROOT/'hardware/cost-plan.json').read_text())['buildQuantity'],
                   flash=dict(daisyBootloaderAddress='0x08000000',daisyAppAddress='0x90040000',presetBanks=['0x907f0000','0x907f1000'],esp32c3=dict(bootloader='0x0',partitionTable='0x8000',application='0x10000',flashSize='4MB',mode='DIO',frequency='80MHz')),
                   files={str(p.relative_to(ROOT)):dict(bytes=p.stat().st_size,sha256=digest(p)) for p in product_files()},referenceFiles={str(p.resolve().relative_to(ROOT.parent)):dict(bytes=p.stat().st_size,sha256=digest(p)) for p in refs})

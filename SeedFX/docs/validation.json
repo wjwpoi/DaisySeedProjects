@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-14T05:48:28.319679+00:00",
+  "generatedAt": "2026-10-14T06:51:19.364596+00:00",
   "referenceBase": "8e9f468ab0d35b87fafa33b9da2f017a0e6a865b",
   "tools": {
     "armGcc": "10.3.1",
@@ -19,7 +19,7 @@
       ],
       "passed": true,
       "log": "releases/verification-logs/hardware.log",
-      "logSHA256": "5b34126764fcc9e22e167f20a68e7469aa71f390313f6649e374f022590eac9d"
+      "logSHA256": "d4cb741ee9d9479312abe005187bf044ecc5bf3f2bd5579c819ff9ba799aa111"
     },
     {
       "name": "mechanical",
@@ -32,6 +32,16 @@
       "logSHA256": "078fcebfb1cedd43a7bf4bfaef225f04da9292177111261705e9b67c7abe93ba"
     },
     {
+      "name": "procurement-datums",
+      "command": [
+        "/usr/bin/python3",
+        "tools/check_procurement.py"
+      ],
+      "passed": true,
+      "log": "releases/verification-logs/procurement-datums.log",
+      "logSHA256": "50e42c2d9f437eff3085000b967b4ae46f14160f1491d4bc66a1e17cdc18a920"
+    },
+    {
       "name": "audio-and-core",
       "command": [
         "make",
@@ -40,7 +50,7 @@
       ],
       "passed": true,
       "log": "releases/verification-logs/audio-and-core.log",
-      "logSHA256": "6e990cf4d2ad5d836d10c71a95fecfc37e72a377766bbb77bc1557a4e2df65b6"
+      "logSHA256": "3e0cb95628445dded828cc611ae4c115f258bc06e2eeb3c7a606600ea68bd870"
     },
     {
       "name": "browser",
@@ -64,7 +74,7 @@
       ],
       "passed": true,
       "log": "releases/verification-logs/wireless.log",
-      "logSHA256": "4d5fada88ba3da6a29ca123f9c4b66736312839981a3fb482a395b0736606c41"
+      "logSHA256": "e068fa7309e1647d5d728379a973c7dddab8482891b04e7a22552322a8dc2445"
     },
     {
       "name": "sanitize-build-arm_fir_f32",
@@ -143,7 +153,7 @@
     }
   ],
   "coreAssertions": 90967,
-  "pythonTests": 12,
+  "pythonTests": 13,
   "jsTests": 4,
   "warmStart": {
     "models": 5,
@@ -252,6 +262,8 @@
     ]
   },
   "physicalTestsExecuted": false,
+  "procurementReady": false,
+  "procurementStatus": "See docs/PROCUREMENT_READINESS.md: complete component fit, ERC annotation review and supplier quotes pending",
   "unverified": [
     "USB flashing",
     "analog audio and listening",
@@ -261,6 +273,5 @@
     "RF range/noise",
     "actual supplier component fit and tolerances",
     "power-cut during physical flash write"
-  ],
-  "costSnapshotUpdatedAt": "2026-10-14T06:17:19.745655+00:00"
+  ]
 }

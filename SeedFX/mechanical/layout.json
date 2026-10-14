@@ -94,6 +94,13 @@
     "width": 23.0,
     "height": 12.0
   },
+  "powerInlet": {
+    "x": 42.57,
+    "depth": 22,
+    "width": 10,
+    "height": 9,
+    "datum": "Rev6 J1 F.Fab body axis; vertical placement still needs exact mounted-part stack"
+  },
   "radioWindow": {
     "side": "right",
     "y": 24,
@@ -122,7 +129,7 @@
       "y": 55.5,
       "z": 34.3,
       "width": 21,
-      "length": 17.5,
+      "length": 17.8,
       "height": 4
     },
     {

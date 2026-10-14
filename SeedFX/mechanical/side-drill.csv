@@ -1,6 +1,6 @@
 Face,Feature,Along_axis_mm,Depth_from_front_mm,Shape,Diameter_or_width_mm,Height_mm
-left,Audio input,87.5,22,circle,13,13
-right,Audio output,87.5,22,circle,13,13
-top,DC-005 power inlet,33,22,rectangle,10,9
+left,Audio output (J4),87.5,22,circle,13,13
+right,Audio input (J2),87.5,22,circle,13,13
+top,DC-005 power inlet,42.57,22,rectangle,10,9
 left,USB service access,47,22,rectangle,12,8
 right,RF dielectric window,44,28.5,rectangle,40,17
