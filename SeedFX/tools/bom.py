@@ -124,10 +124,56 @@ cost={
     'excluded':['soldering/measurement tools','development labor','repairs or replacement purchases during bring-up','extra populated boards beyond the one-set assembly assumption','entire enclosure machined from raw stock'],
     'costDown':['bring up and finish the same single device','use a standard enclosure with machining','compare full one-device SMT and local assembly quotes','combine tiny printed accessories in one order','omit the MIDI population']
 }
+# Keep the outsourced reference bill for comparison. Self-build scenarios charge
+# the tools this user needs to buy, with no assumed second device or free labor.
+tool_rows=[
+ ('solder_station','温控烙铁 / T12 焊台（含电源、烙铁头、支架）',80,150,'基础焊接；选可靠接地的设备，热风与回流设备不作为必购'),
+ ('multimeter','万用表',35,70,'直流电压、通断、电阻测量；不能替代纹波/延迟验收仪器'),
+ ('consumables','焊锡 / 助焊剂 / 吸锡带 / 清洗耗材',35,70,'手焊耗材；不另计锡膏和钢网'),
+ ('hand_tools','镊子 / 斜口钳等小工具',20,40,'不含电钻、台钳、锉刀等壳体加工工具'),
+ ('practice_board','0805 / SOIC 焊接练习板与小料',10,20,'正式主板前练习；不算第二台效果器')
+]
+with (ROOT/'hardware/tool-budget.csv').open('w') as f:
+    w=csv.writer(f);w.writerow(['Id','Item_ZH','CNY_low_estimate','CNY_high_estimate','Notes','Price_basis'])
+    for identifier,label,lo,hi,notes in tool_rows:w.writerow([identifier,label,lo,hi,notes,price_basis])
+tool_low=sum(t[2] for t in tool_rows);tool_high=sum(t[3] for t in tool_rows)
+common_parts=[p for p in parts if p[0] not in {'Case and finish','Dielectric inserts and tray','Panel printing'}]
+common_low=round(sum(subtotal(p[1],p[4]) for p in common_parts),2)
+common_high=round(sum(subtotal(p[1],p[5]) for p in common_parts),2)
+common_services=[s for s in services if s[0] in {'shipping','material_moq'}]
+scenarios={}
+variant_items={
+ 'self_stock_aluminum':('全手焊 + 通用铝壳 + 外包开孔',[
+     ('stock_case','淘宝通用未涂装铝壳',25,50,'候选125B外形；完整主板装配与内腔需复核，必要时选更深壳体'),
+     ('insulation','绝缘托盘 / 增高圈 / RF附件',20,60,'保留安装与天线所需预算；尚不能直接删掉已有隔圈'),
+     ('panel_decal','封面贴纸 / 简单转印',10,25,'替代UV直印；用户图案后续适配'),
+     ('case_machining','壳体开孔、OLED窗口、必要的天线开槽',60,180,'沿用原加工额度；未取得简化加工的真实报价')]),
+ 'self_printed':('全手焊 + PETG打印壳',[
+     ('printed_case','PETG壳体、盖板及安装附件打印',40,100,'按一次合并打印预留；需要重做脚踏受力和打印结构，现有STL未作承重验证'),
+     ('reinforcement','脚踏金属垫片 / 加强板与紧固件',10,25,'待结构设计确认；不把普通塑料壁直接视作可靠脚踏支撑'),
+     ('panel_decal','封面贴纸 / 简单转印',10,25,'非金属表面图案；无需铝壳的RF开槽')])
+}
+scenario_rows=[]
+for identifier,(label,extras) in variant_items.items():
+    line_items=[dict(id=p[0],label=labels[p[0]],category='common_material',low=subtotal(p[1],p[4]),high=subtotal(p[1],p[5]),notes=p[6]) for p in common_parts]
+    line_items += [dict(id=s[0],label=s[1],category='procurement',low=subtotal(s[3],s[5]),high=subtotal(s[3],s[6]),notes=s[7]) for s in common_services]
+    line_items += [dict(id=i,label=l,category='enclosure',low=lo,high=hi,notes=n) for i,l,lo,hi,n in extras]
+    without_low=round(sum(i['low'] for i in line_items),2);without_high=round(sum(i['high'] for i in line_items),2)
+    line_items += [dict(id=i,label=l,category='tools',low=lo,high=hi,notes=n) for i,l,lo,hi,n in tool_rows]
+    scenarios[identifier]=dict(label=label,toolsAlreadyOwned=False,withoutToolsLow=without_low,withoutToolsHigh=without_high,toolsLow=tool_low,toolsHigh=tool_high,projectLow=round(without_low+tool_low,2),projectHigh=round(without_high+tool_high,2),lineItems=line_items,physicalValidation=False)
+    for item in line_items:scenario_rows.append([identifier,label,item['id'],item['label'],item['category'],item['low'],item['high'],item['notes'],price_basis])
+with (ROOT/'hardware/diy-budget.csv').open('w') as f:
+    w=csv.writer(f);w.writerow(['Scenario','Scenario_ZH','Id','Item_ZH','Category','CNY_low_estimate','CNY_high_estimate','Notes','Price_basis']);w.writerows(scenario_rows)
+cost.update(referenceScenario='outsourced_original',preferredScenario='self_stock_aluminum',
+            referenceScenarioFields=['partsLow','partsHigh','servicesLow','servicesHigh','projectLow','projectHigh','included','excluded'],
+            assemblyPreference='user self-soldering; tools must be purchased',
+            enclosureCandidates=['generic aluminum enclosure with machining','reinforced PETG printed enclosure'],
+            scenarioStatus='planning alternatives; no supplier quote or structural/complete-fit validation',
+            selfBuildScenarios=scenarios)
 (ROOT/'hardware/cost-plan.json').write_text(json.dumps(cost,ensure_ascii=False,indent=2)+'\n')
 # Generate the human purchasing view from the exact same priced rows.
 def money(value):return f'{value:g}'
-lines=['# 单台采购预估价','','金额为人民币工程预算预估，未获取实时店铺价格或服务商报价。采购数量为一台成品所需；裸板按一次最低订单预留费用，余板作为备件。实际最低订单、装配数量和服务费需要询价确认。','','| 项目 | 渠道 | 数量 | 单价预估（元） | 小计预估（元） |','|---|---|---:|---:|---:|']
+lines=['# 单台采购预估价','','金额为人民币工程预算预估，未获取实时店铺价格或服务商报价。采购数量为一台成品所需；裸板按一次最低订单预留费用，余板作为备件。实际最低订单、装配数量和服务费需要询价确认。','','**当前制作方向改为自行焊接、通用铝壳或3D打印壳，并计入从零购置工具的费用。** 下表保留此前委托制作的对照报价口径；不应把全表与新路线叠加购买。新路线见 [手焊与通用外壳预算](DIY_BUILD_OPTIONS.md)。','','| 项目 | 渠道 | 数量 | 单价预估（元） | 小计预估（元） |','|---|---|---:|---:|---:|']
 for item,quantity,spec,source,lo,hi,notes in parts:
     lines.append(f'| {labels[item]} | {channels.get(item,"淘宝 / 立创商城")} | {quantity}{units.get(item,'个')} | {money(lo)}–{money(hi)} | {money(subtotal(quantity,lo))}–{money(subtotal(quantity,hi))} |')
 lines += ['',f'材料与裸板订单预算合计：**¥{money(low)}–{money(high)}**。','','| 服务项目 | 次数 | 小计预估（元） |','|---|---:|---:|']
@@ -135,4 +181,11 @@ for identifier,label,channel,quantity,unit,lo,hi,notes in services:lines.append(
 lines += ['',f'服务与采购附加预算合计：**¥{money(service_low)}–{money(service_high)}**。',f'按委托焊接、现成壳体加工路线，单台整项目预算约 **¥{money(cost["projectLow"])}–{money(cost["projectHigh"])}**。这不是供应商已确认的成交报价或价格上限。','','- 主板贴片元件费与贴装工费分开，电源座、音频插座和 Seed 排母单独列价。如果工厂报价已包含它们，从网购清单中删除对应项。','- 适配板裸板、六颗贴片件、三个排针及焊接服务分开，避免打板和小料混计。','- 若代焊报价已经包含通孔件和线束装配，合并工费；自行焊接可去掉对应人工额度，工具采购不在本预算内。','- 主板材料按一个安装套数估算；SMT平台若要求多装板，需要按其整单数量重算费用。','- 小料最小包装补差与裸板最低订单分别核算；目前没有把起步费分摊给第二台机器。','- 单台封面印刷预算为一次UV印刷或UV DTF转印，不同时计算两种工艺。','- 外壳开孔、RF窗口、模块安装尺寸及所有待确认料号仍按 [采购前复核](PROCUREMENT_READINESS.md) 关闭后下单。','','明细：[材料 CSV](../hardware/purchase-bom.csv)、[服务 CSV](../hardware/service-budget.csv)、[机器预算](../hardware/cost-plan.json)。']
 lines += ['', '相对原仓库的新增与沿用费用见 [成本来源对比](COST_COMPARISON.md)。当前分项外包预算不能作为原作者造价或商家报价。']
 (ROOT/'docs/PURCHASING_PRICES.md').write_text('\n'.join(lines)+'\n')
+lines=['# 自己焊接与通用外壳方案','','用户没有焊接工具，本预算将工具完整计入这一台项目。金额是工程预留，未经实时询价；保留同一套电子电路、无线、屏幕与六旋钮，不靠删除功能降低账面金额。','','## 当前选择方向','','优先评估自行焊接、淘宝通用铝壳、简单贴纸封面；PETG打印壳作为候选。铝壳适合长期踩踏，但必须核实实际内腔、装配深度与天线位置。打印壳需要完成承重结构设计后才能制作。这里只修改制作路线与预算，没有宣称外壳结构已经重新验证。','','## 两条路线的完整预算','','| 路线 | 不含新工具（元） | 新工具与耗材（元） | 从零购置合计（元） |','|---|---:|---:|---:|']
+for scenario in scenarios.values():lines.append(f'| {scenario["label"]} | {money(scenario["withoutToolsLow"])}–{money(scenario["withoutToolsHigh"])} | {money(tool_low)}–{money(tool_high)} | **{money(scenario["projectLow"])}–{money(scenario["projectHigh"])}** |')
+lines += ['',f'两条路线共用的电子物料、裸板订单、线束与外接9V电源：**¥{money(common_low)}–{money(common_high)}**。运费另预留¥20–60、小料最低包装补差¥0–80；这些费用已计入上表。若已有合格9V电源，按原表采购额度可减少¥30–80。','','| 替换项目 | 通用铝壳（元） | PETG打印壳（元） |','|---|---:|---:|---:|','| 壳体 | 25–50 | 40–100（含盖板、打印安装附件） |','| 绝缘 / 安装附件或脚踏金属加强件 | 20–60 | 10–25 |','| 封面贴纸 / 简单转印 | 10–25 | 10–25 |','| 开孔、屏幕窗口、必要的天线开槽 | 60–180 | 已在打印壳费用中预留 |','','铝壳预算沿用原加工额度，没有将未询价的低价打孔当作确定成交价。只有圆孔的报价无法覆盖OLED矩形窗口、当前DC-005开口与天线处理。若自行加工，可删去加工工费，但需要另算电钻、钻头、锉刀、夹具；从零购置暂预留¥130–280（工具额外购置，尚未计入上表），不能直接把开孔费全部当成净节省。','','## 焊接工具逐项预留','','| 项目 | 预估（元） |','|---|---:|']
+for identifier,label,lo,hi,notes in tool_rows:lines.append(f'| {label} | {money(lo)}–{money(hi)} |')
+lines += ['',f'工具与练习耗材合计：**¥{money(tool_low)}–{money(tool_high)}**。不默认购买热风枪、回流炉、钢网或示波器。示波器等电源/音频验收仪器需要借用或另行核算；返工、重复打印、替换元件与个人工时也未计入。','','## 能否全手焊','','核对当前PCB封装与装配BOM，主板实际安装的贴片件54颗：43颗0805阻容、3颗SOD二极管、2个贴片继电器、2个SOIC运放、2个SOP-4光继电器、1个SOT-23晶体管、1个SOT-223稳压器。适配板还有6颗0805/1206贴片件和3个排针。','', '这些外围封装具备烙铁手焊条件，没有需要用户自己焊接的BGA/QFN主控；Daisy、XIAO、OLED与降压模块整块购买。SOIC焊桥、器件方向、继电器焊点和小件极性仍需逐个检查，不能把模块插接等同于全部免焊。','','取消主板SMT、适配板焊接、通孔与线束代焊，可去掉原预算人工 **¥160–480**。购置工具增加¥180–350，首台的净节省取决于实际工费和工具成交价，不保证全手焊必然比局部代焊便宜。若练习后难以稳定焊好SOIC，可只询价主板贴片，自己焊外围；从对应路线预算另加实际贴片报价，不能套用包含通孔装配的旧整机工费。','','建议顺序：练习0805/SOIC → 焊主板和适配板低矮贴片件 → 焊排母与通孔件 → 断电检查短路及电位器金属脚绝缘 → 不插主控先检查供电，标定Mini-360到5V → 接入模块烧录与裸机验收 → 按实际装配位置加工/打印壳体。接线、供电和USB限制继续按 [硬件说明](HARDWARE.md) 执行。','','## 外壳与外观','','- **铝壳**：普通现成壳体与贴纸即可做完整封面，不默认烤漆、UV直印或整壳CNC。现有PCB安装位置决定孔距；通用壳体的尺寸、螺柱和壁厚必须核实，增高隔圈预算仍保留。','- **无线**：金属壳需要非金属天线窗口或在壳外保护放置天线，方式待复核；不能将天线完全封在金属盒里并假定连接正常。','- **PETG打印壳**：开口与安装柱可一体打印，省去金属壳加工；脚踏附近需要肋、厚壁或金属加强板，并使踩踏载荷传到壳体/底板，避免靠PCB承重。打印层方向、紧固方式与实际受力仍需验证。','- **屏蔽**：金属壳按原设计接地；塑料壳可评估局部导电屏蔽并接地，但需要给天线留非导电区域，新增屏蔽材料据实计价。','- **现有STL**：是当前尺寸与孔位的参考模型，没有做整壳打印承重、耐热和长期踩踏验证，不能作为最终打印下单依据。','','采购冻结仍见 [采购前复核](PROCUREMENT_READINESS.md)。新路线逐项费用见 [DIY明细](../hardware/diy-budget.csv)、[工具清单](../hardware/tool-budget.csv)、[机器预算](../hardware/cost-plan.json)；原分项委托预算保留在 [采购预估价](PURCHASING_PRICES.md)。']
+(ROOT/'docs/DIY_BUILD_OPTIONS.md').write_text('\n'.join(lines)+'\n')
 print(f'One-device materials: CNY {low:g}–{high:g}; services: {service_low:g}–{service_high:g}; project estimate: {cost["projectLow"]:g}–{cost["projectHigh"]:g}')
+for scenario in scenarios.values():print(f'{scenario["label"]} including new tools: CNY {scenario["projectLow"]:g}–{scenario["projectHigh"]:g}')

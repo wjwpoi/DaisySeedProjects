@@ -1,6 +1,6 @@
 {
   "version": "v1-engineering",
-  "generatedAt": "2026-10-14T07:25:55.474972+00:00",
+  "generatedAt": "2026-10-14T08:13:15.907106+00:00",
   "referenceRepository": "wjwpoi/DaisySeedProjects",
   "referenceCommit": "8e9f468ab0d35b87fafa33b9da2f017a0e6a865b",
   "physicalTestsExecuted": false,
@@ -40,8 +40,8 @@
       "sha256": "94748d47a5f38496ff1ca10e0a6493a92d24486dd2f118d7b4ce92624fa3f55a"
     },
     "README.md": {
-      "bytes": 5141,
-      "sha256": "e0028837bed906705271bdca6c9f4499c38eccf7c95a24671a323a094ec7246e"
+      "bytes": 5505,
+      "sha256": "3767fcb444098cf7406b7c52f611aa35d818195b0eb3012f4c8b4b4eb7cb5680"
     },
     "THIRD_PARTY.md": {
       "bytes": 1742,
@@ -52,20 +52,24 @@
       "sha256": "b9910d6ec2c0b1e10d81626969fd837b679c25b779a49277d426ec1f2220425d"
     },
     "docs/COST_COMPARISON.md": {
-      "bytes": 3689,
-      "sha256": "fb85e13d1e2196a347315ed34d6c57121f0092361ad018bf81e4c9b81fbc3896"
+      "bytes": 3885,
+      "sha256": "849d1a1a970498564414edf11d7e276757d424c6758df82ea3a66331efdbe536"
+    },
+    "docs/DIY_BUILD_OPTIONS.md": {
+      "bytes": 5186,
+      "sha256": "705656b28132b41187a54bacf5fdbf34e9a518f04c31a68f19252358bf57953e"
     },
     "docs/HARDWARE.md": {
-      "bytes": 6890,
-      "sha256": "f0936ffdd42b1579446cfacb2561d271148a7a079ac33b79f2c0971eaa5f6b2d"
+      "bytes": 7293,
+      "sha256": "50262dc687e1a679f896a4dfbdec55c362bee8babc505db5c92df4d1d3c57979"
     },
     "docs/MODELS.md": {
       "bytes": 2921,
       "sha256": "29d6404c04070212e7060f70c02c2d4fe36f867656e82c40c7e51082bc3e07bc"
     },
     "docs/PROCUREMENT_READINESS.md": {
-      "bytes": 3827,
-      "sha256": "5de8a8d1f0f00d5e241d86c4591c9f1cea34a295f4008a7d86ddba8af5e31960"
+      "bytes": 4106,
+      "sha256": "e76627c1fcf4fbc150801ec8855762d7465941fa4e93540fbb775adce8981517"
     },
     "docs/PRODUCT.md": {
       "bytes": 4404,
@@ -76,8 +80,8 @@
       "sha256": "61314d274a8faf403bfb09b7994fcd12b831f5a53bc698253ca0edf910dc2e6b"
     },
     "docs/PURCHASING_PRICES.md": {
-      "bytes": 3874,
-      "sha256": "075d0e0506930ba8310efb47065f273ab1fda248d75afaf4594d6a539781ada0"
+      "bytes": 4151,
+      "sha256": "f0d4bdede9caa3c9eeb6f8480562683ef7ce4a06870f9165a3faf2a42d3868de"
     },
     "docs/RELEASE.md": {
       "bytes": 2950,
@@ -104,8 +108,8 @@
       "sha256": "02d9590fcb01b26d82aa12b6f4b05fb7769a2fc03255abaa7976d3ffccaf98cd"
     },
     "docs/validation.json": {
-      "bytes": 9488,
-      "sha256": "13478873580bd9499cb03676ab9216abf4c15a403b5785a4a24653260dd686ff"
+      "bytes": 27981,
+      "sha256": "5bfb0374eee919264e6e5dce47716ce7c3d4512179463e01a2468607b6554783"
     },
     "firmware/audio/Makefile": {
       "bytes": 874,
@@ -184,8 +188,12 @@
       "sha256": "27d3178f7b05ea8a1d5b4c3dac75a896b4377dfeb22e9870306ced3d9a7a9474"
     },
     "hardware/cost-plan.json": {
-      "bytes": 1627,
-      "sha256": "683fdd3132735a0ad1759add45b9b2418e78c9e4b7d190f12ea735f14acf65bc"
+      "bytes": 19084,
+      "sha256": "7e4bc417755d5869b749dda4d4dfca3d59ca80591e7bc1c0fa32263bb880699a"
+    },
+    "hardware/diy-budget.csv": {
+      "bytes": 14310,
+      "sha256": "f37937a4e140f63dbacd733354d46905203d174517b0674f56b9f16123a0014c"
     },
     "hardware/io-map.csv": {
       "bytes": 913,
@@ -526,6 +534,10 @@
     "hardware/service-budget.csv": {
       "bytes": 1525,
       "sha256": "0ed701f0627b0cacb9741f20775e163d7941885506c5ef740ec6f5002dc9c623"
+    },
+    "hardware/tool-budget.csv": {
+      "bytes": 953,
+      "sha256": "c29989b953ac0ec964f83d78119388313ce008f3cc30e0ba46fbd14fa560f8e6"
     },
     "hardware/wiring.csv": {
       "bytes": 1257,
@@ -948,8 +960,8 @@
       "sha256": "b75110f6bbf909de75a37d6c449d5ad8a4e6da0b5230e9ace480ee808ebedf1a"
     },
     "tools/bom.py": {
-      "bytes": 15343,
-      "sha256": "d5dac4e78c832a02221df614ac569c82d720d0834a292208d933b31aef04cf43"
+      "bytes": 25726,
+      "sha256": "b69422035aa4a920b17c301eb9c5d5b897f8a1f9af615b8b5108c830c8859a1a"
     },
     "tools/cad-python.lock": {
       "bytes": 247,

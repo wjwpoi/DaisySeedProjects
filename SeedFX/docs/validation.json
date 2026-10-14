@@ -271,7 +271,525 @@
       "compare full one-device SMT and local assembly quotes",
       "combine tiny printed accessories in one order",
       "omit the MIDI population"
-    ]
+    ],
+    "referenceScenario": "outsourced_original",
+    "preferredScenario": "self_stock_aluminum",
+    "referenceScenarioFields": [
+      "partsLow",
+      "partsHigh",
+      "servicesLow",
+      "servicesHigh",
+      "projectLow",
+      "projectHigh",
+      "included",
+      "excluded"
+    ],
+    "assemblyPreference": "user self-soldering; tools must be purchased",
+    "enclosureCandidates": [
+      "generic aluminum enclosure with machining",
+      "reinforced PETG printed enclosure"
+    ],
+    "scenarioStatus": "planning alternatives; no supplier quote or structural/complete-fit validation",
+    "selfBuildScenarios": {
+      "self_stock_aluminum": {
+        "label": "全手焊 + 通用铝壳 + 外包开孔",
+        "toolsAlreadyOwned": false,
+        "withoutToolsLow": 653.9,
+        "withoutToolsHigh": 1451.5,
+        "toolsLow": 180,
+        "toolsHigh": 350,
+        "projectLow": 833.9,
+        "projectHigh": 1801.5,
+        "lineItems": [
+          {
+            "id": "Daisy Seed Rev7",
+            "label": "Daisy Seed 主控",
+            "category": "common_material",
+            "low": 240,
+            "high": 360,
+            "notes": "Audio MCU, codec, SDRAM and QSPI included"
+          },
+          {
+            "id": "Main PCB",
+            "label": "主板裸板最低订单",
+            "category": "common_material",
+            "low": 20,
+            "high": 60,
+            "notes": "Allowance for one minimum bare-board order; quantity depends on supplier quote; extra boards are repair spares"
+          },
+          {
+            "id": "Main SMT components",
+            "label": "主板贴片元件一套",
+            "category": "common_material",
+            "low": 65,
+            "high": 120,
+            "notes": "SMD material set only; excludes DC/audio sockets, Seed sockets and assembly service; omit MIDI DNP"
+          },
+          {
+            "id": "Potentiometers",
+            "label": "B10K 电位器",
+            "category": "common_material",
+            "low": 24,
+            "high": 48,
+            "notes": "B10K linear; round shaft; follow electrical isolation note"
+          },
+          {
+            "id": "Encoder",
+            "label": "按压编码器",
+            "category": "common_material",
+            "low": 10,
+            "high": 25,
+            "notes": "Momentary push switch; 24 detents; 6mm shaft"
+          },
+          {
+            "id": "OLED",
+            "label": "七针 SPI OLED",
+            "category": "common_material",
+            "low": 20,
+            "high": 45,
+            "notes": "27.5x27.75mm PCB, 22x11mm active area; GND,VCC,SCK,MOSI,RESET,DC,CS; match footprint"
+          },
+          {
+            "id": "Audio sockets",
+            "label": "Neutrik 音频插座",
+            "category": "common_material",
+            "low": 20,
+            "high": 40,
+            "notes": "Fits the existing mainboard footprint; use mono TS patch leads"
+          },
+          {
+            "id": "Footswitches",
+            "label": "瞬时常开脚踏",
+            "category": "common_material",
+            "low": 16,
+            "high": 36,
+            "notes": "12.2mm panel bore; do not use latching 3PDT switches"
+          },
+          {
+            "id": "LEDs",
+            "label": "3mm LED",
+            "category": "common_material",
+            "low": 0.4,
+            "high": 2,
+            "notes": "Flush 3.2mm holes; isolated leads; no metal holders needed"
+          },
+          {
+            "id": "Knobs",
+            "label": "旋钮帽",
+            "category": "common_material",
+            "low": 14,
+            "high": 35,
+            "notes": "Set-screw type; select correct bore sizes"
+          },
+          {
+            "id": "Seed sockets",
+            "label": "Seed 1×20 排母",
+            "category": "common_material",
+            "low": 4,
+            "high": 10,
+            "notes": "Match the included footprint; no tall stacking sockets"
+          },
+          {
+            "id": "Wi-Fi MCU",
+            "label": "XIAO ESP32-C3 含天线",
+            "category": "common_material",
+            "low": 25,
+            "high": 50,
+            "notes": "USB-C, 4MB flash; D6 GPIO21 TX / D7 GPIO20 RX"
+          },
+          {
+            "id": "Wi-Fi buck supply",
+            "label": "Mini-360 降压模块",
+            "category": "common_material",
+            "low": 5,
+            "high": 15,
+            "notes": "18x14mm envelope; protected +9V input; commission before attaching XIAO. Fixed 5V Pololu D24V10F5 #2831 is the drop-in premium option"
+          },
+          {
+            "id": "UART adapter PCB",
+            "label": "适配板裸板最低订单",
+            "category": "common_material",
+            "low": 10,
+            "high": 30,
+            "notes": "Allowance for one minimum bare-board order; excludes components and assembly; extra boards are repair spares"
+          },
+          {
+            "id": "UART adapter small components",
+            "label": "适配板六颗贴片元件",
+            "category": "common_material",
+            "low": 3,
+            "high": 8,
+            "notes": "Parts only; excludes the three headers and soldering; minimum material packages are accounted separately"
+          },
+          {
+            "id": "UART adapter headers",
+            "label": "适配板排针",
+            "category": "common_material",
+            "low": 1.5,
+            "high": 4.5,
+            "notes": "PCB headers only; mating wire housings are included in the harness allowance"
+          },
+          {
+            "id": "DC power socket",
+            "label": "DC-005 电源座",
+            "category": "common_material",
+            "low": 1,
+            "high": 3,
+            "notes": "Through-hole item; not included in the SMD component allowance"
+          },
+          {
+            "id": "External 9V supply",
+            "label": "外接 9V 电源",
+            "category": "common_material",
+            "low": 30,
+            "high": 80,
+            "notes": "Power-supply purchase included here; actual ripple/noise will be tested on the single device"
+          },
+          {
+            "id": "Harness and small hardware",
+            "label": "线束 / 螺丝 / 绝缘小件",
+            "category": "common_material",
+            "low": 10,
+            "high": 25,
+            "notes": "Short twisted UART/GND pairs; no bare wire near pot tabs"
+          },
+          {
+            "id": "shipping",
+            "label": "多平台合计运费",
+            "category": "procurement",
+            "low": 20,
+            "high": 60,
+            "notes": "整项目运费额度；包邮订单可据实减少"
+          },
+          {
+            "id": "material_moq",
+            "label": "小料最小包装 / 采购补差",
+            "category": "procurement",
+            "low": 0,
+            "high": 80,
+            "notes": "装入设备数量之外的袋装小料预算；裸板最低订单已另计，不重复计入"
+          },
+          {
+            "id": "stock_case",
+            "label": "淘宝通用未涂装铝壳",
+            "category": "enclosure",
+            "low": 25,
+            "high": 50,
+            "notes": "候选125B外形；完整主板装配与内腔需复核，必要时选更深壳体"
+          },
+          {
+            "id": "insulation",
+            "label": "绝缘托盘 / 增高圈 / RF附件",
+            "category": "enclosure",
+            "low": 20,
+            "high": 60,
+            "notes": "保留安装与天线所需预算；尚不能直接删掉已有隔圈"
+          },
+          {
+            "id": "panel_decal",
+            "label": "封面贴纸 / 简单转印",
+            "category": "enclosure",
+            "low": 10,
+            "high": 25,
+            "notes": "替代UV直印；用户图案后续适配"
+          },
+          {
+            "id": "case_machining",
+            "label": "壳体开孔、OLED窗口、必要的天线开槽",
+            "category": "enclosure",
+            "low": 60,
+            "high": 180,
+            "notes": "沿用原加工额度；未取得简化加工的真实报价"
+          },
+          {
+            "id": "solder_station",
+            "label": "温控烙铁 / T12 焊台（含电源、烙铁头、支架）",
+            "category": "tools",
+            "low": 80,
+            "high": 150,
+            "notes": "基础焊接；选可靠接地的设备，热风与回流设备不作为必购"
+          },
+          {
+            "id": "multimeter",
+            "label": "万用表",
+            "category": "tools",
+            "low": 35,
+            "high": 70,
+            "notes": "直流电压、通断、电阻测量；不能替代纹波/延迟验收仪器"
+          },
+          {
+            "id": "consumables",
+            "label": "焊锡 / 助焊剂 / 吸锡带 / 清洗耗材",
+            "category": "tools",
+            "low": 35,
+            "high": 70,
+            "notes": "手焊耗材；不另计锡膏和钢网"
+          },
+          {
+            "id": "hand_tools",
+            "label": "镊子 / 斜口钳等小工具",
+            "category": "tools",
+            "low": 20,
+            "high": 40,
+            "notes": "不含电钻、台钳、锉刀等壳体加工工具"
+          },
+          {
+            "id": "practice_board",
+            "label": "0805 / SOIC 焊接练习板与小料",
+            "category": "tools",
+            "low": 10,
+            "high": 20,
+            "notes": "正式主板前练习；不算第二台效果器"
+          }
+        ],
+        "physicalValidation": false
+      },
+      "self_printed": {
+        "label": "全手焊 + PETG打印壳",
+        "toolsAlreadyOwned": false,
+        "withoutToolsLow": 598.9,
+        "withoutToolsHigh": 1286.5,
+        "toolsLow": 180,
+        "toolsHigh": 350,
+        "projectLow": 778.9,
+        "projectHigh": 1636.5,
+        "lineItems": [
+          {
+            "id": "Daisy Seed Rev7",
+            "label": "Daisy Seed 主控",
+            "category": "common_material",
+            "low": 240,
+            "high": 360,
+            "notes": "Audio MCU, codec, SDRAM and QSPI included"
+          },
+          {
+            "id": "Main PCB",
+            "label": "主板裸板最低订单",
+            "category": "common_material",
+            "low": 20,
+            "high": 60,
+            "notes": "Allowance for one minimum bare-board order; quantity depends on supplier quote; extra boards are repair spares"
+          },
+          {
+            "id": "Main SMT components",
+            "label": "主板贴片元件一套",
+            "category": "common_material",
+            "low": 65,
+            "high": 120,
+            "notes": "SMD material set only; excludes DC/audio sockets, Seed sockets and assembly service; omit MIDI DNP"
+          },
+          {
+            "id": "Potentiometers",
+            "label": "B10K 电位器",
+            "category": "common_material",
+            "low": 24,
+            "high": 48,
+            "notes": "B10K linear; round shaft; follow electrical isolation note"
+          },
+          {
+            "id": "Encoder",
+            "label": "按压编码器",
+            "category": "common_material",
+            "low": 10,
+            "high": 25,
+            "notes": "Momentary push switch; 24 detents; 6mm shaft"
+          },
+          {
+            "id": "OLED",
+            "label": "七针 SPI OLED",
+            "category": "common_material",
+            "low": 20,
+            "high": 45,
+            "notes": "27.5x27.75mm PCB, 22x11mm active area; GND,VCC,SCK,MOSI,RESET,DC,CS; match footprint"
+          },
+          {
+            "id": "Audio sockets",
+            "label": "Neutrik 音频插座",
+            "category": "common_material",
+            "low": 20,
+            "high": 40,
+            "notes": "Fits the existing mainboard footprint; use mono TS patch leads"
+          },
+          {
+            "id": "Footswitches",
+            "label": "瞬时常开脚踏",
+            "category": "common_material",
+            "low": 16,
+            "high": 36,
+            "notes": "12.2mm panel bore; do not use latching 3PDT switches"
+          },
+          {
+            "id": "LEDs",
+            "label": "3mm LED",
+            "category": "common_material",
+            "low": 0.4,
+            "high": 2,
+            "notes": "Flush 3.2mm holes; isolated leads; no metal holders needed"
+          },
+          {
+            "id": "Knobs",
+            "label": "旋钮帽",
+            "category": "common_material",
+            "low": 14,
+            "high": 35,
+            "notes": "Set-screw type; select correct bore sizes"
+          },
+          {
+            "id": "Seed sockets",
+            "label": "Seed 1×20 排母",
+            "category": "common_material",
+            "low": 4,
+            "high": 10,
+            "notes": "Match the included footprint; no tall stacking sockets"
+          },
+          {
+            "id": "Wi-Fi MCU",
+            "label": "XIAO ESP32-C3 含天线",
+            "category": "common_material",
+            "low": 25,
+            "high": 50,
+            "notes": "USB-C, 4MB flash; D6 GPIO21 TX / D7 GPIO20 RX"
+          },
+          {
+            "id": "Wi-Fi buck supply",
+            "label": "Mini-360 降压模块",
+            "category": "common_material",
+            "low": 5,
+            "high": 15,
+            "notes": "18x14mm envelope; protected +9V input; commission before attaching XIAO. Fixed 5V Pololu D24V10F5 #2831 is the drop-in premium option"
+          },
+          {
+            "id": "UART adapter PCB",
+            "label": "适配板裸板最低订单",
+            "category": "common_material",
+            "low": 10,
+            "high": 30,
+            "notes": "Allowance for one minimum bare-board order; excludes components and assembly; extra boards are repair spares"
+          },
+          {
+            "id": "UART adapter small components",
+            "label": "适配板六颗贴片元件",
+            "category": "common_material",
+            "low": 3,
+            "high": 8,
+            "notes": "Parts only; excludes the three headers and soldering; minimum material packages are accounted separately"
+          },
+          {
+            "id": "UART adapter headers",
+            "label": "适配板排针",
+            "category": "common_material",
+            "low": 1.5,
+            "high": 4.5,
+            "notes": "PCB headers only; mating wire housings are included in the harness allowance"
+          },
+          {
+            "id": "DC power socket",
+            "label": "DC-005 电源座",
+            "category": "common_material",
+            "low": 1,
+            "high": 3,
+            "notes": "Through-hole item; not included in the SMD component allowance"
+          },
+          {
+            "id": "External 9V supply",
+            "label": "外接 9V 电源",
+            "category": "common_material",
+            "low": 30,
+            "high": 80,
+            "notes": "Power-supply purchase included here; actual ripple/noise will be tested on the single device"
+          },
+          {
+            "id": "Harness and small hardware",
+            "label": "线束 / 螺丝 / 绝缘小件",
+            "category": "common_material",
+            "low": 10,
+            "high": 25,
+            "notes": "Short twisted UART/GND pairs; no bare wire near pot tabs"
+          },
+          {
+            "id": "shipping",
+            "label": "多平台合计运费",
+            "category": "procurement",
+            "low": 20,
+            "high": 60,
+            "notes": "整项目运费额度；包邮订单可据实减少"
+          },
+          {
+            "id": "material_moq",
+            "label": "小料最小包装 / 采购补差",
+            "category": "procurement",
+            "low": 0,
+            "high": 80,
+            "notes": "装入设备数量之外的袋装小料预算；裸板最低订单已另计，不重复计入"
+          },
+          {
+            "id": "printed_case",
+            "label": "PETG壳体、盖板及安装附件打印",
+            "category": "enclosure",
+            "low": 40,
+            "high": 100,
+            "notes": "按一次合并打印预留；需要重做脚踏受力和打印结构，现有STL未作承重验证"
+          },
+          {
+            "id": "reinforcement",
+            "label": "脚踏金属垫片 / 加强板与紧固件",
+            "category": "enclosure",
+            "low": 10,
+            "high": 25,
+            "notes": "待结构设计确认；不把普通塑料壁直接视作可靠脚踏支撑"
+          },
+          {
+            "id": "panel_decal",
+            "label": "封面贴纸 / 简单转印",
+            "category": "enclosure",
+            "low": 10,
+            "high": 25,
+            "notes": "非金属表面图案；无需铝壳的RF开槽"
+          },
+          {
+            "id": "solder_station",
+            "label": "温控烙铁 / T12 焊台（含电源、烙铁头、支架）",
+            "category": "tools",
+            "low": 80,
+            "high": 150,
+            "notes": "基础焊接；选可靠接地的设备，热风与回流设备不作为必购"
+          },
+          {
+            "id": "multimeter",
+            "label": "万用表",
+            "category": "tools",
+            "low": 35,
+            "high": 70,
+            "notes": "直流电压、通断、电阻测量；不能替代纹波/延迟验收仪器"
+          },
+          {
+            "id": "consumables",
+            "label": "焊锡 / 助焊剂 / 吸锡带 / 清洗耗材",
+            "category": "tools",
+            "low": 35,
+            "high": 70,
+            "notes": "手焊耗材；不另计锡膏和钢网"
+          },
+          {
+            "id": "hand_tools",
+            "label": "镊子 / 斜口钳等小工具",
+            "category": "tools",
+            "low": 20,
+            "high": 40,
+            "notes": "不含电钻、台钳、锉刀等壳体加工工具"
+          },
+          {
+            "id": "practice_board",
+            "label": "0805 / SOIC 焊接练习板与小料",
+            "category": "tools",
+            "low": 10,
+            "high": 20,
+            "notes": "正式主板前练习；不算第二台效果器"
+          }
+        ],
+        "physicalValidation": false
+      }
+    }
   },
   "physicalTestsExecuted": false,
   "procurementReady": false,
@@ -286,5 +804,5 @@
     "actual supplier component fit and tolerances",
     "power-cut during physical flash write"
   ],
-  "costSnapshotUpdatedAt": "2026-10-14T07:13:32.762707+00:00"
+  "costSnapshotUpdatedAt": "2026-10-14T08:13:14.068162+00:00"
 }

@@ -1,0 +1,60 @@
+Scenario,Scenario_ZH,Id,Item_ZH,Category,CNY_low_estimate,CNY_high_estimate,Notes,Price_basis
+self_stock_aluminum,全手焊 + 通用铝壳 + 外包开孔,Daisy Seed Rev7,Daisy Seed 主控,common_material,240,360,"Audio MCU, codec, SDRAM and QSPI included",工程预算预估，未获取实时店铺或服务商报价
+self_stock_aluminum,全手焊 + 通用铝壳 + 外包开孔,Main PCB,主板裸板最低订单,common_material,20,60,Allowance for one minimum bare-board order; quantity depends on supplier quote; extra boards are repair spares,工程预算预估，未获取实时店铺或服务商报价
+self_stock_aluminum,全手焊 + 通用铝壳 + 外包开孔,Main SMT components,主板贴片元件一套,common_material,65,120,"SMD material set only; excludes DC/audio sockets, Seed sockets and assembly service; omit MIDI DNP",工程预算预估，未获取实时店铺或服务商报价
+self_stock_aluminum,全手焊 + 通用铝壳 + 外包开孔,Potentiometers,B10K 电位器,common_material,24,48,B10K linear; round shaft; follow electrical isolation note,工程预算预估，未获取实时店铺或服务商报价
+self_stock_aluminum,全手焊 + 通用铝壳 + 外包开孔,Encoder,按压编码器,common_material,10,25,Momentary push switch; 24 detents; 6mm shaft,工程预算预估，未获取实时店铺或服务商报价
+self_stock_aluminum,全手焊 + 通用铝壳 + 外包开孔,OLED,七针 SPI OLED,common_material,20,45,"27.5x27.75mm PCB, 22x11mm active area; GND,VCC,SCK,MOSI,RESET,DC,CS; match footprint",工程预算预估，未获取实时店铺或服务商报价
+self_stock_aluminum,全手焊 + 通用铝壳 + 外包开孔,Audio sockets,Neutrik 音频插座,common_material,20,40,Fits the existing mainboard footprint; use mono TS patch leads,工程预算预估，未获取实时店铺或服务商报价
+self_stock_aluminum,全手焊 + 通用铝壳 + 外包开孔,Footswitches,瞬时常开脚踏,common_material,16,36,12.2mm panel bore; do not use latching 3PDT switches,工程预算预估，未获取实时店铺或服务商报价
+self_stock_aluminum,全手焊 + 通用铝壳 + 外包开孔,LEDs,3mm LED,common_material,0.4,2,Flush 3.2mm holes; isolated leads; no metal holders needed,工程预算预估，未获取实时店铺或服务商报价
+self_stock_aluminum,全手焊 + 通用铝壳 + 外包开孔,Knobs,旋钮帽,common_material,14,35,Set-screw type; select correct bore sizes,工程预算预估，未获取实时店铺或服务商报价
+self_stock_aluminum,全手焊 + 通用铝壳 + 外包开孔,Seed sockets,Seed 1×20 排母,common_material,4,10,Match the included footprint; no tall stacking sockets,工程预算预估，未获取实时店铺或服务商报价
+self_stock_aluminum,全手焊 + 通用铝壳 + 外包开孔,Wi-Fi MCU,XIAO ESP32-C3 含天线,common_material,25,50,"USB-C, 4MB flash; D6 GPIO21 TX / D7 GPIO20 RX",工程预算预估，未获取实时店铺或服务商报价
+self_stock_aluminum,全手焊 + 通用铝壳 + 外包开孔,Wi-Fi buck supply,Mini-360 降压模块,common_material,5,15,18x14mm envelope; protected +9V input; commission before attaching XIAO. Fixed 5V Pololu D24V10F5 #2831 is the drop-in premium option,工程预算预估，未获取实时店铺或服务商报价
+self_stock_aluminum,全手焊 + 通用铝壳 + 外包开孔,UART adapter PCB,适配板裸板最低订单,common_material,10,30,Allowance for one minimum bare-board order; excludes components and assembly; extra boards are repair spares,工程预算预估，未获取实时店铺或服务商报价
+self_stock_aluminum,全手焊 + 通用铝壳 + 外包开孔,UART adapter small components,适配板六颗贴片元件,common_material,3,8,Parts only; excludes the three headers and soldering; minimum material packages are accounted separately,工程预算预估，未获取实时店铺或服务商报价
+self_stock_aluminum,全手焊 + 通用铝壳 + 外包开孔,UART adapter headers,适配板排针,common_material,1.5,4.5,PCB headers only; mating wire housings are included in the harness allowance,工程预算预估，未获取实时店铺或服务商报价
+self_stock_aluminum,全手焊 + 通用铝壳 + 外包开孔,DC power socket,DC-005 电源座,common_material,1,3,Through-hole item; not included in the SMD component allowance,工程预算预估，未获取实时店铺或服务商报价
+self_stock_aluminum,全手焊 + 通用铝壳 + 外包开孔,External 9V supply,外接 9V 电源,common_material,30,80,Power-supply purchase included here; actual ripple/noise will be tested on the single device,工程预算预估，未获取实时店铺或服务商报价
+self_stock_aluminum,全手焊 + 通用铝壳 + 外包开孔,Harness and small hardware,线束 / 螺丝 / 绝缘小件,common_material,10,25,Short twisted UART/GND pairs; no bare wire near pot tabs,工程预算预估，未获取实时店铺或服务商报价
+self_stock_aluminum,全手焊 + 通用铝壳 + 外包开孔,shipping,多平台合计运费,procurement,20,60,整项目运费额度；包邮订单可据实减少,工程预算预估，未获取实时店铺或服务商报价
+self_stock_aluminum,全手焊 + 通用铝壳 + 外包开孔,material_moq,小料最小包装 / 采购补差,procurement,0,80,装入设备数量之外的袋装小料预算；裸板最低订单已另计，不重复计入,工程预算预估，未获取实时店铺或服务商报价
+self_stock_aluminum,全手焊 + 通用铝壳 + 外包开孔,stock_case,淘宝通用未涂装铝壳,enclosure,25,50,候选125B外形；完整主板装配与内腔需复核，必要时选更深壳体,工程预算预估，未获取实时店铺或服务商报价
+self_stock_aluminum,全手焊 + 通用铝壳 + 外包开孔,insulation,绝缘托盘 / 增高圈 / RF附件,enclosure,20,60,保留安装与天线所需预算；尚不能直接删掉已有隔圈,工程预算预估，未获取实时店铺或服务商报价
+self_stock_aluminum,全手焊 + 通用铝壳 + 外包开孔,panel_decal,封面贴纸 / 简单转印,enclosure,10,25,替代UV直印；用户图案后续适配,工程预算预估，未获取实时店铺或服务商报价
+self_stock_aluminum,全手焊 + 通用铝壳 + 外包开孔,case_machining,壳体开孔、OLED窗口、必要的天线开槽,enclosure,60,180,沿用原加工额度；未取得简化加工的真实报价,工程预算预估，未获取实时店铺或服务商报价
+self_stock_aluminum,全手焊 + 通用铝壳 + 外包开孔,solder_station,温控烙铁 / T12 焊台（含电源、烙铁头、支架）,tools,80,150,基础焊接；选可靠接地的设备，热风与回流设备不作为必购,工程预算预估，未获取实时店铺或服务商报价
+self_stock_aluminum,全手焊 + 通用铝壳 + 外包开孔,multimeter,万用表,tools,35,70,直流电压、通断、电阻测量；不能替代纹波/延迟验收仪器,工程预算预估，未获取实时店铺或服务商报价
+self_stock_aluminum,全手焊 + 通用铝壳 + 外包开孔,consumables,焊锡 / 助焊剂 / 吸锡带 / 清洗耗材,tools,35,70,手焊耗材；不另计锡膏和钢网,工程预算预估，未获取实时店铺或服务商报价
+self_stock_aluminum,全手焊 + 通用铝壳 + 外包开孔,hand_tools,镊子 / 斜口钳等小工具,tools,20,40,不含电钻、台钳、锉刀等壳体加工工具,工程预算预估，未获取实时店铺或服务商报价
+self_stock_aluminum,全手焊 + 通用铝壳 + 外包开孔,practice_board,0805 / SOIC 焊接练习板与小料,tools,10,20,正式主板前练习；不算第二台效果器,工程预算预估，未获取实时店铺或服务商报价
+self_printed,全手焊 + PETG打印壳,Daisy Seed Rev7,Daisy Seed 主控,common_material,240,360,"Audio MCU, codec, SDRAM and QSPI included",工程预算预估，未获取实时店铺或服务商报价
+self_printed,全手焊 + PETG打印壳,Main PCB,主板裸板最低订单,common_material,20,60,Allowance for one minimum bare-board order; quantity depends on supplier quote; extra boards are repair spares,工程预算预估，未获取实时店铺或服务商报价
+self_printed,全手焊 + PETG打印壳,Main SMT components,主板贴片元件一套,common_material,65,120,"SMD material set only; excludes DC/audio sockets, Seed sockets and assembly service; omit MIDI DNP",工程预算预估，未获取实时店铺或服务商报价
+self_printed,全手焊 + PETG打印壳,Potentiometers,B10K 电位器,common_material,24,48,B10K linear; round shaft; follow electrical isolation note,工程预算预估，未获取实时店铺或服务商报价
+self_printed,全手焊 + PETG打印壳,Encoder,按压编码器,common_material,10,25,Momentary push switch; 24 detents; 6mm shaft,工程预算预估，未获取实时店铺或服务商报价
+self_printed,全手焊 + PETG打印壳,OLED,七针 SPI OLED,common_material,20,45,"27.5x27.75mm PCB, 22x11mm active area; GND,VCC,SCK,MOSI,RESET,DC,CS; match footprint",工程预算预估，未获取实时店铺或服务商报价
+self_printed,全手焊 + PETG打印壳,Audio sockets,Neutrik 音频插座,common_material,20,40,Fits the existing mainboard footprint; use mono TS patch leads,工程预算预估，未获取实时店铺或服务商报价
+self_printed,全手焊 + PETG打印壳,Footswitches,瞬时常开脚踏,common_material,16,36,12.2mm panel bore; do not use latching 3PDT switches,工程预算预估，未获取实时店铺或服务商报价
+self_printed,全手焊 + PETG打印壳,LEDs,3mm LED,common_material,0.4,2,Flush 3.2mm holes; isolated leads; no metal holders needed,工程预算预估，未获取实时店铺或服务商报价
+self_printed,全手焊 + PETG打印壳,Knobs,旋钮帽,common_material,14,35,Set-screw type; select correct bore sizes,工程预算预估，未获取实时店铺或服务商报价
+self_printed,全手焊 + PETG打印壳,Seed sockets,Seed 1×20 排母,common_material,4,10,Match the included footprint; no tall stacking sockets,工程预算预估，未获取实时店铺或服务商报价
+self_printed,全手焊 + PETG打印壳,Wi-Fi MCU,XIAO ESP32-C3 含天线,common_material,25,50,"USB-C, 4MB flash; D6 GPIO21 TX / D7 GPIO20 RX",工程预算预估，未获取实时店铺或服务商报价
+self_printed,全手焊 + PETG打印壳,Wi-Fi buck supply,Mini-360 降压模块,common_material,5,15,18x14mm envelope; protected +9V input; commission before attaching XIAO. Fixed 5V Pololu D24V10F5 #2831 is the drop-in premium option,工程预算预估，未获取实时店铺或服务商报价
+self_printed,全手焊 + PETG打印壳,UART adapter PCB,适配板裸板最低订单,common_material,10,30,Allowance for one minimum bare-board order; excludes components and assembly; extra boards are repair spares,工程预算预估，未获取实时店铺或服务商报价
+self_printed,全手焊 + PETG打印壳,UART adapter small components,适配板六颗贴片元件,common_material,3,8,Parts only; excludes the three headers and soldering; minimum material packages are accounted separately,工程预算预估，未获取实时店铺或服务商报价
+self_printed,全手焊 + PETG打印壳,UART adapter headers,适配板排针,common_material,1.5,4.5,PCB headers only; mating wire housings are included in the harness allowance,工程预算预估，未获取实时店铺或服务商报价
+self_printed,全手焊 + PETG打印壳,DC power socket,DC-005 电源座,common_material,1,3,Through-hole item; not included in the SMD component allowance,工程预算预估，未获取实时店铺或服务商报价
+self_printed,全手焊 + PETG打印壳,External 9V supply,外接 9V 电源,common_material,30,80,Power-supply purchase included here; actual ripple/noise will be tested on the single device,工程预算预估，未获取实时店铺或服务商报价
+self_printed,全手焊 + PETG打印壳,Harness and small hardware,线束 / 螺丝 / 绝缘小件,common_material,10,25,Short twisted UART/GND pairs; no bare wire near pot tabs,工程预算预估，未获取实时店铺或服务商报价
+self_printed,全手焊 + PETG打印壳,shipping,多平台合计运费,procurement,20,60,整项目运费额度；包邮订单可据实减少,工程预算预估，未获取实时店铺或服务商报价
+self_printed,全手焊 + PETG打印壳,material_moq,小料最小包装 / 采购补差,procurement,0,80,装入设备数量之外的袋装小料预算；裸板最低订单已另计，不重复计入,工程预算预估，未获取实时店铺或服务商报价
+self_printed,全手焊 + PETG打印壳,printed_case,PETG壳体、盖板及安装附件打印,enclosure,40,100,按一次合并打印预留；需要重做脚踏受力和打印结构，现有STL未作承重验证,工程预算预估，未获取实时店铺或服务商报价
+self_printed,全手焊 + PETG打印壳,reinforcement,脚踏金属垫片 / 加强板与紧固件,enclosure,10,25,待结构设计确认；不把普通塑料壁直接视作可靠脚踏支撑,工程预算预估，未获取实时店铺或服务商报价
+self_printed,全手焊 + PETG打印壳,panel_decal,封面贴纸 / 简单转印,enclosure,10,25,非金属表面图案；无需铝壳的RF开槽,工程预算预估，未获取实时店铺或服务商报价
+self_printed,全手焊 + PETG打印壳,solder_station,温控烙铁 / T12 焊台（含电源、烙铁头、支架）,tools,80,150,基础焊接；选可靠接地的设备，热风与回流设备不作为必购,工程预算预估，未获取实时店铺或服务商报价
+self_printed,全手焊 + PETG打印壳,multimeter,万用表,tools,35,70,直流电压、通断、电阻测量；不能替代纹波/延迟验收仪器,工程预算预估，未获取实时店铺或服务商报价
+self_printed,全手焊 + PETG打印壳,consumables,焊锡 / 助焊剂 / 吸锡带 / 清洗耗材,tools,35,70,手焊耗材；不另计锡膏和钢网,工程预算预估，未获取实时店铺或服务商报价
+self_printed,全手焊 + PETG打印壳,hand_tools,镊子 / 斜口钳等小工具,tools,20,40,不含电钻、台钳、锉刀等壳体加工工具,工程预算预估，未获取实时店铺或服务商报价
+self_printed,全手焊 + PETG打印壳,practice_board,0805 / SOIC 焊接练习板与小料,tools,10,20,正式主板前练习；不算第二台效果器,工程预算预估，未获取实时店铺或服务商报价
