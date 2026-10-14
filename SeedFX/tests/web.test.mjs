@@ -1,0 +1,7 @@
+import test from 'node:test';import assert from 'node:assert/strict';import fs from 'node:fs';
+import {validateCommand,pitchNote,requestCommand} from '../web/api.js';
+const schema=JSON.parse(fs.readFileSync(new URL('../web/schema.json',import.meta.url)));
+test('every parameter accepts its default and rejects out-of-range/nonfinite values',()=>{for(const p of schema.parameters){assert.doesNotThrow(()=>validateCommand({op:'set',id:p.id,value:p.default},schema));for(const value of [NaN,Infinity,p.min-1,p.max+1])assert.throws(()=>validateCommand({op:'set',id:p.id,value},schema));}});
+test('preset and knob routing validation',()=>{assert.throws(()=>validateCommand({op:'load',preset:16},schema));assert.throws(()=>validateCommand({op:'knobs',knobs:[0,5,6,7,16,4]},schema));assert.doesNotThrow(()=>validateCommand({op:'knobs',knobs:schema.defaultKnobs},schema));});
+test('tuner pitch labels',()=>{assert.deepEqual(pitchNote(440),{name:'A4',cents:0});assert.equal(pitchNote(82.4069).name,'E2');assert.equal(pitchNote(0),null);});
+test('disconnected and rejected commands never report success',async()=>{await assert.rejects(requestCommand({op:'save',preset:0},schema,async()=>({ok:false,status:503})));await assert.rejects(requestCommand({op:'save',preset:0},schema,async()=>({ok:true,json:async()=>({ok:false})})));assert.equal((await requestCommand({op:'save',preset:0},schema,async()=>({ok:true,json:async()=>({ok:true})}))).ok,true);});

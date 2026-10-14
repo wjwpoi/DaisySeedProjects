@@ -1,0 +1,257 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-10-14T05:48:28.319679+00:00",
+  "referenceBase": "8e9f468ab0d35b87fafa33b9da2f017a0e6a865b",
+  "tools": {
+    "armGcc": "10.3.1",
+    "espIdf": "v5.4.2",
+    "espIdfCommit": "f5c3654a1c2d2a01f7f67def7a0dc48e691f63c0",
+    "kicad": "9.0.2",
+    "node": "v24.19.0",
+    "cadquery": "2.5.2"
+  },
+  "checks": [
+    {
+      "name": "hardware",
+      "command": [
+        "bash",
+        "tools/export_hardware.sh"
+      ],
+      "passed": true,
+      "log": "releases/verification-logs/hardware.log",
+      "logSHA256": "5b34126764fcc9e22e167f20a68e7469aa71f390313f6649e374f022590eac9d"
+    },
+    {
+      "name": "mechanical",
+      "command": [
+        "/workspace/daisy-environment/dev-python/bin/python",
+        "tools/mechanical.py"
+      ],
+      "passed": true,
+      "log": "releases/verification-logs/mechanical.log",
+      "logSHA256": "078fcebfb1cedd43a7bf4bfaef225f04da9292177111261705e9b67c7abe93ba"
+    },
+    {
+      "name": "audio-and-core",
+      "command": [
+        "make",
+        "test",
+        "audio"
+      ],
+      "passed": true,
+      "log": "releases/verification-logs/audio-and-core.log",
+      "logSHA256": "6e990cf4d2ad5d836d10c71a95fecfc37e72a377766bbb77bc1557a4e2df65b6"
+    },
+    {
+      "name": "browser",
+      "command": [
+        "node",
+        "tests/browser.cjs"
+      ],
+      "passed": true,
+      "log": "releases/verification-logs/browser.log",
+      "logSHA256": "899e75eaee68d533d904c097ee6f94ba98502a1d3fdf8a31193a54a59f6edaf7"
+    },
+    {
+      "name": "wireless",
+      "command": [
+        "bash",
+        "-c",
+        "source \"$1/export.sh\" && idf.py -C \"$2\" build",
+        "seedfx-build",
+        "/workspace/daisy-environment/esp-idf",
+        "/workspace/DaisySeedProjects/SeedFX/firmware/wireless"
+      ],
+      "passed": true,
+      "log": "releases/verification-logs/wireless.log",
+      "logSHA256": "4d5fada88ba3da6a29ca123f9c4b66736312839981a3fb482a395b0736606c41"
+    },
+    {
+      "name": "sanitize-build-arm_fir_f32",
+      "command": [
+        "gcc",
+        "-O1",
+        "-g",
+        "-fsanitize=address,undefined",
+        "-fno-omit-frame-pointer",
+        "-D__GNUC_PYTHON__",
+        "-DARM_MATH_LOOPUNROLL",
+        "-I/workspace/DaisySeedProjects/SeedFX/../Software/GuitarPedal/dependencies/libDaisy/Drivers/CMSIS-DSP/Include",
+        "-c",
+        "/workspace/DaisySeedProjects/SeedFX/../Software/GuitarPedal/dependencies/libDaisy/Drivers/CMSIS-DSP/Source/FilteringFunctions/arm_fir_f32.c",
+        "-o",
+        "/workspace/DaisySeedProjects/SeedFX/build/sanitized/arm_fir_f32.o"
+      ],
+      "passed": true,
+      "log": "releases/verification-logs/sanitize-build-arm_fir_f32.log",
+      "logSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "sanitize-build-arm_fir_init_f32",
+      "command": [
+        "gcc",
+        "-O1",
+        "-g",
+        "-fsanitize=address,undefined",
+        "-fno-omit-frame-pointer",
+        "-D__GNUC_PYTHON__",
+        "-DARM_MATH_LOOPUNROLL",
+        "-I/workspace/DaisySeedProjects/SeedFX/../Software/GuitarPedal/dependencies/libDaisy/Drivers/CMSIS-DSP/Include",
+        "-c",
+        "/workspace/DaisySeedProjects/SeedFX/../Software/GuitarPedal/dependencies/libDaisy/Drivers/CMSIS-DSP/Source/FilteringFunctions/arm_fir_init_f32.c",
+        "-o",
+        "/workspace/DaisySeedProjects/SeedFX/build/sanitized/arm_fir_init_f32.o"
+      ],
+      "passed": true,
+      "log": "releases/verification-logs/sanitize-build-arm_fir_init_f32.log",
+      "logSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "sanitize-build-core",
+      "command": [
+        "g++",
+        "-O1",
+        "-g",
+        "-fsanitize=address,undefined",
+        "-fno-omit-frame-pointer",
+        "-D__GNUC_PYTHON__",
+        "-DARM_MATH_LOOPUNROLL",
+        "-I/workspace/DaisySeedProjects/SeedFX/../Software/GuitarPedal/dependencies/libDaisy/Drivers/CMSIS-DSP/Include",
+        "-std=c++17",
+        "-DNAM_A2_HOT_DATA=",
+        "-DNAM_A2_HOT_STATE_DATA=",
+        "-DNAM_A2_STATE_DATA=",
+        "tests/core_test.cpp",
+        "../Software/GuitarPedal/Effect-Modules/ImpulseResponse/ir_data.cpp",
+        "/workspace/DaisySeedProjects/SeedFX/build/sanitized/arm_fir_f32.o",
+        "/workspace/DaisySeedProjects/SeedFX/build/sanitized/arm_fir_init_f32.o",
+        "-o",
+        "/workspace/DaisySeedProjects/SeedFX/build/sanitized/tests"
+      ],
+      "passed": true,
+      "log": "releases/verification-logs/sanitize-build-core.log",
+      "logSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "sanitizers",
+      "command": [
+        "/workspace/DaisySeedProjects/SeedFX/build/sanitized/tests"
+      ],
+      "passed": true,
+      "log": "releases/verification-logs/sanitizers.log",
+      "logSHA256": "287473acbec0e672745f11a9250bc2827467240b131231e1d5ebbd3986dcd9a8"
+    }
+  ],
+  "coreAssertions": 90967,
+  "pythonTests": 12,
+  "jsTests": 4,
+  "warmStart": {
+    "models": 5,
+    "samples": 15360,
+    "maxAbsoluteError": 8.64267349e-07
+  },
+  "daisyMemory": {
+    "DTCMRAM": {
+      "usedBytes": 48864,
+      "capacityBytes": 131072,
+      "percent": 37.28
+    },
+    "SRAM": {
+      "usedBytes": 187516,
+      "capacityBytes": 491520,
+      "percent": 38.15
+    },
+    "RAM_D2_DMA": {
+      "usedBytes": 16960,
+      "capacityBytes": 32768,
+      "percent": 51.76
+    },
+    "RAM_D2": {
+      "usedBytes": 76640,
+      "capacityBytes": 262144,
+      "percent": 29.24
+    },
+    "SDRAM": {
+      "usedBytes": 333064,
+      "capacityBytes": 67108864,
+      "percent": 0.5
+    }
+  },
+  "espApp": {
+    "sizeBytes": 908736,
+    "partitionBytes": 1048576
+  },
+  "pcb": {
+    "mainboard": {
+      "drcViolations": 0,
+      "unconnected": 0,
+      "schematicParity": 0,
+      "ercErrors": 0,
+      "ercWarnings": 125
+    },
+    "adapter": {
+      "drcViolations": 0,
+      "unconnected": 0,
+      "schematicParity": 0,
+      "ercErrors": 0,
+      "ercWarnings": 0
+    }
+  },
+  "mechanical": {
+    "lidBodyInterference_mm3": 0.0,
+    "lidSpacerInterference_mm3": 0.0,
+    "boardCaseInterference_mm3": 0.0,
+    "scope": "bare board and conservative accessory envelopes; main components use a procurement keepout, not measured CAD",
+    "pcbThickness_mm": 1.516200000000019,
+    "mainElectronicsDepthLimit_mm": 28,
+    "accessoryChecks": [
+      {
+        "name": "radio_adapter",
+        "caseBoardLidInterference_mm3": 0.0,
+        "clearanceToMainKeepout_mm": 1.6999999999999957
+      },
+      {
+        "name": "xiao_esp32c3",
+        "caseBoardLidInterference_mm3": 0.0,
+        "clearanceToMainKeepout_mm": 6.299999999999997
+      },
+      {
+        "name": "mini360",
+        "caseBoardLidInterference_mm3": 0.0,
+        "clearanceToMainKeepout_mm": 6.299999999999997
+      }
+    ]
+  },
+  "cost": {
+    "currency": "CNY",
+    "basis": "engineering planning estimate, not current quotations",
+    "partsLow": 563.4,
+    "partsHigh": 1076,
+    "excluded": [
+      "shipping",
+      "PCB/SMT setup not shared across units",
+      "manual assembly",
+      "RF window machining",
+      "repeated prototypes",
+      "external 9V adapter",
+      "development labor"
+    ],
+    "costDown": [
+      "share five-board setup",
+      "retain standard enclosure and generic knobs",
+      "fixed 5V >=1A buck substitute only after voltage/ripple/transient validation",
+      "omit the MIDI population"
+    ]
+  },
+  "physicalTestsExecuted": false,
+  "unverified": [
+    "USB flashing",
+    "analog audio and listening",
+    "round-trip latency and callback time",
+    "switch time",
+    "power ripple and thermal behavior",
+    "RF range/noise",
+    "actual supplier component fit and tolerances",
+    "power-cut during physical flash write"
+  ]
+}

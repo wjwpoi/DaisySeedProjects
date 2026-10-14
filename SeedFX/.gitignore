@@ -1,0 +1,9 @@
+build/
+firmware/audio/build/
+firmware/wireless/build/
+firmware/wireless/sdkconfig
+firmware/wireless/sdkconfig.old
+hardware/**/_autosave-*
+__pycache__/
+
+hardware/**/*.kicad_prl

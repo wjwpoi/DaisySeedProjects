@@ -1,0 +1,9 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#151916"><title>SeedFX · 效果器控制</title><link rel="stylesheet" href="/style.css"></head>
+<body><header><div><span class="eyebrow">NAM A2 / MULTI EFFECTS</span><h1>SeedFX<span class="accent">.</span></h1></div><span id="connection" role="status">正在连接</span></header>
+<main><section class="hero"><div><span class="eyebrow">当前音色</span><h2 id="modelName">—</h2><p id="presetName">读取效果器状态…</p></div><div class="meters"><label>INPUT <meter id="inputMeter" min="0" max="1" value="0"></meter></label><label>OUTPUT <meter id="outputMeter" min="0" max="1" value="0"></meter></label><span id="cpu">—</span><strong id="clip"></strong></div></section>
+<section class="toolbar"><label>目标槽位 <select id="preset"></select></label><button id="load">载入</button><button id="save" class="primary">保存到此槽位</button><button id="bypass" aria-pressed="false">旁通</button><button id="tuner" aria-pressed="false">调音器</button><button id="tap">Tap Tempo</button></section>
+<section id="tunerPanel" hidden aria-live="polite"><strong id="note">—</strong><span id="cents">弹奏单音开始调音</span></section>
+<section id="effects" aria-label="音色与效果参数"></section>
+<details class="mapping"><summary>自定义六旋钮</summary><p>改映射或载入预设后，转动实体旋钮到屏幕中的数值即可接管。映射随预设保存。</p><div id="knobMaps"></div><button id="applyMaps">应用旋钮映射</button><button id="resetMaps">恢复当前映射</button></details>
+<p id="notice" role="status" aria-live="polite"></p><footer>本机音频 · 无线调参<br>连接 SeedFX Wi-Fi 后使用本页面。离线时不会覆盖效果器设置。</footer></main><script type="module" src="/app.js"></script></body></html>

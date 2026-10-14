@@ -1,0 +1,154 @@
+{
+  "units": "mm",
+  "body": {
+    "width": 66.0,
+    "height": 121.5,
+    "depth": 42.0,
+    "wall": 1.5,
+    "bareBodyDepth": 38.5,
+    "lidThickness": 1.5,
+    "lidSpacerThickness": 2
+  },
+  "frontHoles": [
+    {
+      "ref": "POT1",
+      "x": 13,
+      "y": 17,
+      "diameter": 7.2,
+      "label": "INPUT"
+    },
+    {
+      "ref": "POT2",
+      "x": 33,
+      "y": 17,
+      "diameter": 7.2,
+      "label": "BASS"
+    },
+    {
+      "ref": "POT3",
+      "x": 53,
+      "y": 17,
+      "diameter": 7.2,
+      "label": "MID"
+    },
+    {
+      "ref": "POT4",
+      "x": 13,
+      "y": 40.5,
+      "diameter": 7.2,
+      "label": "TREBLE"
+    },
+    {
+      "ref": "POT5",
+      "x": 33,
+      "y": 40.5,
+      "diameter": 7.2,
+      "label": "LEVEL"
+    },
+    {
+      "ref": "POT6",
+      "x": 53,
+      "y": 40.5,
+      "diameter": 7.2,
+      "label": "USER"
+    },
+    {
+      "ref": "ENC1",
+      "x": 33,
+      "y": 81.275,
+      "diameter": 7.2,
+      "label": "EDIT"
+    },
+    {
+      "ref": "LED1",
+      "x": 15,
+      "y": 87.5,
+      "diameter": 3.2,
+      "label": "ON"
+    },
+    {
+      "ref": "LED2",
+      "x": 51,
+      "y": 87.5,
+      "diameter": 3.2,
+      "label": "CLIP"
+    },
+    {
+      "ref": "FS1",
+      "x": 15,
+      "y": 106.5,
+      "diameter": 12.2,
+      "label": "BYPASS / TUNER"
+    },
+    {
+      "ref": "FS2",
+      "x": 51,
+      "y": 106.5,
+      "diameter": 12.2,
+      "label": "TAP / PRESET"
+    }
+  ],
+  "display": {
+    "x": 21.5,
+    "y": 53.0,
+    "width": 23.0,
+    "height": 12.0
+  },
+  "radioWindow": {
+    "side": "right",
+    "y": 24,
+    "z": 20,
+    "length": 40,
+    "height": 17
+  },
+  "pcbTransform": {
+    "x": "175 - pcb_x",
+    "y": "pcb_y - 37.5",
+    "z": 14.5
+  },
+  "accessoryEnvelopes": [
+    {
+      "name": "radio_adapter",
+      "x": 5,
+      "y": 55.5,
+      "z": 29.699999999999996,
+      "width": 32,
+      "length": 28,
+      "height": 7.6
+    },
+    {
+      "name": "xiao_esp32c3",
+      "x": 38.5,
+      "y": 55.5,
+      "z": 34.3,
+      "width": 21,
+      "length": 17.5,
+      "height": 4
+    },
+    {
+      "name": "mini360",
+      "x": 39.5,
+      "y": 76,
+      "z": 34.3,
+      "width": 18,
+      "length": 14,
+      "height": 4
+    }
+  ],
+  "adapterMountHoles": [
+    [
+      34,
+      57.5
+    ],
+    [
+      15,
+      81.5
+    ]
+  ],
+  "trayDepth": 39.3,
+  "assemblyAssumptions": {
+    "seedKeepoutDepthMax": 28,
+    "accessoryLayerDepthMin": 29.7,
+    "needsPhysicalFitCheck": true
+  }
+}

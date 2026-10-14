@@ -1,0 +1,1130 @@
+(kicad_sch (version 20250114) (generator "eeschema") (uuid 14f6f7f7-afd8-4a2b-9597-4f9b7caecdfe) (paper "A4")
+(title_block (title "SeedFX wireless power / UART adapter") (rev "1.0") (comment 1 "230400 baud; 3.3 V logic; disconnect UART harness during independent USB flashing"))
+(lib_symbols
+(symbol "Connector_Generic:Conn_01x02"
+		(pin_names
+			(offset 1.016)
+			(hide yes)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(property "Reference" "J"
+			(at 0 2.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Conn_01x02"
+			(at 0 -5.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ki_keywords" "connector"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ki_fp_filters" "Connector*:*_1x??_*"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(symbol "Conn_01x02_1_1"
+			(rectangle
+				(start -1.27 1.27)
+				(end 1.27 -3.81)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type background)
+				)
+			)
+			(rectangle
+				(start -1.27 0.127)
+				(end 0 -0.127)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(rectangle
+				(start -1.27 -2.413)
+				(end 0 -2.667)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(pin passive line
+				(at -5.08 0 0)
+				(length 3.81)
+				(name "Pin_1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -5.08 -2.54 0)
+				(length 3.81)
+				(name "Pin_2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+(symbol "Connector_Generic:Conn_01x03"
+		(pin_names
+			(offset 1.016)
+			(hide yes)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(property "Reference" "J"
+			(at 0 5.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Conn_01x03"
+			(at 0 -5.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ki_keywords" "connector"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ki_fp_filters" "Connector*:*_1x??_*"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(symbol "Conn_01x03_1_1"
+			(rectangle
+				(start -1.27 3.81)
+				(end 1.27 -3.81)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type background)
+				)
+			)
+			(rectangle
+				(start -1.27 2.667)
+				(end 0 2.413)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(rectangle
+				(start -1.27 0.127)
+				(end 0 -0.127)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(rectangle
+				(start -1.27 -2.413)
+				(end 0 -2.667)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(pin passive line
+				(at -5.08 2.54 0)
+				(length 3.81)
+				(name "Pin_1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -5.08 0 0)
+				(length 3.81)
+				(name "Pin_2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -5.08 -2.54 0)
+				(length 3.81)
+				(name "Pin_3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+(symbol "Connector_Generic:Conn_01x04"
+		(pin_names
+			(offset 1.016)
+			(hide yes)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(property "Reference" "J"
+			(at 0 5.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Conn_01x04"
+			(at 0 -7.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ki_keywords" "connector"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ki_fp_filters" "Connector*:*_1x??_*"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(symbol "Conn_01x04_1_1"
+			(rectangle
+				(start -1.27 3.81)
+				(end 1.27 -6.35)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type background)
+				)
+			)
+			(rectangle
+				(start -1.27 2.667)
+				(end 0 2.413)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(rectangle
+				(start -1.27 0.127)
+				(end 0 -0.127)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(rectangle
+				(start -1.27 -2.413)
+				(end 0 -2.667)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(rectangle
+				(start -1.27 -4.953)
+				(end 0 -5.207)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(pin passive line
+				(at -5.08 2.54 0)
+				(length 3.81)
+				(name "Pin_1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -5.08 0 0)
+				(length 3.81)
+				(name "Pin_2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -5.08 -2.54 0)
+				(length 3.81)
+				(name "Pin_3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -5.08 -5.08 0)
+				(length 3.81)
+				(name "Pin_4"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "4"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+(symbol "Device:C"
+		(pin_numbers
+			(hide yes)
+		)
+		(pin_names
+			(offset 0.254)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(property "Reference" "C"
+			(at 0.635 2.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "C"
+			(at 0.635 -2.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 0.9652 -3.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ki_keywords" "cap capacitor"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ki_fp_filters" "C_*"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(symbol "C_0_1"
+			(polyline
+				(pts
+					(xy -2.032 0.762) (xy 2.032 0.762)
+				)
+				(stroke
+					(width 0.508)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy -2.032 -0.762) (xy 2.032 -0.762)
+				)
+				(stroke
+					(width 0.508)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+		)
+		(symbol "C_1_1"
+			(pin passive line
+				(at 0 3.81 270)
+				(length 2.794)
+				(name "~"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 0 -3.81 90)
+				(length 2.794)
+				(name "~"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+(symbol "Device:FerriteBead"
+		(pin_numbers
+			(hide yes)
+		)
+		(pin_names
+			(offset 0)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(property "Reference" "FB"
+			(at -3.81 0.635 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "FerriteBead"
+			(at 3.81 0 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at -1.778 0 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Ferrite bead"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ki_keywords" "L ferrite bead inductor filter"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ki_fp_filters" "Inductor_* L_* *Ferrite*"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(symbol "FerriteBead_0_1"
+			(polyline
+				(pts
+					(xy -2.7686 0.4064) (xy -1.7018 2.2606) (xy 2.7686 -0.3048) (xy 1.6764 -2.159) (xy -2.7686 0.4064)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 0 1.27) (xy 0 1.2954)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 0 -1.27) (xy 0 -1.2192)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+		)
+		(symbol "FerriteBead_1_1"
+			(pin passive line
+				(at 0 3.81 270)
+				(length 2.54)
+				(name "~"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 0 -3.81 90)
+				(length 2.54)
+				(name "~"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+(symbol "Device:R"
+		(pin_numbers
+			(hide yes)
+		)
+		(pin_names
+			(offset 0)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(property "Reference" "R"
+			(at 2.032 0 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "R"
+			(at 0 0 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at -1.778 0 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ki_keywords" "R res resistor"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ki_fp_filters" "R_*"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(symbol "R_0_1"
+			(rectangle
+				(start -1.016 -2.54)
+				(end 1.016 2.54)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+		)
+		(symbol "R_1_1"
+			(pin passive line
+				(at 0 3.81 270)
+				(length 1.27)
+				(name "~"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 0 -3.81 90)
+				(length 1.27)
+				(name "~"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+(symbol "Mechanical:MountingHole"
+		(pin_names
+			(offset 1.016)
+		)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(property "Reference" "H"
+			(at 0 5.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "MountingHole"
+			(at 0 3.175 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Mounting Hole without connection"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ki_keywords" "mounting hole"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ki_fp_filters" "MountingHole*"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(symbol "MountingHole_0_1"
+			(circle
+				(center 0 0)
+				(radius 1.27)
+				(stroke
+					(width 1.27)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+		)
+		(embedded_fonts no)
+	))
+(symbol (lib_id "Connector_Generic:Conn_01x02") (at 35.56 35.56 0) (unit 1) (in_bom yes) (on_board yes) (uuid 859f1362-da39-46a8-8c32-05284ef00be5)
+(property "Reference" "J1" (at 35.56 25.560000000000002 0) (effects (font (size 1.27 1.27))))
+(property "Value" "5V BUCK INPUT" (at 35.56 45.56 0) (effects (font (size 1.27 1.27))))
+(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" (at 35.56 35.56 0) (effects (font (size 1.27 1.27)) hide))
+(pin "1" (uuid 7082da11-2f29-44b2-97fe-558dd5c261f5))
+(pin "2" (uuid b62af464-0cae-4a0e-8648-06080a222880))
+(instances (project "seedfx-adapter" (path "/14f6f7f7-afd8-4a2b-9597-4f9b7caecdfe" (reference "J1") (unit 1)))) )
+(wire (pts (xy 30.480000000000004 35.56) (xy 25.400000000000006 35.56)) (stroke (width 0) (type default)) (uuid 262680cc-4d47-4b0c-9fd4-6d15d2f65bcf))
+(label "5V_SOURCE" (at 25.400000000000006 35.56 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid 3a6e5b0f-28e6-4c06-8b8b-4cd4f91a3e34))
+(wire (pts (xy 30.480000000000004 38.1) (xy 25.400000000000006 38.1)) (stroke (width 0) (type default)) (uuid bf75aab8-f8a3-479f-8016-4a3dfeb08519))
+(label "GND" (at 25.400000000000006 38.1 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid 2c898ee3-0d1b-41c2-97d5-4ccd3513c7d3))
+(symbol (lib_id "Connector_Generic:Conn_01x04") (at 35.56 85.09 0) (unit 1) (in_bom yes) (on_board yes) (uuid 88caa326-ecdc-48d0-a8d5-572855821a42)
+(property "Reference" "J2" (at 35.56 75.09 0) (effects (font (size 1.27 1.27))))
+(property "Value" "XIAO HARNESS" (at 35.56 95.09 0) (effects (font (size 1.27 1.27))))
+(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" (at 35.56 85.09 0) (effects (font (size 1.27 1.27)) hide))
+(pin "1" (uuid e7148b90-add9-405b-89f9-74cba835aa52))
+(pin "2" (uuid e01a6d46-75fd-4ed6-9d0d-ab0883a4de40))
+(pin "3" (uuid bcac0743-6daa-470f-ae63-699965ac6298))
+(pin "4" (uuid 4a66dc5d-9b73-4eeb-9dd9-f74318c8f438))
+(instances (project "seedfx-adapter" (path "/14f6f7f7-afd8-4a2b-9597-4f9b7caecdfe" (reference "J2") (unit 1)))) )
+(wire (pts (xy 30.480000000000004 82.55) (xy 25.400000000000006 82.55)) (stroke (width 0) (type default)) (uuid 466969b6-5d86-4a79-9361-f6936936918f))
+(label "5V_WIFI" (at 25.400000000000006 82.55 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid 397a0b10-bacf-4ce0-af78-ba9f1110d604))
+(wire (pts (xy 30.480000000000004 85.09) (xy 25.400000000000006 85.09)) (stroke (width 0) (type default)) (uuid 7c9c0967-5067-4580-84f1-ca09423914b1))
+(label "GND" (at 25.400000000000006 85.09 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid 88ad1c99-796e-4e30-969a-3a3ad9f02512))
+(wire (pts (xy 30.480000000000004 87.63000000000001) (xy 25.400000000000006 87.63000000000001)) (stroke (width 0) (type default)) (uuid 377c8ca1-aae3-414f-a54c-ac760a9776be))
+(label "ESP_TX" (at 25.400000000000006 87.63000000000001 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid ad3e1694-4cb7-4971-b93e-b90514085b4a))
+(wire (pts (xy 30.480000000000004 90.17) (xy 25.400000000000006 90.17)) (stroke (width 0) (type default)) (uuid 5b2d20af-66be-4411-87c0-8ebfd6055a5b))
+(label "ESP_RX" (at 25.400000000000006 90.17 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid 14cd72e9-9370-47a0-94ce-6d6a1a4c9f27))
+(symbol (lib_id "Connector_Generic:Conn_01x03") (at 119.38 85.09 0) (unit 1) (in_bom yes) (on_board yes) (uuid b161748b-6e99-43dd-87be-f3de2c1c29db)
+(property "Reference" "J3" (at 119.38 75.09 0) (effects (font (size 1.27 1.27))))
+(property "Value" "DAISY HARNESS" (at 119.38 95.09 0) (effects (font (size 1.27 1.27))))
+(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" (at 119.38 85.09 0) (effects (font (size 1.27 1.27)) hide))
+(pin "1" (uuid a292efcf-8509-4b0e-a232-e9aa62ca42ed))
+(pin "2" (uuid 84c2014c-2d84-49d4-8cee-84b7a12946fc))
+(pin "3" (uuid 6a10f5d7-737c-4d06-9561-a8168b3bafc4))
+(instances (project "seedfx-adapter" (path "/14f6f7f7-afd8-4a2b-9597-4f9b7caecdfe" (reference "J3") (unit 1)))) )
+(wire (pts (xy 114.3 82.55) (xy 109.22 82.55)) (stroke (width 0) (type default)) (uuid 5c33eeea-6a06-419b-9a39-6107c8ccc81a))
+(label "GND" (at 109.22 82.55 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid f7550fe6-6bde-4bbd-947c-29ebb4d63317))
+(wire (pts (xy 114.3 85.09) (xy 109.22 85.09)) (stroke (width 0) (type default)) (uuid cc3352bd-fd8d-44f9-886b-ce6f302b1324))
+(label "SEED_TX" (at 109.22 85.09 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid f324fa22-1471-4ce7-85ba-3cef3822c556))
+(wire (pts (xy 114.3 87.63000000000001) (xy 109.22 87.63000000000001)) (stroke (width 0) (type default)) (uuid a072ff54-0599-4a32-a21a-185be638c8ce))
+(label "SEED_RX" (at 109.22 87.63000000000001 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid 09832433-350e-4a9c-b2e8-e848c7def6b2))
+(symbol (lib_id "Device:FerriteBead") (at 85.09 35.56 0) (unit 1) (in_bom yes) (on_board yes) (uuid e20203e3-ea3a-43e3-b861-7fa7fca17079)
+(property "Reference" "FB1" (at 85.09 25.560000000000002 0) (effects (font (size 1.27 1.27))))
+(property "Value" "BLM21PG601SN1D" (at 85.09 45.56 0) (effects (font (size 1.27 1.27))))
+(property "Footprint" "Inductor_SMD:L_0805_2012Metric" (at 85.09 35.56 0) (effects (font (size 1.27 1.27)) hide))
+(pin "1" (uuid 89ff9655-25f0-4283-bd26-3741ff248dbc))
+(pin "2" (uuid 9573102b-a4ba-471f-a130-94a9752a9d2d))
+(instances (project "seedfx-adapter" (path "/14f6f7f7-afd8-4a2b-9597-4f9b7caecdfe" (reference "FB1") (unit 1)))) )
+(wire (pts (xy 85.09 31.750000000000004) (xy 80.01 31.750000000000004)) (stroke (width 0) (type default)) (uuid f1c2d9b6-6c9a-42f2-a452-7db361d0b2dc))
+(label "5V_SOURCE" (at 80.01 31.750000000000004 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid e0e90cee-c044-4651-bd7a-3d4f94fedecc))
+(wire (pts (xy 85.09 39.370000000000005) (xy 80.01 39.370000000000005)) (stroke (width 0) (type default)) (uuid 007d5734-0c08-4224-92c1-b191f30afc11))
+(label "5V_WIFI" (at 80.01 39.370000000000005 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid c55cdfaf-9a5a-4ff2-8b40-0d87bf8a1d7a))
+(symbol (lib_id "Device:C") (at 129.54 35.56 0) (unit 1) (in_bom yes) (on_board yes) (uuid da6bc9fb-f493-4f1a-8f41-d2adfa52a4d3)
+(property "Reference" "C1" (at 129.54 25.560000000000002 0) (effects (font (size 1.27 1.27))))
+(property "Value" "22u 10V X5R" (at 129.54 45.56 0) (effects (font (size 1.27 1.27))))
+(property "Footprint" "Capacitor_SMD:C_1206_3216Metric" (at 129.54 35.56 0) (effects (font (size 1.27 1.27)) hide))
+(pin "1" (uuid 11505513-da20-47f7-96d6-cfbf2c633e4e))
+(pin "2" (uuid 0433949e-1a89-45d2-a63b-bd167a94362f))
+(instances (project "seedfx-adapter" (path "/14f6f7f7-afd8-4a2b-9597-4f9b7caecdfe" (reference "C1") (unit 1)))) )
+(wire (pts (xy 129.54 31.750000000000004) (xy 124.46 31.750000000000004)) (stroke (width 0) (type default)) (uuid 20fc9516-e07c-4cf6-874d-cf98f407dc51))
+(label "5V_WIFI" (at 124.46 31.750000000000004 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid 4c71f800-f3ad-4a68-9724-ab75a69a24b4))
+(wire (pts (xy 129.54 39.370000000000005) (xy 124.46 39.370000000000005)) (stroke (width 0) (type default)) (uuid 453ff7da-10a5-41b2-911f-f8f0f73b9c38))
+(label "GND" (at 124.46 39.370000000000005 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid c23f397e-3f48-4cc4-be6e-d3aa3b6a1cba))
+(symbol (lib_id "Device:C") (at 175.26 35.56 0) (unit 1) (in_bom yes) (on_board yes) (uuid 5880e080-2775-49ae-aea9-d84295074d14)
+(property "Reference" "C2" (at 175.26 25.560000000000002 0) (effects (font (size 1.27 1.27))))
+(property "Value" "22u 10V X5R" (at 175.26 45.56 0) (effects (font (size 1.27 1.27))))
+(property "Footprint" "Capacitor_SMD:C_1206_3216Metric" (at 175.26 35.56 0) (effects (font (size 1.27 1.27)) hide))
+(pin "1" (uuid 4e99fb92-910a-46f8-87c9-727369b50182))
+(pin "2" (uuid 03338a99-c2ce-476d-baea-9ef4f60e0109))
+(instances (project "seedfx-adapter" (path "/14f6f7f7-afd8-4a2b-9597-4f9b7caecdfe" (reference "C2") (unit 1)))) )
+(wire (pts (xy 175.26 31.750000000000004) (xy 170.17999999999998 31.750000000000004)) (stroke (width 0) (type default)) (uuid 94e64f4a-5918-433f-8b17-f3805bfa90d2))
+(label "5V_WIFI" (at 170.17999999999998 31.750000000000004 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid df1a3dc4-0562-41c5-b06c-a37c9a947381))
+(wire (pts (xy 175.26 39.370000000000005) (xy 170.17999999999998 39.370000000000005)) (stroke (width 0) (type default)) (uuid 40a69f7d-674d-4647-b25d-8c85a06581d6))
+(label "GND" (at 170.17999999999998 39.370000000000005 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid cfaca7cd-ca5a-400f-8802-20497162de10))
+(symbol (lib_id "Device:C") (at 219.71 35.56 0) (unit 1) (in_bom yes) (on_board yes) (uuid 4b2ffa82-9979-4c52-a198-31068469cd95)
+(property "Reference" "C3" (at 219.71 25.560000000000002 0) (effects (font (size 1.27 1.27))))
+(property "Value" "100n 50V X7R" (at 219.71 45.56 0) (effects (font (size 1.27 1.27))))
+(property "Footprint" "Capacitor_SMD:C_0805_2012Metric" (at 219.71 35.56 0) (effects (font (size 1.27 1.27)) hide))
+(pin "1" (uuid 7c324b89-b799-401b-a0f5-9de5178205ed))
+(pin "2" (uuid fbeda895-c781-4622-89cb-ad5fd6ddfe0d))
+(instances (project "seedfx-adapter" (path "/14f6f7f7-afd8-4a2b-9597-4f9b7caecdfe" (reference "C3") (unit 1)))) )
+(wire (pts (xy 219.71 31.750000000000004) (xy 214.63 31.750000000000004)) (stroke (width 0) (type default)) (uuid e3871a82-5dc8-4b8d-a907-71a067f52460))
+(label "5V_WIFI" (at 214.63 31.750000000000004 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid e675a2ec-597f-4a3e-afc7-9234394fe56f))
+(wire (pts (xy 219.71 39.370000000000005) (xy 214.63 39.370000000000005)) (stroke (width 0) (type default)) (uuid 9615261e-a7f8-4f95-ab9e-228d3ab9adcb))
+(label "GND" (at 214.63 39.370000000000005 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid 5a0d3fe5-e2b7-4ac5-a3f1-a1faaf2fdefb))
+(symbol (lib_id "Device:R") (at 175.26 85.09 0) (unit 1) (in_bom yes) (on_board yes) (uuid 2fb19091-02e4-4e44-af55-2e784393b386)
+(property "Reference" "R1" (at 175.26 75.09 0) (effects (font (size 1.27 1.27))))
+(property "Value" "1k 1%" (at 175.26 95.09 0) (effects (font (size 1.27 1.27))))
+(property "Footprint" "Resistor_SMD:R_0805_2012Metric" (at 175.26 85.09 0) (effects (font (size 1.27 1.27)) hide))
+(pin "1" (uuid 8627389b-9f19-4332-8d50-2c39faa2ca11))
+(pin "2" (uuid ee5c5d3a-e12b-4d0b-9243-2280d3c23e6a))
+(instances (project "seedfx-adapter" (path "/14f6f7f7-afd8-4a2b-9597-4f9b7caecdfe" (reference "R1") (unit 1)))) )
+(wire (pts (xy 175.26 81.28) (xy 170.17999999999998 81.28)) (stroke (width 0) (type default)) (uuid 21927b00-ef54-4f63-880a-e1dd2d7bc769))
+(label "SEED_TX" (at 170.17999999999998 81.28 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid 11a1c551-a38e-4863-a8aa-61f91fb91190))
+(wire (pts (xy 175.26 88.9) (xy 170.17999999999998 88.9)) (stroke (width 0) (type default)) (uuid fe1a8d3f-1f88-4025-ad14-f14adbc3dfbc))
+(label "ESP_RX" (at 170.17999999999998 88.9 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid c9d5ffe0-4689-4465-b984-fbbf9985c40d))
+(symbol (lib_id "Device:R") (at 219.71 85.09 0) (unit 1) (in_bom yes) (on_board yes) (uuid 0d87ae83-1254-46f4-a9f9-6a4e4896bfb4)
+(property "Reference" "R2" (at 219.71 75.09 0) (effects (font (size 1.27 1.27))))
+(property "Value" "1k 1%" (at 219.71 95.09 0) (effects (font (size 1.27 1.27))))
+(property "Footprint" "Resistor_SMD:R_0805_2012Metric" (at 219.71 85.09 0) (effects (font (size 1.27 1.27)) hide))
+(pin "1" (uuid 4c54f2bb-d996-49ae-b82d-289da8b95792))
+(pin "2" (uuid c83e30bc-0fc8-44d3-a46a-8dd9bd69fa30))
+(instances (project "seedfx-adapter" (path "/14f6f7f7-afd8-4a2b-9597-4f9b7caecdfe" (reference "R2") (unit 1)))) )
+(wire (pts (xy 219.71 81.28) (xy 214.63 81.28)) (stroke (width 0) (type default)) (uuid 44f9d7e9-e28d-43cc-8452-29a5c74a6bc5))
+(label "ESP_TX" (at 214.63 81.28 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid 166a3672-c48e-4bee-a669-28d7f6fc535d))
+(wire (pts (xy 219.71 88.9) (xy 214.63 88.9)) (stroke (width 0) (type default)) (uuid e3d044f5-88d2-4907-a1cf-206a93968196))
+(label "SEED_RX" (at 214.63 88.9 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid 9bd9f9e8-4ff9-4389-8f3f-85ceabd0317e))
+(symbol (lib_id "Mechanical:MountingHole") (at 35.56 134.62 0) (unit 1) (in_bom no) (on_board yes) (uuid 31493871-4223-4b4f-8f1e-1e41e04304ad)
+(property "Reference" "H1" (at 35.56 124.62 0) (effects (font (size 1.27 1.27))))
+(property "Value" "M2 NPTH" (at 35.56 144.62 0) (effects (font (size 1.27 1.27))))
+(property "Footprint" "MountingHole:MountingHole_2.2mm_M2" (at 35.56 134.62 0) (effects (font (size 1.27 1.27)) hide))
+(instances (project "seedfx-adapter" (path "/14f6f7f7-afd8-4a2b-9597-4f9b7caecdfe" (reference "H1") (unit 1)))) )
+(symbol (lib_id "Mechanical:MountingHole") (at 85.09 134.62 0) (unit 1) (in_bom no) (on_board yes) (uuid 8e4a2ec4-f283-4f3a-8a5a-40294171f754)
+(property "Reference" "H2" (at 85.09 124.62 0) (effects (font (size 1.27 1.27))))
+(property "Value" "M2 NPTH" (at 85.09 144.62 0) (effects (font (size 1.27 1.27))))
+(property "Footprint" "MountingHole:MountingHole_2.2mm_M2" (at 85.09 134.62 0) (effects (font (size 1.27 1.27)) hide))
+(instances (project "seedfx-adapter" (path "/14f6f7f7-afd8-4a2b-9597-4f9b7caecdfe" (reference "H2") (unit 1)))) )
+)

@@ -1,0 +1,287 @@
+{
+  "version": 1,
+  "sampleRate": 48000,
+  "blockSize": 48,
+  "presetCount": 16,
+  "parameters": [
+    {
+      "id": 0,
+      "key": "input",
+      "label": "Input",
+      "unit": "dB",
+      "min": -18.0,
+      "max": 18.0,
+      "default": 0.0,
+      "integer": false
+    },
+    {
+      "id": 1,
+      "key": "gate",
+      "label": "Gate",
+      "unit": "dB",
+      "min": -80.0,
+      "max": -20.0,
+      "default": -65.0,
+      "integer": false
+    },
+    {
+      "id": 2,
+      "key": "comp",
+      "label": "Compress",
+      "unit": "%",
+      "min": 0.0,
+      "max": 100.0,
+      "default": 25.0,
+      "integer": false
+    },
+    {
+      "id": 3,
+      "key": "drive",
+      "label": "Drive",
+      "unit": "%",
+      "min": 0.0,
+      "max": 100.0,
+      "default": 20.0,
+      "integer": false
+    },
+    {
+      "id": 4,
+      "key": "model",
+      "label": "Amp model",
+      "unit": "",
+      "min": 0.0,
+      "max": 4.0,
+      "default": 0.0,
+      "integer": true
+    },
+    {
+      "id": 5,
+      "key": "bass",
+      "label": "Bass",
+      "unit": "dB",
+      "min": -12.0,
+      "max": 12.0,
+      "default": 0.0,
+      "integer": false
+    },
+    {
+      "id": 6,
+      "key": "mid",
+      "label": "Mid",
+      "unit": "dB",
+      "min": -12.0,
+      "max": 12.0,
+      "default": 0.0,
+      "integer": false
+    },
+    {
+      "id": 7,
+      "key": "treble",
+      "label": "Treble",
+      "unit": "dB",
+      "min": -12.0,
+      "max": 12.0,
+      "default": 0.0,
+      "integer": false
+    },
+    {
+      "id": 8,
+      "key": "cab",
+      "label": "Cabinet",
+      "unit": "",
+      "min": 0.0,
+      "max": 1.0,
+      "default": 0.0,
+      "integer": true
+    },
+    {
+      "id": 9,
+      "key": "chorus",
+      "label": "Chorus",
+      "unit": "%",
+      "min": 0.0,
+      "max": 100.0,
+      "default": 20.0,
+      "integer": false
+    },
+    {
+      "id": 10,
+      "key": "chorus_rate",
+      "label": "Chorus rate",
+      "unit": "Hz",
+      "min": 0.1,
+      "max": 4.0,
+      "default": 0.8,
+      "integer": false
+    },
+    {
+      "id": 11,
+      "key": "delay",
+      "label": "Delay",
+      "unit": "%",
+      "min": 0.0,
+      "max": 100.0,
+      "default": 20.0,
+      "integer": false
+    },
+    {
+      "id": 12,
+      "key": "delay_time",
+      "label": "Delay time",
+      "unit": "ms",
+      "min": 40.0,
+      "max": 1500.0,
+      "default": 320.0,
+      "integer": false
+    },
+    {
+      "id": 13,
+      "key": "feedback",
+      "label": "Feedback",
+      "unit": "%",
+      "min": 0.0,
+      "max": 85.0,
+      "default": 30.0,
+      "integer": false
+    },
+    {
+      "id": 14,
+      "key": "reverb",
+      "label": "Reverb",
+      "unit": "%",
+      "min": 0.0,
+      "max": 60.0,
+      "default": 12.0,
+      "integer": false
+    },
+    {
+      "id": 15,
+      "key": "decay",
+      "label": "Reverb decay",
+      "unit": "%",
+      "min": 0.0,
+      "max": 95.0,
+      "default": 50.0,
+      "integer": false
+    },
+    {
+      "id": 16,
+      "key": "level",
+      "label": "Output",
+      "unit": "dB",
+      "min": -30.0,
+      "max": 6.0,
+      "default": -6.0,
+      "integer": false
+    },
+    {
+      "id": 17,
+      "key": "amp_on",
+      "label": "Amp",
+      "unit": "",
+      "min": 0.0,
+      "max": 1.0,
+      "default": 1.0,
+      "integer": true
+    },
+    {
+      "id": 18,
+      "key": "gate_on",
+      "label": "Gate",
+      "unit": "",
+      "min": 0.0,
+      "max": 1.0,
+      "default": 1.0,
+      "integer": true
+    },
+    {
+      "id": 19,
+      "key": "comp_on",
+      "label": "Compressor",
+      "unit": "",
+      "min": 0.0,
+      "max": 1.0,
+      "default": 0.0,
+      "integer": true
+    },
+    {
+      "id": 20,
+      "key": "drive_on",
+      "label": "Overdrive",
+      "unit": "",
+      "min": 0.0,
+      "max": 1.0,
+      "default": 0.0,
+      "integer": true
+    },
+    {
+      "id": 21,
+      "key": "eq_on",
+      "label": "Equalizer",
+      "unit": "",
+      "min": 0.0,
+      "max": 1.0,
+      "default": 1.0,
+      "integer": true
+    },
+    {
+      "id": 22,
+      "key": "cab_on",
+      "label": "Cabinet",
+      "unit": "",
+      "min": 0.0,
+      "max": 1.0,
+      "default": 1.0,
+      "integer": true
+    },
+    {
+      "id": 23,
+      "key": "chorus_on",
+      "label": "Chorus",
+      "unit": "",
+      "min": 0.0,
+      "max": 1.0,
+      "default": 0.0,
+      "integer": true
+    },
+    {
+      "id": 24,
+      "key": "delay_on",
+      "label": "Delay",
+      "unit": "",
+      "min": 0.0,
+      "max": 1.0,
+      "default": 0.0,
+      "integer": true
+    },
+    {
+      "id": 25,
+      "key": "reverb_on",
+      "label": "Reverb",
+      "unit": "",
+      "min": 0.0,
+      "max": 1.0,
+      "default": 0.0,
+      "integer": true
+    }
+  ],
+  "models": [
+    "BE-100",
+    "JCM800",
+    "Ampeg",
+    "Mesa",
+    "1959BJA"
+  ],
+  "cabinets": [
+    "Rhythm",
+    "Lead"
+  ],
+  "defaultKnobs": [
+    0,
+    5,
+    6,
+    7,
+    16,
+    11
+  ]
+}

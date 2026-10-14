@@ -1,0 +1,1015 @@
+{
+  "version": "v1-engineering",
+  "generatedAt": "2026-10-14T06:07:25.036948+00:00",
+  "referenceRepository": "wjwpoi/DaisySeedProjects",
+  "referenceCommit": "8e9f468ab0d35b87fafa33b9da2f017a0e6a865b",
+  "physicalTestsExecuted": false,
+  "flash": {
+    "daisyBootloaderAddress": "0x08000000",
+    "daisyAppAddress": "0x90040000",
+    "presetBanks": [
+      "0x907f0000",
+      "0x907f1000"
+    ],
+    "esp32c3": {
+      "bootloader": "0x0",
+      "partitionTable": "0x8000",
+      "application": "0x10000",
+      "flashSize": "4MB",
+      "mode": "DIO",
+      "frequency": "80MHz"
+    }
+  },
+  "files": {
+    ".gitattributes": {
+      "bytes": 263,
+      "sha256": "d8a63eceb7e07cbcb51f7b155a2c35df85d587af05e6519acf9be948d8b35731"
+    },
+    ".gitignore": {
+      "bytes": 176,
+      "sha256": "61a0114e6b9d5d86598052aa2fce09a04abe7edff18d0421fee60c17c2846514"
+    },
+    "LICENSE": {
+      "bytes": 1071,
+      "sha256": "131506f67eaa2ae86aff13dec1e4898befe5e74faabb7bb996fce351024b9758"
+    },
+    "Makefile": {
+      "bytes": 1639,
+      "sha256": "94748d47a5f38496ff1ca10e0a6493a92d24486dd2f118d7b4ce92624fa3f55a"
+    },
+    "README.md": {
+      "bytes": 4157,
+      "sha256": "1d2c6c740efd374ff37fd4a984ec0ec9d4cda390704a8301e6bc333922f885f6"
+    },
+    "THIRD_PARTY.md": {
+      "bytes": 1742,
+      "sha256": "95f1831ec6e667bced1707c9929b24743837c6dae2da0783e0407f724c1b2941"
+    },
+    "docs/BUILD.md": {
+      "bytes": 4731,
+      "sha256": "b9910d6ec2c0b1e10d81626969fd837b679c25b779a49277d426ec1f2220425d"
+    },
+    "docs/HARDWARE.md": {
+      "bytes": 6048,
+      "sha256": "65b730634b8ead6a1756332871d03a7dfe1ee4cdbd57aecec3c3e71280d9f2a4"
+    },
+    "docs/MODELS.md": {
+      "bytes": 2921,
+      "sha256": "29d6404c04070212e7060f70c02c2d4fe36f867656e82c40c7e51082bc3e07bc"
+    },
+    "docs/PRODUCT.md": {
+      "bytes": 4049,
+      "sha256": "73b5e359b126b4b18417d963c7452f8f673f19ad3fcfcc1274d445791f8608db"
+    },
+    "docs/PROTOCOL.md": {
+      "bytes": 3242,
+      "sha256": "61314d274a8faf403bfb09b7994fcd12b831f5a53bc698253ca0edf910dc2e6b"
+    },
+    "docs/RELEASE.md": {
+      "bytes": 2740,
+      "sha256": "80fcf3ac720fbef7f862e371cc648cb3267e9395b4feeb04c38a902ed0dd090a"
+    },
+    "docs/USER_MANUAL.md": {
+      "bytes": 2979,
+      "sha256": "d3cd6dd53fdafe370a7e32d0640d93834783282ac6e2ecc6473067319ac18a6e"
+    },
+    "docs/VALIDATION.md": {
+      "bytes": 3954,
+      "sha256": "bfc416f38f970bfd3a09a16c9b9077e3ec349f7ad1ddb1e7c0f7937f6c8a09ff"
+    },
+    "docs/images/panel-preview.png": {
+      "bytes": 78804,
+      "sha256": "99fe46e01fd4ed16836f1fe5cfc66b2146c0cfa944f26659adbc4693f930668f"
+    },
+    "docs/images/web-desktop.png": {
+      "bytes": 122770,
+      "sha256": "bec32b8e72098b81151ab536385e6246795d32f88a55979cc8c80a506e1361d6"
+    },
+    "docs/images/web-mobile.png": {
+      "bytes": 125513,
+      "sha256": "02d9590fcb01b26d82aa12b6f4b05fb7769a2fc03255abaa7976d3ffccaf98cd"
+    },
+    "docs/validation.json": {
+      "bytes": 7839,
+      "sha256": "249332b0f383b4eb0aa641848c8940affc8ac984bde01caa448426f9e0f08d4c"
+    },
+    "firmware/audio/Makefile": {
+      "bytes": 874,
+      "sha256": "adce2767a774695bc69552c49d20773bf0d2346d5fdd9b9d0b280df321b2caef"
+    },
+    "firmware/audio/controller.hpp": {
+      "bytes": 5467,
+      "sha256": "e045f9b89136dfc3c40f6d0eb60907cb477cb110354b568ea759d39b9d279dd6"
+    },
+    "firmware/audio/dsp.hpp": {
+      "bytes": 14229,
+      "sha256": "86209357c24e159b2acb5eaf4f11649d0fd13fc6b118769d92531a15c9fdee91"
+    },
+    "firmware/audio/main.cpp": {
+      "bytes": 14182,
+      "sha256": "06148a551e72452f2e43a346491c2598328687d9c8f0a6e3f9a81d5cf8c5b896"
+    },
+    "firmware/audio/stm32h750_seedfx_sram.lds": {
+      "bytes": 5073,
+      "sha256": "d1fde6c2e6c4995cda40cd623267e1f0503cc6e25101a2ca102b1af0ba5d0d35"
+    },
+    "firmware/audio/warm_start.hpp": {
+      "bytes": 2529,
+      "sha256": "ffa248213f7a4f354a49cd5d32b4467e55983b78735dd7f873f069e3db97f6ff"
+    },
+    "firmware/common/parameters.hpp": {
+      "bytes": 3926,
+      "sha256": "b344e31aabd8fb55fac4f63cd95f32b531f9948bcda0738512ae18003591e829"
+    },
+    "firmware/common/protocol.hpp": {
+      "bytes": 3685,
+      "sha256": "6bc88f69e72c8147b9bce238ce11ffee903f0870a50a02d2307607e90df8efbf"
+    },
+    "firmware/common/queue.hpp": {
+      "bytes": 981,
+      "sha256": "8542dc483f3c78b6bd70e355e2ff521bd7e9653632afbfd0959e26c45c69b5ad"
+    },
+    "firmware/common/storage.hpp": {
+      "bytes": 2524,
+      "sha256": "5d19a122261ed802d8c0052f38cab38edadcd7ff8d30f31eef5148eb5f0c3339"
+    },
+    "firmware/wireless/CMakeLists.txt": {
+      "bytes": 112,
+      "sha256": "a7e56a0ed157287ee2a4c9919f0e2ff13d3a32d3ebd17357727a5f18e686171f"
+    },
+    "firmware/wireless/main/CMakeLists.txt": {
+      "bytes": 368,
+      "sha256": "d6b8fb0ceffd1c849a9d79cb2e35ad83a88ffb51be491bfbfd07df9e7710cbb3"
+    },
+    "firmware/wireless/main/main.cpp": {
+      "bytes": 12629,
+      "sha256": "7a0dcddc47434ed1228a08b93f68bda8ef3332959d769e29e6eecdc67f0e85eb"
+    },
+    "firmware/wireless/sdkconfig.defaults": {
+      "bytes": 276,
+      "sha256": "03c0e4d56c93d3563bd196efef1681b2617473004695c8ce36a6bed3d59d8e19"
+    },
+    "hardware/adapter/bom.csv": {
+      "bytes": 562,
+      "sha256": "6145fb2691210d4ade07ba51c291e9079f5b94a269088128e6a9ad27c623b182"
+    },
+    "hardware/adapter/fp-lib-table": {
+      "bytes": 633,
+      "sha256": "527c49d766fd18ea7d3d2c67b13fdbe2d6e654119dc12814955effab7d5a5063"
+    },
+    "hardware/adapter/seedfx-adapter.kicad_pcb": {
+      "bytes": 48538,
+      "sha256": "899fca6d3c82e2a339515bfbf0cb41adbda17b314a92f399fe592eff84070b31"
+    },
+    "hardware/adapter/seedfx-adapter.kicad_pro": {
+      "bytes": 8367,
+      "sha256": "26c0e9b9fccbed028e8e653dc4031624ed5be9757e78f2a0da8d9c1d1eb9497a"
+    },
+    "hardware/adapter/seedfx-adapter.kicad_sch": {
+      "bytes": 27895,
+      "sha256": "27d3178f7b05ea8a1d5b4c3dac75a896b4377dfeb22e9870306ced3d9a7a9474"
+    },
+    "hardware/cost-plan.json": {
+      "bytes": 561,
+      "sha256": "f11928bdc2e6b5a073ad5d8c6eec12b9b56e67f3d5931989b659aa71753b8e16"
+    },
+    "hardware/io-map.csv": {
+      "bytes": 913,
+      "sha256": "f1309c0f1a8ac8d7d32c355fd8d9476d8ccda7853f95e7c73ea2ad24d65c2048"
+    },
+    "hardware/mainboard/Audio_Input_Buffer.kicad_sch": {
+      "bytes": 45750,
+      "sha256": "1a72c6c35cc4d345563914aeb42f3be9a24e8ce22ee979993ff384af3455e817"
+    },
+    "hardware/mainboard/Audio_Output_Buffer.kicad_sch": {
+      "bytes": 49922,
+      "sha256": "665763a8ce85a1716a94cae29c3514cffbb64ff3ab41ec71d4ffa07a00712e70"
+    },
+    "hardware/mainboard/Audio_True_Bypass_Stereo.kicad_sch": {
+      "bytes": 53668,
+      "sha256": "7f5bc020addc8c8f02e36312ede64291cfcf9f50061cffef272d73fc81ed4d0f"
+    },
+    "hardware/mainboard/Controls.kicad_sch": {
+      "bytes": 64571,
+      "sha256": "52fd2266720844802ee74cb713d33ac8d5297fd4143f70acb5cba1c0ab8d8188"
+    },
+    "hardware/mainboard/CustomSymbols.kicad_sym": {
+      "bytes": 14001,
+      "sha256": "70d22126dd6974a492362ff9ca27b87c9b4e4f4e20a9cf2f552175230d5e2a69"
+    },
+    "hardware/mainboard/DaisySeedPedal125b.kicad_pcb": {
+      "bytes": 1165397,
+      "sha256": "8cf2a78a9dbe6c7d35344087633b07f63b1026de6a8d4f4e2c34e16cdc2c629f"
+    },
+    "hardware/mainboard/DaisySeedPedal125b.kicad_pro": {
+      "bytes": 14994,
+      "sha256": "cdf5fcd629cd26dfa58bbb9c2f1683fb53885dba3fdd27b17bdc407c1ad23b53"
+    },
+    "hardware/mainboard/DaisySeedPedal125b.kicad_sch": {
+      "bytes": 108221,
+      "sha256": "21e91e153ddd44fd6a1208359e15414550191abd3f176245a438ad8838db2bdc"
+    },
+    "hardware/mainboard/Libraries/Capacitor_SMD.pretty/C_0805_2012Metric.kicad_mod": {
+      "bytes": 3652,
+      "sha256": "9c41b23d9ec7472a430b18008d3aca876e2e3c376bd9f38f6ef8307726302708"
+    },
+    "hardware/mainboard/Libraries/Connector_PinHeader_2.54mm.pretty/PinHeader_1x02_P2.54mm_Vertical.kicad_mod": {
+      "bytes": 4329,
+      "sha256": "4f01f1a37c60d9ad363e3bfeef58ac49caca8b6813e0cb58a6fbcba78d7502fa"
+    },
+    "hardware/mainboard/Libraries/Diode_SMD.pretty/D_SOD-123.kicad_mod": {
+      "bytes": 4546,
+      "sha256": "45fd96bafeaf3a41ef9c771241ed56e013a58ac0feef5f597994f9c3e64b5016"
+    },
+    "hardware/mainboard/Libraries/Diode_SMD.pretty/D_SOD-123F.kicad_mod": {
+      "bytes": 4573,
+      "sha256": "f56726da41b75609ac381f00737032200ae366ce587c5f1e5c5cbf7f6bb18cdb"
+    },
+    "hardware/mainboard/Libraries/GuitarPedal125B.pretty/Generic_PowerJack.kicad_mod": {
+      "bytes": 2116,
+      "sha256": "522c15349ed7d26bd005c6f04fe95b648e52dde27dbd6f05942c8e66a925b3a4"
+    },
+    "hardware/mainboard/Libraries/GuitarPedal125B.pretty/HiLetgo_OLED_SPI.kicad_mod": {
+      "bytes": 7266,
+      "sha256": "bcbbcab2cad5f409e844f561f9a56c9cf357c8fc2adbaff1fb05cc518385de9c"
+    },
+    "hardware/mainboard/Libraries/GuitarPedal125B.pretty/PJ-320A.kicad_mod": {
+      "bytes": 4059,
+      "sha256": "71463dba74b7493d6b0800d962f1d33b1cde4e76ca244e38986ca825e7ddd42f"
+    },
+    "hardware/mainboard/Libraries/GuitarPedal125B.pretty/PinSocket1x20_P2.54mm_Vertical_JLCPCB.kicad_mod": {
+      "bytes": 7623,
+      "sha256": "5b4e00c8b8d4835df84af8bfffca6eac7f1b7b97e2096ea5b9fa8a916399efe6"
+    },
+    "hardware/mainboard/Libraries/GuitarPedal125B.pretty/Potentiometer_Bourns_PRS11R.kicad_mod": {
+      "bytes": 5393,
+      "sha256": "ce01cb516270a7f809be17356dbc851706a30236e8cab75823832805ef145d3a"
+    },
+    "hardware/mainboard/Libraries/GuitarPedal125B.pretty/SOP-6_2.54mm.kicad_mod": {
+      "bytes": 4800,
+      "sha256": "6b9d2df814d4265fb138f6f97c1ca391fd4d4238a45e18453795b579392e529c"
+    },
+    "hardware/mainboard/Libraries/NMJ6HCD2.pretty/NEUTRIK_NMJ6HCD2.kicad_mod": {
+      "bytes": 8046,
+      "sha256": "3e114850f0f65a852ff55e602f82ef72c08df50c3b251f9a334d4b05fd947dd6"
+    },
+    "hardware/mainboard/Libraries/Package_SO.pretty/SOIC-14_3.9x8.7mm_P1.27mm.kicad_mod": {
+      "bytes": 6128,
+      "sha256": "ef4b2818b65a64333e0286173be5bdf069a193eecd8834e9efce4cc8735b5ffa"
+    },
+    "hardware/mainboard/Libraries/Package_SO.pretty/SOIC-8_3.9x4.9mm_P1.27mm.kicad_mod": {
+      "bytes": 5093,
+      "sha256": "accd3982678cc7ad470be61d17e32287bbf92d6645f2199fac64ce7efef8f471"
+    },
+    "hardware/mainboard/Libraries/Package_SO.pretty/SOP-4_3.8x4.1mm_P2.54mm.kicad_mod": {
+      "bytes": 5149,
+      "sha256": "0e6bc4b624b8770c3ce90bf47af0b07ec52eee999ec606d38e22b813efb37349"
+    },
+    "hardware/mainboard/Libraries/Package_TO_SOT_SMD.pretty/SOT-223-3_TabPin2.kicad_mod": {
+      "bytes": 4062,
+      "sha256": "c295cab0372a84b2bd5013752e844ffa492bd1bbc45ddf167fe4caeb1a313251"
+    },
+    "hardware/mainboard/Libraries/Package_TO_SOT_SMD.pretty/SOT-23-3.kicad_mod": {
+      "bytes": 4116,
+      "sha256": "87edaf04bb0b6bb407aa642ee948adfa186b47371a1ca72a63ece7ddd1e22c7b"
+    },
+    "hardware/mainboard/Libraries/Relay_SMD.pretty/Relay_DPDT_Omron_G6K-2G-Y.kicad_mod": {
+      "bytes": 6302,
+      "sha256": "acfe43f72ee2369f60686a140f29a9d41db93bea7894af812637d6074215f2e0"
+    },
+    "hardware/mainboard/Libraries/Resistor_SMD.pretty/R_0805_2012Metric.kicad_mod": {
+      "bytes": 3556,
+      "sha256": "18464ba1f944d7880c8b5179230b2988bda2603e1b4741fe21da872549751285"
+    },
+    "hardware/mainboard/Libraries/Rotary_Encoder.pretty/RotaryEncoder_Alps_EC11E-Switch_Vertical_H20mm.kicad_mod": {
+      "bytes": 7044,
+      "sha256": "9dc4d495161bf9dd8f079356ae9707832ae546d53848e27bf9bd12d127bbcdf3"
+    },
+    "hardware/mainboard/Libraries/Symbols/Amplifier_Operational.kicad_sym": {
+      "bytes": 8150,
+      "sha256": "53b7bf0cd774217d3501b347055feeb5efeb4968d03663f3962dc8d323c02735"
+    },
+    "hardware/mainboard/Libraries/Symbols/Connector.kicad_sym": {
+      "bytes": 14751,
+      "sha256": "3418512e72e0c329f41bca65fc430bb1e9a69f89e30e5a3e73f54a7b2f17f723"
+    },
+    "hardware/mainboard/Libraries/Symbols/Connector_Audio.kicad_sym": {
+      "bytes": 3075,
+      "sha256": "1931cf65cc490b7eda8c484dd35c84e705df5e484faab9fbb32293dffe361736"
+    },
+    "hardware/mainboard/Libraries/Symbols/Device.kicad_sym": {
+      "bytes": 16536,
+      "sha256": "f0979beb0c64085836b1dc71357027f90b811898c28a9d07883bea3c48eb33dd"
+    },
+    "hardware/mainboard/Libraries/Symbols/Diode.kicad_sym": {
+      "bytes": 6505,
+      "sha256": "2dd61daece68b161b4bb611c1926f01a6e46be46cc30febf339b792c498f3e8b"
+    },
+    "hardware/mainboard/Libraries/Symbols/GuitarPedal125B.kicad_sym": {
+      "bytes": 14662,
+      "sha256": "ad68ddc0e037ebbe0a238bcf9d6d815578b28923f22f0790a4b99de46693c844"
+    },
+    "hardware/mainboard/Libraries/Symbols/Isolator.kicad_sym": {
+      "bytes": 4388,
+      "sha256": "30fb610d578563f56d78f3717828edf1b2840c380ec80f27bb0f86cd212c96d9"
+    },
+    "hardware/mainboard/Libraries/Symbols/NMJ6HCD2.kicad_sym": {
+      "bytes": 8915,
+      "sha256": "9d972158af6ba73f4403ae8b5c5621e66c2aa298ef79edc3a30f329051e2ebd5"
+    },
+    "hardware/mainboard/Libraries/Symbols/Regulator_Linear.kicad_sym": {
+      "bytes": 1893,
+      "sha256": "9009c93d9ace1842001bc5accc78913cc493076e0bd597fee735770431a7ea39"
+    },
+    "hardware/mainboard/Libraries/Symbols/Relay.kicad_sym": {
+      "bytes": 7595,
+      "sha256": "63fcb2f3e81fcbd2542f3dc67231a12a5f877f4955c6d67537cfa744d7602691"
+    },
+    "hardware/mainboard/Libraries/Symbols/Relay_SolidState.kicad_sym": {
+      "bytes": 8665,
+      "sha256": "6c7c537452ceb03d6563e0dd78eae67d07783b65182a8907470a6e81dbfa42f5"
+    },
+    "hardware/mainboard/Libraries/Symbols/Switch.kicad_sym": {
+      "bytes": 1886,
+      "sha256": "364ff5117396a4c47a3d430c5210439d1c3f6dcb6f4018279556254d2a55dbcc"
+    },
+    "hardware/mainboard/Libraries/Symbols/power.kicad_sym": {
+      "bytes": 8739,
+      "sha256": "da3ea28dd5daaefb16660a28ffe237a290bc53ecdc49fb647ec83e21345f1f48"
+    },
+    "hardware/mainboard/Midi_InOut.kicad_sch": {
+      "bytes": 28788,
+      "sha256": "ad464945eba9a73689c60e5fb3912592f90e1a422285db143cb57930930a9b07"
+    },
+    "hardware/mainboard/Power.kicad_sch": {
+      "bytes": 26129,
+      "sha256": "13af45d34467911bd7fcbf72480ae38df92a15d2ebf885a3d290ee0f84c3e73b"
+    },
+    "hardware/mainboard/SSD1306_Screen_SPI.kicad_sch": {
+      "bytes": 9815,
+      "sha256": "8b4b33db22cb558e06f1d9fd73d79bf4b09b23f732a615d35aa81151c279ae2f"
+    },
+    "hardware/mainboard/assembly-bom.csv": {
+      "bytes": 1032,
+      "sha256": "51a7aa0d40b136bce8246cd9fef5cb79343c75d0633ae9625f57a8f6b4ed30c8"
+    },
+    "hardware/mainboard/fp-lib-table": {
+      "bytes": 1468,
+      "sha256": "fc73b55507812b368919e88a2f1296f4a63ec25e67c96d15ac0d51e4d6bc6f43"
+    },
+    "hardware/mainboard/sym-lib-table": {
+      "bytes": 1911,
+      "sha256": "6c6624940cd6e2743a4b1682b6e7b63bb08d1ca9ab137f98e2ff17512ed5e86f"
+    },
+    "hardware/manufacturing/adapter/assembly.pdf": {
+      "bytes": 23038,
+      "sha256": "1e46c6e8042d839dc1a3b67bb5da7b8a4d3cd95510d641fcd97973f954c11a26"
+    },
+    "hardware/manufacturing/adapter/drill/seedfx-adapter-drl_map.pdf": {
+      "bytes": 12075,
+      "sha256": "ea0c7daac75bb8a27e8e7239dcf383ade78e9c53c7cbca5f25506132e13c11c0"
+    },
+    "hardware/manufacturing/adapter/drill/seedfx-adapter.drl": {
+      "bytes": 634,
+      "sha256": "e40b6aa7e0ad34737f217c763eb6c08904d64364578ea4c2ea281dca37672e9f"
+    },
+    "hardware/manufacturing/adapter/gerbers/seedfx-adapter-B_Cu.gbl": {
+      "bytes": 1957,
+      "sha256": "5264bb12bb8893accd6b6b5616b22b4165f80d4c8af56de48a77eaa769b13cfa"
+    },
+    "hardware/manufacturing/adapter/gerbers/seedfx-adapter-B_Mask.gbs": {
+      "bytes": 922,
+      "sha256": "a63797a8e9de6ad4ea48ccac3b79856eec5f7b9e871b2d905178ed6d34c98dde"
+    },
+    "hardware/manufacturing/adapter/gerbers/seedfx-adapter-B_Paste.gbp": {
+      "bytes": 471,
+      "sha256": "52b9710714d27c542f6d31fbb258eacf02ab8512307b7ad639ac88b1f0d55888"
+    },
+    "hardware/manufacturing/adapter/gerbers/seedfx-adapter-B_Silkscreen.gbo": {
+      "bytes": 472,
+      "sha256": "8f6c8ea317bd095e09d9e00872cb4f705f04fd909caefb06fe998f677d766411"
+    },
+    "hardware/manufacturing/adapter/gerbers/seedfx-adapter-Edge_Cuts.gm1": {
+      "bytes": 633,
+      "sha256": "dbc74892f34919b7b0a01bf160733f9687224e08249a502baa63946786328734"
+    },
+    "hardware/manufacturing/adapter/gerbers/seedfx-adapter-F_Cu.gtl": {
+      "bytes": 4394,
+      "sha256": "a7e0b67c3b45352f2834f3a5d0809e717e9865861749ca750c8096d7df85907e"
+    },
+    "hardware/manufacturing/adapter/gerbers/seedfx-adapter-F_Mask.gts": {
+      "bytes": 2302,
+      "sha256": "6ecf7bf1729d81ee19921f88011b6c0a71b638dff51c6a4dcf89705c0879f47d"
+    },
+    "hardware/manufacturing/adapter/gerbers/seedfx-adapter-F_Paste.gtp": {
+      "bytes": 1846,
+      "sha256": "d368fcee12ea0afb53a4ea18e425c023d33ea0ea76f5a261027984f9929dafce"
+    },
+    "hardware/manufacturing/adapter/gerbers/seedfx-adapter-F_Silkscreen.gto": {
+      "bytes": 6960,
+      "sha256": "5aacab629cd98c1adfed36276a336dcc62a776acdd9a600cb9c5227fd48ad74d"
+    },
+    "hardware/manufacturing/adapter/gerbers/seedfx-adapter-job.gbrjob": {
+      "bytes": 2695,
+      "sha256": "ad5f7937dc40c91c643b987b15ffaf0d29e06a4dbd953dd8d5d75f10c1f81e37"
+    },
+    "hardware/manufacturing/adapter/positions.csv": {
+      "bytes": 463,
+      "sha256": "2d058f631b166c80add8830036ee251f77518f9d55fa4b4998c8fde94263a3e5"
+    },
+    "hardware/manufacturing/adapter/schematic.pdf": {
+      "bytes": 52752,
+      "sha256": "57f7dedc0f2082f5e7586b2c1e52e0d2fcab41f83703b5a60c0513f711cb5b8f"
+    },
+    "hardware/manufacturing/mainboard/assembly.pdf": {
+      "bytes": 160144,
+      "sha256": "28d393a7cbe2a6e4d31cc2a82293315cd175733e6892c7068c777cfbe342f5e9"
+    },
+    "hardware/manufacturing/mainboard/drill/DaisySeedPedal125b-drl_map.pdf": {
+      "bytes": 43427,
+      "sha256": "784df63f407f4bf04b863241fa678a82332ac30cabd86d99a477aed932d56bf8"
+    },
+    "hardware/manufacturing/mainboard/drill/DaisySeedPedal125b.drl": {
+      "bytes": 3987,
+      "sha256": "242178c43480f3ac95518ac66530548cfac08ebb3a93d6204339d90f04d2a33e"
+    },
+    "hardware/manufacturing/mainboard/gerbers/DaisySeedPedal125b-B_Cu.gbl": {
+      "bytes": 17914,
+      "sha256": "fdd72aa7aec13df3a74af3e6e3b2c302dfe20dd8fc64a9ce83560181c08c5035"
+    },
+    "hardware/manufacturing/mainboard/gerbers/DaisySeedPedal125b-B_Mask.gbs": {
+      "bytes": 4499,
+      "sha256": "008d7d710af0a99d75c78aff05bb2a0555a456beeee05023bbdbfde3992ae7b1"
+    },
+    "hardware/manufacturing/mainboard/gerbers/DaisySeedPedal125b-B_Paste.gbp": {
+      "bytes": 475,
+      "sha256": "a87b4e6fc1d7b9a27e74936d95654097586f0e41a9d20279f86fba8a7bee53a8"
+    },
+    "hardware/manufacturing/mainboard/gerbers/DaisySeedPedal125b-B_Silkscreen.gbo": {
+      "bytes": 476,
+      "sha256": "b876be3d36c3d142ea3ad7aac1e018d89b4c31a6c2d77cc969f5a5dba88856ac"
+    },
+    "hardware/manufacturing/mainboard/gerbers/DaisySeedPedal125b-Edge_Cuts.gm1": {
+      "bytes": 732,
+      "sha256": "9c0615cf627fc1bd918ffc2ef4d45753e32b1b5df26348a2efbaa27047300f1f"
+    },
+    "hardware/manufacturing/mainboard/gerbers/DaisySeedPedal125b-F_Cu.gtl": {
+      "bytes": 310920,
+      "sha256": "38b58481ee65d17cc25b6ed5f9d7083dab37d74fa2318d48560080ff4ae8d4f7"
+    },
+    "hardware/manufacturing/mainboard/gerbers/DaisySeedPedal125b-F_Mask.gts": {
+      "bytes": 12205,
+      "sha256": "09122cfa0c64f81913e73b1ca07924d36c44721c9bbab96bdefe7048d83ed0b3"
+    },
+    "hardware/manufacturing/mainboard/gerbers/DaisySeedPedal125b-F_Paste.gtp": {
+      "bytes": 8181,
+      "sha256": "03b26a60943f690917bdf668077318e5c4d062916c1cb8f6a1e0f099c12eb2b5"
+    },
+    "hardware/manufacturing/mainboard/gerbers/DaisySeedPedal125b-F_Silkscreen.gto": {
+      "bytes": 476,
+      "sha256": "1b36d56eea78c3dac513cf8eff248d899af3d51622c6b13c98021a896dc2e002"
+    },
+    "hardware/manufacturing/mainboard/gerbers/DaisySeedPedal125b-job.gbrjob": {
+      "bytes": 3532,
+      "sha256": "48729ebd7ad96724131be9c9949449c100b6e4cae751e5c2e3251e4fbc955df0"
+    },
+    "hardware/manufacturing/mainboard/positions.csv": {
+      "bytes": 4273,
+      "sha256": "f8eb59ee8d17e20a921d14bdc6d65003e0cde9d1169d1146796f5b2bd35b1bc5"
+    },
+    "hardware/manufacturing/mainboard/schematic.pdf": {
+      "bytes": 681969,
+      "sha256": "d56d62e0790a0a6e2db5182b0ef2066f674194c2f0ee8188e52589dd4a82d80a"
+    },
+    "hardware/purchase-bom.csv": {
+      "bytes": 3099,
+      "sha256": "3d220786cca4241ba833f36e38abd1f3773ca453e76467ca74e0b24c9cc53244"
+    },
+    "hardware/reports/adapter-drc.json": {
+      "bytes": 280,
+      "sha256": "804e097d65101d63a37919946b2d5135e69a8d4b6c7479ebff24d633e429ce01"
+    },
+    "hardware/reports/adapter-erc.json": {
+      "bytes": 364,
+      "sha256": "1a1c2d322af19deed735aa9d317a7c68175058f6d0fe1c600b15f95ab7dace63"
+    },
+    "hardware/reports/adapter-netlist.xml": {
+      "bytes": 16116,
+      "sha256": "fc3c79a6fdeb0b563094b8cd215c20641008799727346e6393ce2f1b391c4006"
+    },
+    "hardware/reports/mainboard-drc.json": {
+      "bytes": 284,
+      "sha256": "1789191176fa740dc0f205f74ec67531234ddb30a37ad453f434afb14ba46da8"
+    },
+    "hardware/reports/mainboard-erc.json": {
+      "bytes": 83681,
+      "sha256": "774cde5079e9693c2cf5433561642a59178943c07ed6d024e815a34891636ba9"
+    },
+    "hardware/reports/mainboard-netlist.xml": {
+      "bytes": 120442,
+      "sha256": "940dfe2049837cabc9400dd4ada2912128512686b396412ca44f659393a418c4"
+    },
+    "hardware/wiring.csv": {
+      "bytes": 1257,
+      "sha256": "457739b885ce69df5cac7b7024dadd226b7f7f3e3c8c9c329d963a78e21de742"
+    },
+    "mechanical/accessory-placement.csv": {
+      "bytes": 152,
+      "sha256": "af5e3b472e18bb13dab960ea736183ae5bdd99b4154405a9d4358f34d0438036"
+    },
+    "mechanical/fit-check.json": {
+      "bytes": 751,
+      "sha256": "13cba0064575696665eb6006210d28696fda51e9def7757789ea8ee1a226d73d"
+    },
+    "mechanical/front-drill.csv": {
+      "bytes": 336,
+      "sha256": "d115a6bed6910d2af0159c38c8d8b986fe29142fb69ccdce1a4894050504e8d0"
+    },
+    "mechanical/front-drill.dxf": {
+      "bytes": 18710,
+      "sha256": "8e9af582ca33dfbc3975fa97cf69dd2b3af89b7525b069069d8dd256a716b3f3"
+    },
+    "mechanical/layout.json": {
+      "bytes": 2478,
+      "sha256": "d8aaa8e1909485fb30a4787300edcbdcfc080ba7ebe4a35e6cb90cf3711c5c93"
+    },
+    "mechanical/mainboard.step": {
+      "bytes": 313334,
+      "sha256": "9823b7f6ea5c8f986612e1f0b0af316a21b213b32ae18c654690a635812d9575"
+    },
+    "mechanical/panel-artwork-template.svg": {
+      "bytes": 2494,
+      "sha256": "3e4b0da06d28934c4afaa9db4bc4621b8ba32a6bcd48a9545cad986132b001bc"
+    },
+    "mechanical/panel-design.svg": {
+      "bytes": 2543,
+      "sha256": "ac66f8932c4a0208c61c334ffee17d8c3d5a5fa0d5d91b41e6455e95b842208e"
+    },
+    "mechanical/panel-print.svg": {
+      "bytes": 2564,
+      "sha256": "d2240f4b8457a1146715c37799b4fbbeb6e123b6be6428d386a045578c2fd729"
+    },
+    "mechanical/seedfx-case.step": {
+      "bytes": 216085,
+      "sha256": "efccabf1722fc600620fae57e9b8645d4f771fe9242574470b51b2415aff19b1"
+    },
+    "mechanical/seedfx-case.stl": {
+      "bytes": 588484,
+      "sha256": "85400e2d063049023cf0b8e37eec9d30aa7c0b535dfe7f2dbc53fc9d58268b24"
+    },
+    "mechanical/seedfx-enclosure.step": {
+      "bytes": 1531113,
+      "sha256": "84e44d57d2d288d097c42b0b94f8ee9f8f9896d5fb7a4377c6cedf679c799df2"
+    },
+    "mechanical/seedfx-insulating-tray.step": {
+      "bytes": 32912,
+      "sha256": "5ab2f8591f6b93fdb2a46c60260afcc450ae56fa8b5ad0f8a8cf680eb6615a49"
+    },
+    "mechanical/seedfx-insulating-tray.stl": {
+      "bytes": 101884,
+      "sha256": "fb54e2b774de7c848e09d6d15ba25ada85ef3698a88ff514d6d9375c69a1553a"
+    },
+    "mechanical/seedfx-lid-spacer.step": {
+      "bytes": 103847,
+      "sha256": "00de105ea29791e7d5597e457c0b16987fdf7f05cc6dc466eb4ac0ce8d097618"
+    },
+    "mechanical/seedfx-lid-spacer.stl": {
+      "bytes": 254484,
+      "sha256": "42ff93d544108405c00ee876e857be4ffef3382853d0545fb6bec90fc671d14e"
+    },
+    "mechanical/seedfx-lid.step": {
+      "bytes": 47860,
+      "sha256": "0cfcfee639910d124a559007909811ded5b9f8b8741133c68825a53e67b73277"
+    },
+    "mechanical/seedfx-lid.stl": {
+      "bytes": 127884,
+      "sha256": "e85cd37e0909260f628b0a3064edbe704c66f8671d6225d2c42ac63104fdff09"
+    },
+    "mechanical/seedfx-rf-window.step": {
+      "bytes": 29306,
+      "sha256": "1b76df0cfc258a6b4ef3fe6b2baae6312e8fc8d8462875daf3353655e2dd83f5"
+    },
+    "mechanical/seedfx-rf-window.stl": {
+      "bytes": 1484,
+      "sha256": "54fab334b57b162856300e0d15f8cacdb7e44bff8acd93f295d2c2f6084dd000"
+    },
+    "mechanical/side-drill.csv": {
+      "bytes": 308,
+      "sha256": "f910c97377459a288254a60fa45aeb0afb3cb7cd2564cbda758110790b553e28"
+    },
+    "releases/adapter-pcb.zip": {
+      "bytes": 19631,
+      "sha256": "b71352ba995668a03a856bf283e126133b1a6c0c3b6bf0858b42082b37afd007"
+    },
+    "releases/firmware/daisy/dsy_bootloader_v6_4-intdfu-2000ms.bin": {
+      "bytes": 130188,
+      "sha256": "76296b6bd625e5e5dbeba2431619a0ed90ae2c0a3a99258df00a64a0b8b9ec35"
+    },
+    "releases/firmware/daisy/seedfx.bin": {
+      "bytes": 187516,
+      "sha256": "780e17455f1c6d775af26a85933f8c78c3d9a62304ce0a3b44f17332875d4b71"
+    },
+    "releases/firmware/daisy/seedfx.elf": {
+      "bytes": 2371032,
+      "sha256": "d2062cf743c3b496370f4466fd9069f62d095464bb3239242ae8a170eaeb0fb3"
+    },
+    "releases/firmware/daisy/seedfx.hex": {
+      "bytes": 527487,
+      "sha256": "e2f120c2d8008e9ea252375433ea4151f2c717c3b3ad81d303b25cf4884b8bee"
+    },
+    "releases/firmware/esp32c3/bootloader.bin": {
+      "bytes": 20688,
+      "sha256": "0f50e53a235c83cc82598bfbc2662e66584d161941147bb1837c59dcadcc44e3"
+    },
+    "releases/firmware/esp32c3/partition-table.bin": {
+      "bytes": 3072,
+      "sha256": "7f00b6c042a89b15b0cac534f82ed988caf29278ff5700b0c511eb1b5bb7c820"
+    },
+    "releases/firmware/esp32c3/seedfx_wireless.bin": {
+      "bytes": 908736,
+      "sha256": "7668ef2cf73590a9259d176cacf1610727bb8964d100b8f2c197afb2ed649647"
+    },
+    "releases/firmware/esp32c3/seedfx_wireless.elf": {
+      "bytes": 9644540,
+      "sha256": "cbcdd854090d63750c0a61214981b6857dc5d01c942974f335b9aeb264d6d127"
+    },
+    "releases/licenses/esp-idf/LICENSE": {
+      "bytes": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    "releases/licenses/esp-idf/components/bootloader/subproject/components/micro-ecc/micro-ecc/LICENSE.txt": {
+      "bytes": 1300,
+      "sha256": "ffd8b033d2df7568c25a98866bd92b1656f7da82d7f813c0b2eb85ec36611193"
+    },
+    "releases/licenses/esp-idf/components/bt/common/tinycrypt/LICENSE": {
+      "bytes": 3254,
+      "sha256": "270e0b63ce74421f1ccaaf03f9c7daa430cdb16c9856259ca4c2e3c74880d589"
+    },
+    "releases/licenses/esp-idf/components/bt/controller/lib_esp32/LICENSE": {
+      "bytes": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    "releases/licenses/esp-idf/components/bt/controller/lib_esp32c2/esp32c2-bt-lib/NOTICE": {
+      "bytes": 320,
+      "sha256": "9db49cb1e535c496d7655dd54d5481404e7634353dc3bc0817c7d07767acc6e8"
+    },
+    "releases/licenses/esp-idf/components/bt/controller/lib_esp32c3_family/LICENSE": {
+      "bytes": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    "releases/licenses/esp-idf/components/bt/controller/lib_esp32c5/esp32c5-bt-lib/NOTICE": {
+      "bytes": 320,
+      "sha256": "ebd002217a1a76e3cce23cd89d0916477da6c7907a6a46c8a7f1fb209e3cb333"
+    },
+    "releases/licenses/esp-idf/components/bt/controller/lib_esp32c6/esp32c6-bt-lib/NOTICE": {
+      "bytes": 320,
+      "sha256": "ebd002217a1a76e3cce23cd89d0916477da6c7907a6a46c8a7f1fb209e3cb333"
+    },
+    "releases/licenses/esp-idf/components/bt/controller/lib_esp32h2/esp32h2-bt-lib/NOTICE": {
+      "bytes": 321,
+      "sha256": "a1a74b78d60bf3feb4f493f058ac8ee4022e40387783085171670e34b001d8dd"
+    },
+    "releases/licenses/esp-idf/components/bt/esp_ble_mesh/lib/lib/LICENSE": {
+      "bytes": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    "releases/licenses/esp-idf/components/bt/host/nimble/nimble/LICENSE": {
+      "bytes": 12514,
+      "sha256": "0deb15bc7df50b1d009c644b008f92e1062909e9521328d337c5fad3a5d4921c"
+    },
+    "releases/licenses/esp-idf/components/bt/host/nimble/nimble/NOTICE": {
+      "bytes": 321,
+      "sha256": "b838c4733a5020cd8e2bafbe70842acd8c8dc7816012965b77d10c1f4c0727f6"
+    },
+    "releases/licenses/esp-idf/components/bt/host/nimble/nimble/ext/tinycrypt/LICENSE": {
+      "bytes": 3313,
+      "sha256": "b2d451fcba3577b118741d733d37ebd15bdd0b6b381e554a7345bdbfa3743108"
+    },
+    "releases/licenses/esp-idf/components/cmock/CMock/LICENSE.txt": {
+      "bytes": 1092,
+      "sha256": "a228c2871b9a779a6542a49470c5b567f2806dddcbcf90af861bb4d39291626c"
+    },
+    "releases/licenses/esp-idf/components/cmock/CMock/vendor/unity/LICENSE.txt": {
+      "bytes": 1123,
+      "sha256": "3ed9b51da86f52c729c96cc99fdde6444b2297c788a9cf4ad1d3649dc34c4985"
+    },
+    "releases/licenses/esp-idf/components/console/argtable3/LICENSE": {
+      "bytes": 8379,
+      "sha256": "a97df648b7db77f9f6f5e1ef5fe44eb6b154ecb8ae26ad39c92ea44201cce45c"
+    },
+    "releases/licenses/esp-idf/components/console/linenoise/LICENSE": {
+      "bytes": 1408,
+      "sha256": "efe1692aa5b869edaa0ac88f95eb0276c1125304ffc636a299db3ebbab47f62b"
+    },
+    "releases/licenses/esp-idf/components/driver/test_apps/components/esp_serial_slave_link/LICENSE": {
+      "bytes": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    "releases/licenses/esp-idf/components/esp_coex/lib/LICENSE": {
+      "bytes": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    "releases/licenses/esp-idf/components/esp_phy/lib/LICENSE": {
+      "bytes": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    "releases/licenses/esp-idf/components/esp_wifi/lib/LICENSE": {
+      "bytes": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    "releases/licenses/esp-idf/components/esptool_py/LICENSE": {
+      "bytes": 18092,
+      "sha256": "8177f97513213526df2cf6184d8ff986c675afb514d4e68a404010521b880643"
+    },
+    "releases/licenses/esp-idf/components/freertos/FreeRTOS-Kernel/LICENSE.md": {
+      "bytes": 1036,
+      "sha256": "508a77d2e7b51d98adeed32648ad124b7b30241a8e70b2e72c99f92d8e5874d1"
+    },
+    "releases/licenses/esp-idf/components/http_parser/LICENSE.txt": {
+      "bytes": 1298,
+      "sha256": "3aced2d086d3f59cafb6589770c30c1e45a5bdf50c1d4375060b81a615db604c"
+    },
+    "releases/licenses/esp-idf/components/json/cJSON/LICENSE": {
+      "bytes": 1084,
+      "sha256": "a36dda207c36db5818729c54e7ad4e8b0c6fba847491ba64f372c1a2037b6d5c"
+    },
+    "releases/licenses/esp-idf/components/json/cJSON/tests/unity/docs/license.txt": {
+      "bytes": 1123,
+      "sha256": "3ed9b51da86f52c729c96cc99fdde6444b2297c788a9cf4ad1d3649dc34c4985"
+    },
+    "releases/licenses/esp-idf/components/lwip/lwip/COPYING": {
+      "bytes": 1425,
+      "sha256": "ef4aac92e05e87cd1cdc140870ed52206ba03d4a7fe46c1e11d7ffa6c87d252b"
+    },
+    "releases/licenses/esp-idf/components/lwip/lwip/contrib/apps/LwipMibCompiler/SharpSnmpLib/license.txt": {
+      "bytes": 24383,
+      "sha256": "ef1f7505cfdff240e72602bc50ef1cdba37c681c84611cdf30e4371320c70942"
+    },
+    "releases/licenses/esp-idf/components/mbedtls/mbedtls/LICENSE": {
+      "bytes": 29852,
+      "sha256": "9b405ef4c89342f5eae1dd828882f931747f71001cfba7d114801039b52ad09b"
+    },
+    "releases/licenses/esp-idf/components/mbedtls/mbedtls/framework/LICENSE": {
+      "bytes": 29861,
+      "sha256": "11402351e38392230bb8934ba1095c0c0049a296c0f8821f76e4672dff54b490"
+    },
+    "releases/licenses/esp-idf/components/mqtt/esp-mqtt/LICENSE": {
+      "bytes": 11339,
+      "sha256": "20ed622a5f1a273258b415097609f6a236fb2f23f8c593c63e29e6cc77de0032"
+    },
+    "releases/licenses/esp-idf/components/newlib/COPYING.NEWLIB": {
+      "bytes": 46295,
+      "sha256": "0681089a556e93791da82718d68011ba452de245f7f59c3846936304756ac0c0"
+    },
+    "releases/licenses/esp-idf/components/openthread/lib/LICENSE": {
+      "bytes": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    "releases/licenses/esp-idf/components/openthread/openthread/LICENSE": {
+      "bytes": 1506,
+      "sha256": "e164182fc3e6378533ba706800087469a14dcd5913ee55e2e8ae3fb14f3cdbbb"
+    },
+    "releases/licenses/esp-idf/components/openthread/openthread/NOTICE": {
+      "bytes": 1325,
+      "sha256": "1b37f4fbb95506a0529a15c007aa53053e0e2bf03b1547fb244fdebacf49374f"
+    },
+    "releases/licenses/esp-idf/components/openthread/openthread/third_party/jlink/SEGGER_RTT_V640/License.txt": {
+      "bytes": 1759,
+      "sha256": "9a160ebc4406ed363f5fb397cc8cd201613ab29e67a2439474f7bafd77e3ce07"
+    },
+    "releases/licenses/esp-idf/components/openthread/openthread/third_party/mbedtls/repo/LICENSE": {
+      "bytes": 29852,
+      "sha256": "9b405ef4c89342f5eae1dd828882f931747f71001cfba7d114801039b52ad09b"
+    },
+    "releases/licenses/esp-idf/components/openthread/openthread/third_party/mbedtls/repo/framework/LICENSE": {
+      "bytes": 29861,
+      "sha256": "11402351e38392230bb8934ba1095c0c0049a296c0f8821f76e4672dff54b490"
+    },
+    "releases/licenses/esp-idf/components/openthread/openthread/tools/otci/LICENSE": {
+      "bytes": 1506,
+      "sha256": "d29b8f5c1c666698dfe7717c53e10f82981e0889a06f8a3ebc093d9dccc35aa4"
+    },
+    "releases/licenses/esp-idf/components/protobuf-c/protobuf-c/LICENSE": {
+      "bytes": 1613,
+      "sha256": "b8999cb392cc5bbe8cd679de59584ad8d2f26033123e76f1d662fa14b9d4f287"
+    },
+    "releases/licenses/esp-idf/components/spiffs/spiffs/LICENSE": {
+      "bytes": 1117,
+      "sha256": "d19257540156a51ed50c2378e7159066415d8bbbe147779f8deb0d3e73f1b0a7"
+    },
+    "releases/licenses/esp-idf/components/unity/unity/LICENSE.txt": {
+      "bytes": 1123,
+      "sha256": "7d710553eaf7174f383699ed4eebac67fe7cda7971cbe892f700cd0e087f860f"
+    },
+    "releases/licenses/esp-idf/components/wpa_supplicant/COPYING": {
+      "bytes": 965,
+      "sha256": "a87ac4e333d0f120408a9d814e40c3672cd27f365af89b4f2f6631f7a9338953"
+    },
+    "releases/licenses/esp-idf/tools/catch/LICENSE.txt": {
+      "bytes": 1338,
+      "sha256": "c9bff75738922193e67fa726fa225535870d2aa1059f91452c411736284ad566"
+    },
+    "releases/licenses/libDaisy/Drivers/CMSIS-DSP/ComputeLibrary/LICENSE.txt": {
+      "bytes": 1074,
+      "sha256": "d739a0662cecfdb700d7dca85dae247a3590ba415b6a937708aa10f0b850a6e4"
+    },
+    "releases/licenses/libDaisy/Drivers/CMSIS-DSP/LICENSE.txt": {
+      "bytes": 11357,
+      "sha256": "b40930bbcf80744c86c46a12bc9da056641d722716c378f5659b9e555ef833e1"
+    },
+    "releases/licenses/libDaisy/Drivers/CMSIS-Device/ST/STM32H7xx/LICENSE.md": {
+      "bytes": 11348,
+      "sha256": "49d37f1f2e5c1f9fc9da194b44ffbfa41f966b7cf446fbab4d1e2b0c1e3d20df"
+    },
+    "releases/licenses/libDaisy/Drivers/CMSIS_5/CMSIS/DSP/ComputeLibrary/LICENSE.txt": {
+      "bytes": 1074,
+      "sha256": "d739a0662cecfdb700d7dca85dae247a3590ba415b6a937708aa10f0b850a6e4"
+    },
+    "releases/licenses/libDaisy/Drivers/CMSIS_5/CMSIS/DSP/LICENSE.txt": {
+      "bytes": 11357,
+      "sha256": "b40930bbcf80744c86c46a12bc9da056641d722716c378f5659b9e555ef833e1"
+    },
+    "releases/licenses/libDaisy/Drivers/CMSIS_5/CMSIS/DSP/SDFTools/LICENSE.txt": {
+      "bytes": 11357,
+      "sha256": "b40930bbcf80744c86c46a12bc9da056641d722716c378f5659b9e555ef833e1"
+    },
+    "releases/licenses/libDaisy/Drivers/CMSIS_5/CMSIS/Pack/Bash/License.txt": {
+      "bytes": 25,
+      "sha256": "3ee21f075e5078c2c414f7e169bf348ede518659b4797c8b86d0aa3777c474e3"
+    },
+    "releases/licenses/libDaisy/Drivers/CMSIS_5/LICENSE.txt": {
+      "bytes": 11357,
+      "sha256": "b40930bbcf80744c86c46a12bc9da056641d722716c378f5659b9e555ef833e1"
+    },
+    "releases/licenses/libDaisy/Drivers/STM32H7xx_HAL_Driver/LICENSE.md": {
+      "bytes": 1485,
+      "sha256": "376c82bcef0be563bf59b93d05cfdd4b6295e4660b55b31dd8a883bf1d6637f7"
+    },
+    "releases/licenses/libDaisy/LICENSE": {
+      "bytes": 1079,
+      "sha256": "a203bc3c1e8bbd29129cd5097a9c7c9e6da65eacee37f04f491715a7d6511e1c"
+    },
+    "releases/licenses/libDaisy/Middlewares/ST/STM32_USB_Device_Library/LICENSE.md": {
+      "bytes": 4361,
+      "sha256": "6b6a3968253466c776a660e916c67c7207c42fcd5bf02895e50215f923dae29d"
+    },
+    "releases/licenses/libDaisy/examples/CopyingWavs/CopyingWavs.cpp": {
+      "bytes": 3367,
+      "sha256": "a6e5e40edea79fa4a19916229f0b9257c79c4b5bec2e4e24009895932823494c"
+    },
+    "releases/licenses/libDaisy/tests/googletest/LICENSE": {
+      "bytes": 1475,
+      "sha256": "9702de7e4117a8e2b20dafab11ffda58c198aede066406496bef670d40a22138"
+    },
+    "releases/mainboard-pcb.zip": {
+      "bytes": 129971,
+      "sha256": "6733434f28e54d46cab2221da823a4b0b1cb771f13e0d64ce6ef3c27ec94da0f"
+    },
+    "releases/verification-logs/audio-and-core.log": {
+      "bytes": 1218,
+      "sha256": "6e990cf4d2ad5d836d10c71a95fecfc37e72a377766bbb77bc1557a4e2df65b6"
+    },
+    "releases/verification-logs/browser.log": {
+      "bytes": 134,
+      "sha256": "899e75eaee68d533d904c097ee6f94ba98502a1d3fdf8a31193a54a59f6edaf7"
+    },
+    "releases/verification-logs/hardware.log": {
+      "bytes": 5262,
+      "sha256": "5b34126764fcc9e22e167f20a68e7469aa71f390313f6649e374f022590eac9d"
+    },
+    "releases/verification-logs/mechanical.log": {
+      "bytes": 309,
+      "sha256": "078fcebfb1cedd43a7bf4bfaef225f04da9292177111261705e9b67c7abe93ba"
+    },
+    "releases/verification-logs/sanitize-build-arm_fir_f32.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "releases/verification-logs/sanitize-build-arm_fir_init_f32.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "releases/verification-logs/sanitize-build-core.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "releases/verification-logs/sanitizers.log": {
+      "bytes": 113,
+      "sha256": "287473acbec0e672745f11a9250bc2827467240b131231e1d5ebbd3986dcd9a8"
+    },
+    "releases/verification-logs/wireless.log": {
+      "bytes": 2466,
+      "sha256": "4d5fada88ba3da6a29ca123f9c4b66736312839981a3fb482a395b0736606c41"
+    },
+    "tests/browser.cjs": {
+      "bytes": 4420,
+      "sha256": "335606062991a6118711504bb6b690cbeb625f61393a7a703e3077c8cd99316e"
+    },
+    "tests/core_test.cpp": {
+      "bytes": 9312,
+      "sha256": "6d6d2be282776b2ff7361f61faa98c975c9fe2524cac8ab0b5b73dfea1c82120"
+    },
+    "tests/hardware_test.py": {
+      "bytes": 2437,
+      "sha256": "4d9b213b6ce7b51a2169d834484385cc9e42287899d494010b2f8857df9d17fc"
+    },
+    "tests/model_test.py": {
+      "bytes": 2241,
+      "sha256": "48c908a84c8fe6522f361dc2a76b8fe883897f05498dcca509cb9ed6eec8ef4a"
+    },
+    "tests/warm_test.cpp": {
+      "bytes": 1615,
+      "sha256": "b6387ca24468ae8e30a161d2f31dbe8f6bdfd3da88f0235b24376031a9301d82"
+    },
+    "tests/web.test.mjs": {
+      "bytes": 1442,
+      "sha256": "b75110f6bbf909de75a37d6c449d5ad8a4e6da0b5230e9ace480ee808ebedf1a"
+    },
+    "tools/bom.py": {
+      "bytes": 5838,
+      "sha256": "21479192e122f8b99b0ebb763cfcc462c60276dc6df99c0a00001e170f454466"
+    },
+    "tools/cad-python.lock": {
+      "bytes": 247,
+      "sha256": "d8018835e6ab2c76112ebe444cfcdd725babf2c7023e8e6543ee9f6fe14e64fd"
+    },
+    "tools/esp-python.lock": {
+      "bytes": 1139,
+      "sha256": "13a92d636859e894fa107b4acedf09e3c946c817111015f2eaad6557d02ad226"
+    },
+    "tools/export_hardware.sh": {
+      "bytes": 2687,
+      "sha256": "ba494f4eb31915361b2ddd1ea302b03918048fc1ba87b04d849a023a7d8ca608"
+    },
+    "tools/generate_schema.py": {
+      "bytes": 933,
+      "sha256": "790cb3eef2f24f5854d60e361de51f2f5ef21f3a1a3560851286db3aeb36b13c"
+    },
+    "tools/hardware.py": {
+      "bytes": 11750,
+      "sha256": "5aa877a417606df69b4ba39af5ee41baaa805159b27f17625238d744402cd4df"
+    },
+    "tools/mechanical.py": {
+      "bytes": 11061,
+      "sha256": "5b623d364f037506f6dee3ee4119fad6cb6f056645ae90eb7a64f7a8b44d32aa"
+    },
+    "tools/model_tool.py": {
+      "bytes": 4876,
+      "sha256": "421d51ab7c52cd258824f3e657fc14e199629a1c6e2101ef900779e5f4e16dfe"
+    },
+    "tools/package_release.py": {
+      "bytes": 6033,
+      "sha256": "b3029be463de0b4748e6ba888424eff0e8999bfc6ba638dd7cdc76d82ed5d5aa"
+    },
+    "tools/prepare_environment.sh": {
+      "bytes": 2957,
+      "sha256": "3dc6a8d21ef240a075259bb4109399fde6d274ac359e6e267899030666c6d0d9"
+    },
+    "tools/validate.py": {
+      "bytes": 6601,
+      "sha256": "76354f82632758c21fb034809057a92cdd9cc7e57a38a5132e41d3a69a5b7487"
+    },
+    "web/api.js": {
+      "bytes": 1817,
+      "sha256": "1f4994cf119fdaee9cb784de470f0800c5206488a4b30030d26cdb0f71d40c3f"
+    },
+    "web/app.js": {
+      "bytes": 5942,
+      "sha256": "05e34894db12e607ff96c5e8782f3d42ab390a824a68211e766f6fb790bb4d97"
+    },
+    "web/index.html": {
+      "bytes": 1953,
+      "sha256": "6529b1bdd2f941c096c840321e0f0391d40f2a2f9f5384f02fdf881c4e08430d"
+    },
+    "web/package.json": {
+      "bytes": 33,
+      "sha256": "a90fc33418afa2b9cbf4768524b021135b965ecdf993457505bfae3ac44a8428"
+    },
+    "web/schema.json": {
+      "bytes": 4949,
+      "sha256": "7eb586b5cd3114869a876ead39d714a001c197032bcd376bf9259e0f7df67751"
+    },
+    "web/style.css": {
+      "bytes": 3690,
+      "sha256": "895f3a29e8fb5ad6b8e7bb2167041e5b0bdb223a1dc856d421e65f883026134c"
+    }
+  },
+  "referenceFiles": {
+    "Software/GuitarPedal/Effect-Modules/Nam/nam_a2_runtime.h": {
+      "bytes": 23198,
+      "sha256": "9555423322781a09c09faf570d2202a1863471bf95c53ceb66f67b9954bb57d7"
+    },
+    "Software/GuitarPedal/Effect-Modules/Nam/model_data_nam_a2.h": {
+      "bytes": 218938,
+      "sha256": "46db3b81ff26751e9f24cddd9b39ed759d85b6be5a1430becec8f4766b2e67bb"
+    },
+    "Software/GuitarPedal/Effect-Modules/ImpulseResponse/ir_data.h": {
+      "bytes": 157,
+      "sha256": "e0c8903cb71d563f8a6c4c7a9456ac4c6c114a0802ddd678c31f0c3d6241d648"
+    },
+    "Software/GuitarPedal/Effect-Modules/ImpulseResponse/ir_data.cpp": {
+      "bytes": 29687,
+      "sha256": "778e662aabeb503d5ddef5d108dadae1f7db1cc506b834cad29e6b83754481ad"
+    }
+  }
+}

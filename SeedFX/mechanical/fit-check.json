@@ -1,0 +1,25 @@
+{
+  "lidBodyInterference_mm3": 0.0,
+  "lidSpacerInterference_mm3": 0.0,
+  "boardCaseInterference_mm3": 0.0,
+  "scope": "bare board and conservative accessory envelopes; main components use a procurement keepout, not measured CAD",
+  "pcbThickness_mm": 1.516200000000019,
+  "mainElectronicsDepthLimit_mm": 28,
+  "accessoryChecks": [
+    {
+      "name": "radio_adapter",
+      "caseBoardLidInterference_mm3": 0.0,
+      "clearanceToMainKeepout_mm": 1.6999999999999957
+    },
+    {
+      "name": "xiao_esp32c3",
+      "caseBoardLidInterference_mm3": 0.0,
+      "clearanceToMainKeepout_mm": 6.299999999999997
+    },
+    {
+      "name": "mini360",
+      "caseBoardLidInterference_mm3": 0.0,
+      "clearanceToMainKeepout_mm": 6.299999999999997
+    }
+  ]
+}

@@ -1,0 +1,114 @@
+(footprint "Generic_PowerJack"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(property "Reference" "J1"
+		(at -0.024 -2.176 90)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "05b8d764-97ec-44b8-a77a-61fdc605d2d4")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "Barrel_Jack_Switch"
+		(at -14.96 -2.216 90)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "ad1b6d9d-6871-460d-8d2c-e952f60f70e7")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "5a4ec934-5055-43c6-abdd-54bb324286d9")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" "DC Barrel Jack with an internal switch"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "907966fe-9a4f-4f27-a279-0376999b451c")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr through_hole)
+	(fp_rect
+		(start -11.15 -6.886)
+		(end 3.2 2.514)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+		(uuid "c42d1a33-b7d4-4a97-82d7-c09fb8cfd1d7")
+	)
+	(fp_rect
+		(start -11 -6.686)
+		(end 3 2.314)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.Fab")
+		(uuid "729edafe-19a9-40df-b81a-350f1a592fdf")
+	)
+	(fp_text user "${REFERENCE}"
+		(at -3 -0.1 90)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "78c9fb0f-8d69-4376-89e0-236fb93381e7")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "1" thru_hole oval
+		(at 3 -2.186)
+		(size 2.3 4.5)
+		(drill oval 0.8 3)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "d27eaaf7-599f-430a-aaf3-0fc98996268b")
+	)
+	(pad "2" thru_hole oval
+		(at -3 -2.186)
+		(size 2.3 4.5)
+		(drill oval 0.8 3)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "6c07a36c-603e-41e2-ac69-10b69c1209d0")
+	)
+	(pad "3" thru_hole oval
+		(at 0.5 2.464 90)
+		(size 2.3 4)
+		(drill oval 0.8 2.5)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "c14f8ad5-0da5-4f5f-b425-d039fbe3ad29")
+	)
+	(embedded_fonts no)
+)

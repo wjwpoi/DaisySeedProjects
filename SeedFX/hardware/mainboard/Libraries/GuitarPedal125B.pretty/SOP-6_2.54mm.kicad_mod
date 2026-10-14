@@ -1,0 +1,265 @@
+(footprint "SOP-6_2.54mm"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(descr "6-lead surface-mounted (SMD) DIP package, row spacing 9.53 mm (375 mils)")
+	(tags "SMD DIP DIL PDIP SMDIP 2.54mm 9.53mm 375mil")
+	(property "Reference" "U4"
+		(at 0 0 180)
+		(layer "F.Fab")
+		(uuid "3243bab3-2e55-41e8-bb43-b1b057b5cf07")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "H11L1"
+		(at 0 5.4 180)
+		(layer "F.Fab")
+		(uuid "2386f1d4-c63b-4653-b9a2-71ad68496b32")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "0af78918-60a7-4ce0-841f-a36e63ae4873")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" "Schmitt Trigger Output Optocoupler, High Speed, DIP-6, 1.6mA turn on threshold"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "5e22a7e9-e6af-4b63-b180-41e74e008c01")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr smd)
+	(fp_line
+		(start -4.4 -5.75)
+		(end -4.4 5.75)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "693e4b6a-f5e4-47f0-98d9-a142dbcfc814")
+	)
+	(fp_line
+		(start -4.4 5.75)
+		(end 4.4 5.75)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "a8d107ab-0a22-4a79-a351-b61e27bdbbae")
+	)
+	(fp_line
+		(start 4.4 -5.75)
+		(end -4.4 -5.75)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "808f1bde-93df-4d41-81ae-9c4f6b532a9c")
+	)
+	(fp_line
+		(start 4.4 5.75)
+		(end 4.4 -5.75)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "af00a38c-9846-46e9-b2ca-ddf886bb6064")
+	)
+	(fp_line
+		(start -3.87 -3.235)
+		(end -3.87 -1)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "7777db6e-d51f-4dcf-b8b7-b6e86ccfaba9")
+	)
+	(fp_line
+		(start -3.87 1)
+		(end -3.87 3.235)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "7aa569f2-6dd4-41da-8990-39cf751a378a")
+	)
+	(fp_line
+		(start -3.87 3.235)
+		(end 3.87 3.235)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "98d3fe13-b797-4666-8037-18d7671849cc")
+	)
+	(fp_line
+		(start -3.81 -3.175)
+		(end 3.81 -3.175)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "0ff2ca92-a1b1-4479-bf55-9ce4f9790a27")
+	)
+	(fp_line
+		(start -3.81 2.175)
+		(end -3.81 -3.175)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "648dc273-b9aa-4ac3-9f2f-2f62f92f147e")
+	)
+	(fp_line
+		(start -2.81 3.175)
+		(end -3.81 2.175)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "3ec75a68-6c58-4a61-9b08-a7f4e09c0a23")
+	)
+	(fp_line
+		(start 3.81 -3.175)
+		(end 3.81 3.175)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "4f072151-1b2b-4bf1-8efc-047f7c0d43a9")
+	)
+	(fp_line
+		(start 3.81 3.175)
+		(end -2.81 3.175)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "adbd651f-b0b6-43d0-97f6-f838e9b90672")
+	)
+	(fp_line
+		(start 3.87 -3.235)
+		(end -3.87 -3.235)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "7ca6b0c6-5982-428d-b61e-0130909f01db")
+	)
+	(fp_line
+		(start 3.87 3.235)
+		(end 3.87 -3.235)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "03b7c32a-006f-483d-a33a-ea66d4394f4b")
+	)
+	(fp_arc
+		(start -3.87 -1)
+		(mid -2.87 0)
+		(end -3.87 1)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "4130423b-a73e-4f0b-8501-6ec2353d2224")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 0 180)
+		(layer "F.Fab")
+		(uuid "46ae26f9-e121-4250-a26e-b56723d67c1e")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "1" smd rect
+		(at -2.54 4.625 90)
+		(size 2 1.78)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "2346b895-bafc-4e14-8196-e82a9dd2b78e")
+	)
+	(pad "2" smd rect
+		(at 0 4.625 90)
+		(size 2 1.78)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "230d7729-231d-43d1-9c1d-6b0ea8681c84")
+	)
+	(pad "3" smd rect
+		(at 2.54 4.625 90)
+		(size 2 1.78)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "75dbc73b-7b1e-48bd-a271-7ba63beb5857")
+	)
+	(pad "4" smd rect
+		(at 2.54 -4.625 90)
+		(size 2 1.78)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "0ed090c9-13f0-4324-9db9-574248524f1c")
+	)
+	(pad "5" smd rect
+		(at 0 -4.625 90)
+		(size 2 1.78)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "e1c6f0e2-a0de-4096-8468-80f8f1d6436a")
+	)
+	(pad "6" smd rect
+		(at -2.54 -4.625 90)
+		(size 2 1.78)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "23c0d03f-f4da-4953-8265-852285ddb729")
+	)
+	(embedded_fonts no)
+	(model "${KICAD6_3DMODEL_DIR}/Package_DIP.3dshapes/SMDIP-6_W9.53mm.wrl"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)

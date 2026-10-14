@@ -1,0 +1,9 @@
+# Preserve the bytes recorded in the engineering release manifest.
+hardware/** -text
+mechanical/** -text
+releases/** -text
+
+# Inspect generated solids and firmware with their native tools.
+mechanical/*.step -diff
+mechanical/*.stl -diff
+releases/firmware/** -diff

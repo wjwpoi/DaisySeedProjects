@@ -1,0 +1,225 @@
+(footprint "PJ-320A"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(property "Reference" "J5"
+		(at 2.9 -2.3 90)
+		(layer "F.Fab")
+		(uuid "2b493dfc-e56d-44ee-9ada-8cc35a753720")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "MIDI OUT JACK"
+		(at -10.436 -0.09 90)
+		(layer "F.Fab")
+		(uuid "498532ab-ec95-461a-9de6-5c0f555d83e8")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "f083999a-982b-4e9a-9072-95c50c1bc0c7")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" "Audio Jack, 4 Poles (TRRS)"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "c13f1071-f999-4c77-8029-710688a5c3e8")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr through_hole)
+	(fp_line
+		(start -9.266 -2.8)
+		(end -9.266 2.8)
+		(stroke
+			(width 0.15)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "3611d86d-e5ab-48b5-b4c1-2aff9141a342")
+	)
+	(fp_line
+		(start -7.266 -3.05)
+		(end -7.266 3.05)
+		(stroke
+			(width 0.15)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "dcafa5f0-9376-4045-abb6-4e0d029b444e")
+	)
+	(fp_line
+		(start -7.266 -3.05)
+		(end 4.834 -3.05)
+		(stroke
+			(width 0.15)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "dac2a20b-4f12-459c-9454-a2ac3c2c0713")
+	)
+	(fp_line
+		(start -7.266 -2.8)
+		(end -9.266 -2.8)
+		(stroke
+			(width 0.15)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "892112d1-a2dc-4966-bc4c-2043c97eec8b")
+	)
+	(fp_line
+		(start -7.266 2.8)
+		(end -9.266 2.8)
+		(stroke
+			(width 0.15)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "fd7889e0-51e2-4032-8e12-cf63914c8de9")
+	)
+	(fp_line
+		(start -7.266 3.05)
+		(end 4.834 3.05)
+		(stroke
+			(width 0.15)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "988904fa-7dfa-4b12-91bf-05aa23d2f4d9")
+	)
+	(fp_line
+		(start 4.834 -3.05)
+		(end 4.834 3.05)
+		(stroke
+			(width 0.15)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "67018f04-c108-4fbc-8230-8dbaa40ebee1")
+	)
+	(fp_text user "S"
+		(at 0.1 -2.55 90)
+		(layer "F.Fab")
+		(uuid "415b5923-8a4f-4ce2-968e-e507ba327dbf")
+		(effects
+			(font
+				(size 0.7 0.7)
+				(thickness 0.1)
+			)
+		)
+	)
+	(fp_text user "T"
+		(at -1.3 -2.3 90)
+		(layer "F.Fab")
+		(uuid "4fdc46eb-a4b5-4829-a904-250f0ac6581c")
+		(effects
+			(font
+				(size 0.7 0.7)
+				(thickness 0.1)
+			)
+		)
+	)
+	(fp_text user "R2"
+		(at -8.05 -2.3 90)
+		(layer "F.Fab")
+		(uuid "8c4abd52-e9d0-4c40-a9f6-697556005d22")
+		(effects
+			(font
+				(size 0.7 0.7)
+				(thickness 0.1)
+			)
+		)
+	)
+	(fp_text user "R1"
+		(at -5.05 -2.3 90)
+		(layer "F.Fab")
+		(uuid "bf218119-fdc5-40b4-83e0-2e4cf1468cf8")
+		(effects
+			(font
+				(size 0.7 0.7)
+				(thickness 0.1)
+			)
+		)
+	)
+	(pad "" np_thru_hole circle
+		(at -5.666 0 90)
+		(size 0.8 0.8)
+		(drill 0.8)
+		(layers "*.Cu" "*.Mask")
+		(uuid "507f2f11-c789-40ec-a1e6-754d6a116e32")
+	)
+	(pad "" np_thru_hole circle
+		(at 1.334 0 90)
+		(size 0.8 0.8)
+		(drill 0.8)
+		(layers "*.Cu" "*.Mask")
+		(uuid "dd85b91f-3995-4dcb-8e2a-9089747180af")
+	)
+	(pad "R1" thru_hole oval
+		(at -1.066 -2.3 90)
+		(size 1.6 2)
+		(drill oval 0.9 1.3)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "50c256f2-cfb9-4dfc-81cd-c8a69e9347c1")
+	)
+	(pad "R2" thru_hole oval
+		(at -4.066 -2.3 90)
+		(size 1.6 2)
+		(drill oval 0.9 1.3)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "3402859f-4138-4af7-9e22-386d07089a6d")
+	)
+	(pad "S" thru_hole oval
+		(at 4.034 2.3 90)
+		(size 1.6 2)
+		(drill oval 0.9 1.3)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "137a3c0c-1f1a-470a-8073-202d9169ae45")
+	)
+	(pad "T" thru_hole oval
+		(at 2.934 -2.3 90)
+		(size 1.6 2)
+		(drill oval 0.9 1.3)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "54b7cff5-7d5b-4324-8305-c0eb84615444")
+	)
+	(embedded_fonts no)
+	(model "/Users/kshep/Documents/KiCad/Parts/AudioConnector-PJ320A/PJ-320A.step"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz -90 0 180)
+		)
+	)
+)

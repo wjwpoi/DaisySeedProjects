@@ -1,0 +1,15 @@
+cadquery==2.5.2
+cadquery-ocp==7.7.2
+casadi==3.8.1
+clang-format==19.1.7
+cmake==3.30.5
+ezdxf==1.4.4
+fonttools==4.66.1
+multimethod==1.12
+ninja==1.11.1.3
+nlopt==2.11.0
+numpy==2.5.4
+path==17.1.1
+pyparsing==3.3.3
+typing_extensions==4.16.0
+typish==1.9.3

@@ -1,0 +1,14 @@
+Harness,From,To,Signal,Wire_guidance
+Power,Mainboard C1 positive / protected +9V,Buck VIN,+9V after reverse polarity diode,Verify cathode side of D1; never tap raw polarity-reversed input
+Power,Mainboard GND,Buck GND,0V,Common ground at power entry
+Power,Buck VOUT,Adapter J1 pin1,5V_SOURCE,5.00V adjusted and trimmer locked; verify before connecting MCU
+Power,Buck GND,Adapter J1 pin2,GND,Pair with 5V conductor
+Wireless,Adapter J2 pin1,XIAO VBUS/5V,5V_WIFI,Filtered 5V; disconnect external 9V for USB flashing
+Wireless,Adapter J2 pin2,XIAO GND,GND,Common 0V
+Wireless,Adapter J2 pin3,XIAO D6 GPIO21,ESP_TX,3.3V UART; input to adapter R2
+Wireless,Adapter J2 pin4,XIAO D7 GPIO20,ESP_RX,3.3V UART; output from adapter R1
+Audio control,Adapter J3 pin1,Mainboard J7 pin1,GND,Removable harness; label pin1
+Audio control,Adapter J3 pin2,Mainboard J7 pin7 / Daisy physical pin14 / D13 PB6,SEED_TX,230400 baud; USART1 TX
+Audio control,Adapter J3 pin3,Mainboard J7 pin6 / Daisy physical pin15 / D14 PB7,SEED_RX,230400 baud; USART1 RX
+Chassis,Mainboard GND,Single chassis ground lug,Shield,One intentional connection; keep radio supply returns away from audio input
+RF,XIAO IPEX connector,Supplied 2.4GHz antenna,RF,Mount behind dielectric window; do not crease coax

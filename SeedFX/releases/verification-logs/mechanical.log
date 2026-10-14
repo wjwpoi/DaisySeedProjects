@@ -1,0 +1,3 @@
+/workspace/daisy-environment/dev-python/lib/python3.12/site-packages/cadquery/utils.py:39: FutureWarning: save will be removed in the next release.
+  warn(f"{f.__name__} will be removed in the next release.", FutureWarning)
+Generated enclosure STEP/STL, RF insert, tray, drill DXF/CSV and editable panel SVGs

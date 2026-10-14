@@ -1,0 +1,10 @@
+Reference,Value,Footprint,Quantity
+J1,5V BUCK INPUT,Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical,1
+J2,XIAO HARNESS,Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical,1
+J3,DAISY HARNESS,Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical,1
+FB1,BLM21PG601SN1D,Inductor_SMD:L_0805_2012Metric,1
+C1,22u 10V X5R,Capacitor_SMD:C_1206_3216Metric,1
+C2,22u 10V X5R,Capacitor_SMD:C_1206_3216Metric,1
+C3,100n 50V X7R,Capacitor_SMD:C_0805_2012Metric,1
+R1,1k 1%,Resistor_SMD:R_0805_2012Metric,1
+R2,1k 1%,Resistor_SMD:R_0805_2012Metric,1

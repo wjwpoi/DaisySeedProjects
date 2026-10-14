@@ -1,0 +1,29 @@
+/workspace/DaisySeedProjects/SeedFX/build/tests
+Passed 90967 checks (framing, corruption, presets, parameter bounds, pickups, real NAM inference, fades, tuner).
+/workspace/DaisySeedProjects/SeedFX/build/warm-test
+Analytic warm start matches 133-block reference: 5 models, 15360 samples; max absolute error 8.64267349e-07.
+python3 tools/model_tool.py --verify-builtin
+Verified 5 built-in model arrays: 1871 finite weights each
+node --test tests/web.test.mjs
+✔ every parameter accepts its default and rejects out-of-range/nonfinite values (3.722311ms)
+✔ preset and knob routing validation (0.304231ms)
+✔ tuner pitch labels (0.836236ms)
+✔ disconnected and rejected commands never report success (0.606042ms)
+ℹ tests 4
+ℹ suites 0
+ℹ pass 4
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 85.998586
+python3 -m unittest discover -s tests -p '*_test.py'
+............
+----------------------------------------------------------------------
+Ran 12 tests in 0.007s
+
+OK
+make -C firmware/audio -j4
+make[1]: Entering directory '/workspace/DaisySeedProjects/SeedFX/firmware/audio'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/workspace/DaisySeedProjects/SeedFX/firmware/audio'
