@@ -50,3 +50,5 @@
 - 外壳开孔、RF窗口、模块安装尺寸及所有待确认料号仍按 [采购前复核](PROCUREMENT_READINESS.md) 关闭后下单。
 
 明细：[材料 CSV](../hardware/purchase-bom.csv)、[服务 CSV](../hardware/service-budget.csv)、[机器预算](../hardware/cost-plan.json)。
+
+相对原仓库的新增与沿用费用见 [成本来源对比](COST_COMPARISON.md)。当前分项外包预算不能作为原作者造价或商家报价。

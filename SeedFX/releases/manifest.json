@@ -1,6 +1,6 @@
 {
   "version": "v1-engineering",
-  "generatedAt": "2026-10-14T07:13:34.515347+00:00",
+  "generatedAt": "2026-10-14T07:25:55.474972+00:00",
   "referenceRepository": "wjwpoi/DaisySeedProjects",
   "referenceCommit": "8e9f468ab0d35b87fafa33b9da2f017a0e6a865b",
   "physicalTestsExecuted": false,
@@ -40,8 +40,8 @@
       "sha256": "94748d47a5f38496ff1ca10e0a6493a92d24486dd2f118d7b4ce92624fa3f55a"
     },
     "README.md": {
-      "bytes": 4959,
-      "sha256": "b2f40f694af07705e5b74a3ec21b23670f5d9a78047728938a40479a183b9223"
+      "bytes": 5141,
+      "sha256": "e0028837bed906705271bdca6c9f4499c38eccf7c95a24671a323a094ec7246e"
     },
     "THIRD_PARTY.md": {
       "bytes": 1742,
@@ -50,6 +50,10 @@
     "docs/BUILD.md": {
       "bytes": 4731,
       "sha256": "b9910d6ec2c0b1e10d81626969fd837b679c25b779a49277d426ec1f2220425d"
+    },
+    "docs/COST_COMPARISON.md": {
+      "bytes": 3689,
+      "sha256": "fb85e13d1e2196a347315ed34d6c57121f0092361ad018bf81e4c9b81fbc3896"
     },
     "docs/HARDWARE.md": {
       "bytes": 6890,
@@ -72,8 +76,8 @@
       "sha256": "61314d274a8faf403bfb09b7994fcd12b831f5a53bc698253ca0edf910dc2e6b"
     },
     "docs/PURCHASING_PRICES.md": {
-      "bytes": 3717,
-      "sha256": "a5f5394b8ebe429b37386a5d4e36f96c1b36b0d091b093520db1a82b52b84122"
+      "bytes": 3874,
+      "sha256": "075d0e0506930ba8310efb47065f273ab1fda248d75afaf4594d6a539781ada0"
     },
     "docs/RELEASE.md": {
       "bytes": 2950,
@@ -944,8 +948,8 @@
       "sha256": "b75110f6bbf909de75a37d6c449d5ad8a4e6da0b5230e9ace480ee808ebedf1a"
     },
     "tools/bom.py": {
-      "bytes": 15170,
-      "sha256": "00513c8fee6ed351b1b817b963f451461269d87efe804eb752bd4a7838899a67"
+      "bytes": 15343,
+      "sha256": "d5dac4e78c832a02221df614ac569c82d720d0834a292208d933b31aef04cf43"
     },
     "tools/cad-python.lock": {
       "bytes": 247,

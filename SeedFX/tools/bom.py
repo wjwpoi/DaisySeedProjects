@@ -133,5 +133,6 @@ for item,quantity,spec,source,lo,hi,notes in parts:
 lines += ['',f'材料与裸板订单预算合计：**¥{money(low)}–{money(high)}**。','','| 服务项目 | 次数 | 小计预估（元） |','|---|---:|---:|']
 for identifier,label,channel,quantity,unit,lo,hi,notes in services:lines.append(f'| {label} | {quantity}{unit} | {money(subtotal(quantity,lo))}–{money(subtotal(quantity,hi))} |')
 lines += ['',f'服务与采购附加预算合计：**¥{money(service_low)}–{money(service_high)}**。',f'按委托焊接、现成壳体加工路线，单台整项目预算约 **¥{money(cost["projectLow"])}–{money(cost["projectHigh"])}**。这不是供应商已确认的成交报价或价格上限。','','- 主板贴片元件费与贴装工费分开，电源座、音频插座和 Seed 排母单独列价。如果工厂报价已包含它们，从网购清单中删除对应项。','- 适配板裸板、六颗贴片件、三个排针及焊接服务分开，避免打板和小料混计。','- 若代焊报价已经包含通孔件和线束装配，合并工费；自行焊接可去掉对应人工额度，工具采购不在本预算内。','- 主板材料按一个安装套数估算；SMT平台若要求多装板，需要按其整单数量重算费用。','- 小料最小包装补差与裸板最低订单分别核算；目前没有把起步费分摊给第二台机器。','- 单台封面印刷预算为一次UV印刷或UV DTF转印，不同时计算两种工艺。','- 外壳开孔、RF窗口、模块安装尺寸及所有待确认料号仍按 [采购前复核](PROCUREMENT_READINESS.md) 关闭后下单。','','明细：[材料 CSV](../hardware/purchase-bom.csv)、[服务 CSV](../hardware/service-budget.csv)、[机器预算](../hardware/cost-plan.json)。']
+lines += ['', '相对原仓库的新增与沿用费用见 [成本来源对比](COST_COMPARISON.md)。当前分项外包预算不能作为原作者造价或商家报价。']
 (ROOT/'docs/PURCHASING_PRICES.md').write_text('\n'.join(lines)+'\n')
 print(f'One-device materials: CNY {low:g}–{high:g}; services: {service_low:g}–{service_high:g}; project estimate: {cost["projectLow"]:g}–{cost["projectHigh"]:g}')
