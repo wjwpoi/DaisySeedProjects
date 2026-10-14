@@ -16,7 +16,7 @@
 |---|---|
 | 打包内容与恢复工程 | [交付指南](docs/RELEASE.md)、[文件校验清单](releases/manifest.json) |
 | 产品范围、架构和设计指标 | [产品设计](docs/PRODUCT.md) |
-| 采购和生产 | [硬件与装配](docs/HARDWARE.md)、[采购 BOM](hardware/purchase-bom.csv)、[连接表](hardware/wiring.csv) |
+| 采购和生产 | [硬件与装配](docs/HARDWARE.md)、[采购 BOM](hardware/purchase-bom.csv)、[逐项预估价](docs/PURCHASING_PRICES.md)、[连接表](hardware/wiring.csv) |
 | PCB 源文件 | [主板](hardware/mainboard/DaisySeedPedal125b.kicad_pcb)、[无线适配板](hardware/adapter/seedfx-adapter.kicad_pcb) |
 | 原理图源文件 | [主板](hardware/mainboard/DaisySeedPedal125b.kicad_sch)、[无线适配板](hardware/adapter/seedfx-adapter.kicad_sch) |
 | 外壳与封面 | [装配 STEP](mechanical/seedfx-enclosure.step)、[开孔 DXF](mechanical/front-drill.dxf)、[印刷版](mechanical/panel-print.svg)、[自定义封面模板](mechanical/panel-artwork-template.svg) |
@@ -39,7 +39,7 @@
 
 ## 成本与边界
 
-唯一一台设备装入的物料估算约 **¥563–1076**，包含基础印刷；这是物料参考额度，整项目支出仍需加入 PCB 最小订单、一次性 SMT/代焊服务、运费、RF/外壳加工、调试替换件及外接电源等实际报价。所有起步费与最低采购量都由这一个项目承担；多余裸板作为维修备件。默认选用经上电标定并锁定的通用 Mini-360 电源模块；希望使用固定输出品牌件时可换 Pololu D24V10F5。
+材料与最低裸板订单预算约 **¥608.9–1206.5**，包括外接 9V 电源及单台印刷；焊接、开孔、运费和小料采购补差预留 **¥240–800**。按委托焊接、现成壳加工路线，整项目预算约 **¥848.9–2006.5**；这是工程预估，实际数量与服务商完整报价仍待确认。所有起步费与最低采购量都由这一个项目承担；多余裸板作为维修备件。详见 [每项采购预估价](docs/PURCHASING_PRICES.md)。默认选用经上电标定并锁定的通用 Mini-360 电源模块；希望使用固定输出品牌件时可换 Pololu D24V10F5。
 
 首版为单声道、外接 9V、Wi-Fi 网页控制。采用参考主板的 TRS 接口时，正常使用 mono TS 线，DSP 模式下 Ring 输出为零信号。没有耳机驱动、电池、蓝牙控制、无线音频或 OTA 功能。
 

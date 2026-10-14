@@ -1,6 +1,6 @@
 {
   "version": "v1-engineering",
-  "generatedAt": "2026-10-14T06:53:49.514276+00:00",
+  "generatedAt": "2026-10-14T07:13:34.515347+00:00",
   "referenceRepository": "wjwpoi/DaisySeedProjects",
   "referenceCommit": "8e9f468ab0d35b87fafa33b9da2f017a0e6a865b",
   "physicalTestsExecuted": false,
@@ -40,8 +40,8 @@
       "sha256": "94748d47a5f38496ff1ca10e0a6493a92d24486dd2f118d7b4ce92624fa3f55a"
     },
     "README.md": {
-      "bytes": 4787,
-      "sha256": "de77b148bb35f13d33e2946f7306d1adeac86d3aa47799ea4e2dd8ad8837b88f"
+      "bytes": 4959,
+      "sha256": "b2f40f694af07705e5b74a3ec21b23670f5d9a78047728938a40479a183b9223"
     },
     "THIRD_PARTY.md": {
       "bytes": 1742,
@@ -52,16 +52,16 @@
       "sha256": "b9910d6ec2c0b1e10d81626969fd837b679c25b779a49277d426ec1f2220425d"
     },
     "docs/HARDWARE.md": {
-      "bytes": 6799,
-      "sha256": "e6299f41ed4a8e3d0bd0536f8f3f201ea64421cf651ce6e2bd8743ce8276028d"
+      "bytes": 6890,
+      "sha256": "f0936ffdd42b1579446cfacb2561d271148a7a079ac33b79f2c0971eaa5f6b2d"
     },
     "docs/MODELS.md": {
       "bytes": 2921,
       "sha256": "29d6404c04070212e7060f70c02c2d4fe36f867656e82c40c7e51082bc3e07bc"
     },
     "docs/PROCUREMENT_READINESS.md": {
-      "bytes": 3749,
-      "sha256": "898c86ade5f1a3dc47d7ce9fac53ae549cdde8b87e79d445d06887d5d85f972c"
+      "bytes": 3827,
+      "sha256": "5de8a8d1f0f00d5e241d86c4591c9f1cea34a295f4008a7d86ddba8af5e31960"
     },
     "docs/PRODUCT.md": {
       "bytes": 4404,
@@ -71,9 +71,13 @@
       "bytes": 3242,
       "sha256": "61314d274a8faf403bfb09b7994fcd12b831f5a53bc698253ca0edf910dc2e6b"
     },
+    "docs/PURCHASING_PRICES.md": {
+      "bytes": 3717,
+      "sha256": "a5f5394b8ebe429b37386a5d4e36f96c1b36b0d091b093520db1a82b52b84122"
+    },
     "docs/RELEASE.md": {
-      "bytes": 2773,
-      "sha256": "4726650724702a49c138189301bf2ef89caabfbcd2bfaaf7fdab959758d2a3e2"
+      "bytes": 2950,
+      "sha256": "776a1b1d21cbae565fa7068694cea599c9a608c32cde01b69a8fbec537015148"
     },
     "docs/USER_MANUAL.md": {
       "bytes": 2979,
@@ -96,8 +100,8 @@
       "sha256": "02d9590fcb01b26d82aa12b6f4b05fb7769a2fc03255abaa7976d3ffccaf98cd"
     },
     "docs/validation.json": {
-      "bytes": 8891,
-      "sha256": "6a8e7c5e9713116f0c44659d41f1dbb93c0fcf167930c630b53ff97d5822eff5"
+      "bytes": 9488,
+      "sha256": "13478873580bd9499cb03676ab9216abf4c15a403b5785a4a24653260dd686ff"
     },
     "firmware/audio/Makefile": {
       "bytes": 874,
@@ -176,8 +180,8 @@
       "sha256": "27d3178f7b05ea8a1d5b4c3dac75a896b4377dfeb22e9870306ced3d9a7a9474"
     },
     "hardware/cost-plan.json": {
-      "bytes": 1117,
-      "sha256": "4b10f98e7b76450bd47491bf804984a20cd339b9d79401a4b6de8f2af2e79798"
+      "bytes": 1627,
+      "sha256": "683fdd3132735a0ad1759add45b9b2418e78c9e4b7d190f12ea735f14acf65bc"
     },
     "hardware/io-map.csv": {
       "bytes": 913,
@@ -488,8 +492,8 @@
       "sha256": "2624d9aa5af0192b6f356069a177ceb9d414fc675c70f43deb037e60e02a315b"
     },
     "hardware/purchase-bom.csv": {
-      "bytes": 3252,
-      "sha256": "7680e5b8161db083417ba20939c541d90273fd0ff0a5e85df821d2e734f480be"
+      "bytes": 6637,
+      "sha256": "9866dae833ccf533849eaac01413fc6798c9174e4ff3c0551ed15c7b49ba0527"
     },
     "hardware/reports/adapter-drc.json": {
       "bytes": 280,
@@ -514,6 +518,10 @@
     "hardware/reports/mainboard-netlist.xml": {
       "bytes": 120442,
       "sha256": "484e7527f078da5d765b0ab3c00fdfba6fc4ed6c6e114eeb13fd90a610b63ba0"
+    },
+    "hardware/service-budget.csv": {
+      "bytes": 1525,
+      "sha256": "0ed701f0627b0cacb9741f20775e163d7941885506c5ef740ec6f5002dc9c623"
     },
     "hardware/wiring.csv": {
       "bytes": 1257,
@@ -936,8 +944,8 @@
       "sha256": "b75110f6bbf909de75a37d6c449d5ad8a4e6da0b5230e9ace480ee808ebedf1a"
     },
     "tools/bom.py": {
-      "bytes": 7183,
-      "sha256": "18e9783381e3739aef8da007ff633f2427404445d7cd095e411c0ad2303f9736"
+      "bytes": 15170,
+      "sha256": "00513c8fee6ed351b1b817b963f451461269d87efe804eb752bd4a7838899a67"
     },
     "tools/cad-python.lock": {
       "bytes": 247,

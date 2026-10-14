@@ -28,7 +28,7 @@
 | 电源滤波 | BLM21PG601SN1D 磁珠、两只 22µF/10V X5R 1206、一只 100nF/50V X7R 0805 |
 | UART 保护 | 两只 1kΩ 0805 串联电阻；接口仍是 3.3V TTL，不是 RS232 |
 
-完整零件和原始 LCSC 选择在 `purchase-bom.csv` 与 `mainboard/assembly-bom.csv`。`adapter/bom.csv` 给出适配板装配明细。库存、价格和供应商替代料未实时询价；需要核对封装、引脚和机械尺寸，不能只按相同商品名称替换。
+每项单价、数量、小计与服务预算见 [采购预估价](PURCHASING_PRICES.md)。完整零件和原始 LCSC 选择在 `purchase-bom.csv` 与 `mainboard/assembly-bom.csv`。`adapter/bom.csv` 给出适配板装配明细。库存、价格和供应商替代料未实时询价；需要核对封装、引脚和机械尺寸，不能只按相同商品名称替换。
 
 ## 接线与供电
 

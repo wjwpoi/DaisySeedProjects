@@ -1,19 +1,23 @@
-Item,Quantity,Selected_part_or_specification,Source,Unit_CNY_low_estimate,Unit_CNY_high_estimate,Notes
-Daisy Seed Rev7,1,"Electro-Smith Daisy Seed, fitted 2 x 20 pin headers",https://electro-smith.com/products/daisy-seed,240,360,"Audio MCU, codec, SDRAM and QSPI included"
-Main PCB,1,"125B Rev6-derived, FR4 1.6mm, 2 layers, 1oz copper",hardware/mainboard,20,60,Installed board allowance only; charge the full supplier minimum order to this single-device project; no sharing assumed
-Main SMT components,1,Use assembly-bom.csv and original LCSC selections,hardware/mainboard/assembly-bom.csv,65,120,DNP MIDI circuit for this UART variant
-Potentiometers,6,Alpha RD901F-40-15R1-B10K,https://www.taydaelectronics.com/10k-ohm-linear-taper-potentiometer-round-shaft-pcb-9mm.html,4,8,B10K linear; round shaft; follow electrical isolation note
-Encoder,1,Bourns PEC11R-4220K-S24,https://www.mouser.com/ProductDetail/652-PEC11R-4220K-S24,10,25,Momentary push switch; 24 detents; 6mm shaft
-OLED,1,"HiLetgo B01MQPQF24 reference form factor; 0.96 inch 128x64, 7-pin SPI, 3.3V SSD1306",https://www.amazon.com/dp/B01MQPQF24,20,45,"27.5x27.75mm PCB, 22x11mm active area; GND,VCC,SCK,MOSI,RESET,DC,CS; match footprint"
-Audio sockets,2,Neutrik NMJ6HCD2,https://www.neutrik.com/en/product/nmj6hcd2,10,20,Fits the existing mainboard footprint; use mono TS patch leads
-Footswitches,2,"SPST normally-open momentary, M12 thread, 2 solder lugs",,8,18,12.2mm panel bore; do not use latching 3PDT switches
-LEDs,2,"3mm diffused green / amber, through-hole",,0.2,1,Flush 3.2mm holes; isolated leads; no metal holders needed
-Knobs,7,6 x 12.5mm OD for 6.35mm round shafts; 1 x 12.5mm OD for 6mm encoder,,2,5,Set-screw type; select correct bore sizes
-Seed sockets,2,"1x20 female, 2.54mm pitch, low profile",,2,5,Match the included footprint; no tall stacking sockets
-Wi-Fi MCU,1,Seeed Studio XIAO ESP32-C3 with supplied IPEX antenna,https://www.seeedstudio.com/Seeed-XIAO-ESP32C3-p-5431.html,25,50,"USB-C, 4MB flash; D6 GPIO21 TX / D7 GPIO20 RX"
-Wi-Fi buck supply,1,"Mini-360 MP2307DN module, adjusted and locked to 5V; >=0.5A tested continuous output",,5,15,18x14mm envelope; protected +9V input; commission before attaching XIAO. Fixed 5V Pololu D24V10F5 #2831 is the drop-in premium option
-UART adapter,1,"32x28mm FR4 board, see adapter BOM",hardware/adapter/bom.csv,10,25,"Installed adapter allowance only; full PCB minimum order is a project expense; 3.3V logic, 1k series resistors and supply filtering"
-Case and finish,1,125B family 66x121.5x40mm black/olive powder-coated metal shell,mechanical/seedfx-case.step,45,90,Check the blank dimensions before drilling; RF window machining separate
-Dielectric inserts and tray,1,PETG/ABS RF insert + insulating tray + 2mm lid spacer + M2 hardware,mechanical,10,30,No metallic paint/foil over the radio window
-Panel printing,1,"UV print from panel-print.svg, full-size 66x121.5mm",mechanical/panel-print.svg,25,60,One panel for the final device; user artwork can replace the artwork layer; confirm any one-time print setup fee
-Harness and small hardware,1,"26-28AWG wire, heatshrink, removable headers, M3x8 lid screws, ground lug",hardware/wiring.csv,10,25,Short twisted UART/GND pairs; no bare wire near pot tabs
+Item,Quantity,Selected_part_or_specification,Source,Unit_CNY_low_estimate,Unit_CNY_high_estimate,Notes,Item_ZH,Purchase_channel,Subtotal_CNY_low_estimate,Subtotal_CNY_high_estimate,Price_basis,Quantity_unit
+Daisy Seed Rev7,1,"Electro-Smith Daisy Seed, fitted 2 x 20 pin headers",https://electro-smith.com/products/daisy-seed,240,360,"Audio MCU, codec, SDRAM and QSPI included",Daisy Seed 主控,淘宝 / 京东 / 原厂代理,240,360,工程预算预估，未获取实时店铺或服务商报价,个
+Main PCB,1,"125B Rev6-derived, FR4 1.6mm, 2 layers, 1oz copper",hardware/mainboard,20,60,Allowance for one minimum bare-board order; quantity depends on supplier quote; extra boards are repair spares,主板裸板最低订单,嘉立创打板,20,60,工程预算预估，未获取实时店铺或服务商报价,单
+Main SMT components,1,Use assembly-bom.csv and original LCSC selections,hardware/mainboard/assembly-bom.csv,65,120,"SMD material set only; excludes DC/audio sockets, Seed sockets and assembly service; omit MIDI DNP",主板贴片元件一套,嘉立创代采 / 立创商城,65,120,工程预算预估，未获取实时店铺或服务商报价,套
+Potentiometers,6,Alpha RD901F-40-15R1-B10K,https://www.taydaelectronics.com/10k-ohm-linear-taper-potentiometer-round-shaft-pcb-9mm.html,4,8,B10K linear; round shaft; follow electrical isolation note,B10K 电位器,淘宝 / 立创商城,24,48,工程预算预估，未获取实时店铺或服务商报价,个
+Encoder,1,Bourns PEC11R-4220K-S24,https://www.mouser.com/ProductDetail/652-PEC11R-4220K-S24,10,25,Momentary push switch; 24 detents; 6mm shaft,按压编码器,淘宝 / 立创商城,10,25,工程预算预估，未获取实时店铺或服务商报价,个
+OLED,1,"HiLetgo B01MQPQF24 reference form factor; 0.96 inch 128x64, 7-pin SPI, 3.3V SSD1306",https://www.amazon.com/dp/B01MQPQF24,20,45,"27.5x27.75mm PCB, 22x11mm active area; GND,VCC,SCK,MOSI,RESET,DC,CS; match footprint",七针 SPI OLED,淘宝 / 京东,20,45,工程预算预估，未获取实时店铺或服务商报价,个
+Audio sockets,2,Neutrik NMJ6HCD2,https://www.neutrik.com/en/product/nmj6hcd2,10,20,Fits the existing mainboard footprint; use mono TS patch leads,Neutrik 音频插座,淘宝 / 立创商城,20,40,工程预算预估，未获取实时店铺或服务商报价,个
+Footswitches,2,"SPST normally-open momentary, M12 thread, 2 solder lugs",,8,18,12.2mm panel bore; do not use latching 3PDT switches,瞬时常开脚踏,淘宝 / 立创商城,16,36,工程预算预估，未获取实时店铺或服务商报价,个
+LEDs,2,"3mm diffused green / amber, through-hole",,0.2,1,Flush 3.2mm holes; isolated leads; no metal holders needed,3mm LED,淘宝 / 立创商城,0.4,2,工程预算预估，未获取实时店铺或服务商报价,个
+Knobs,7,6 x 12.5mm OD for 6.35mm round shafts; 1 x 12.5mm OD for 6mm encoder,,2,5,Set-screw type; select correct bore sizes,旋钮帽,淘宝 / 立创商城,14,35,工程预算预估，未获取实时店铺或服务商报价,个
+Seed sockets,2,"1x20 female, 2.54mm pitch, low profile",,2,5,Match the included footprint; no tall stacking sockets,Seed 1×20 排母,淘宝 / 立创商城,4,10,工程预算预估，未获取实时店铺或服务商报价,个
+Wi-Fi MCU,1,Seeed Studio XIAO ESP32-C3 with supplied IPEX antenna,https://www.seeedstudio.com/Seeed-XIAO-ESP32C3-p-5431.html,25,50,"USB-C, 4MB flash; D6 GPIO21 TX / D7 GPIO20 RX",XIAO ESP32-C3 含天线,淘宝 / 京东 / 原厂代理,25,50,工程预算预估，未获取实时店铺或服务商报价,个
+Wi-Fi buck supply,1,"Mini-360 MP2307DN module, adjusted and locked to 5V; >=0.5A tested continuous output",,5,15,18x14mm envelope; protected +9V input; commission before attaching XIAO. Fixed 5V Pololu D24V10F5 #2831 is the drop-in premium option,Mini-360 降压模块,淘宝 / 立创商城,5,15,工程预算预估，未获取实时店铺或服务商报价,个
+UART adapter PCB,1,32x28mm bare FR4 board; 2 layers,hardware/adapter/seedfx-adapter.kicad_pcb,10,30,Allowance for one minimum bare-board order; excludes components and assembly; extra boards are repair spares,适配板裸板最低订单,嘉立创打板,10,30,工程预算预估，未获取实时店铺或服务商报价,单
+UART adapter small components,1,"One installed set: FB1, C1-C3, R1-R2 (6 SMD components)",hardware/adapter/bom.csv,3,8,Parts only; excludes the three headers and soldering; minimum material packages are accounted separately,适配板六颗贴片元件,立创商城,3,8,工程预算预估，未获取实时店铺或服务商报价,套
+UART adapter headers,3,"PCB headers: one 1x02, one 1x03, one 1x04; 2.54mm pitch",hardware/adapter/bom.csv,0.5,1.5,PCB headers only; mating wire housings are included in the harness allowance,适配板排针,淘宝 / 立创商城,1.5,4.5,工程预算预估，未获取实时店铺或服务商报价,个
+DC power socket,1,DC-005-2.5A-2.0; J1; reference LCSC C136744,hardware/mainboard/assembly-bom.csv,1,3,Through-hole item; not included in the SMD component allowance,DC-005 电源座,淘宝 / 立创商城,1,3,工程预算预估，未获取实时店铺或服务商报价,个
+External 9V supply,1,"9V regulated, center-negative, >=1A; suitable guitar-pedal supply",,30,80,Power-supply purchase included here; actual ripple/noise will be tested on the single device,外接 9V 电源,淘宝 / 京东,30,80,工程预算预估，未获取实时店铺或服务商报价,个
+Case and finish,1,125B family 66x121.5x40mm black/olive powder-coated metal shell,mechanical/seedfx-case.step,45,90,Check the blank dimensions before drilling; RF window machining separate,标准金属壳含基础涂装,淘宝壳体店,45,90,工程预算预估，未获取实时店铺或服务商报价,个
+Dielectric inserts and tray,1,PETG RF insert + insulating tray + 2mm lid spacer,mechanical,20,60,No metallic paint/foil over the radio window,RF窗口 / 托盘 / 增高圈,3D打印服务,20,60,工程预算预估，未获取实时店铺或服务商报价,套
+Panel printing,1,"UV print from panel-print.svg, full-size 66x121.5mm",mechanical/panel-print.svg,25,60,One panel for the final device; user artwork can replace the artwork layer; confirm any one-time print setup fee,单台封面印刷,UV印刷 / UV DTF服务,25,60,工程预算预估，未获取实时店铺或服务商报价,次
+Harness and small hardware,1,"26-28AWG wire, heatshrink, removable headers, M3x8 lid screws, ground lug",hardware/wiring.csv,10,25,Short twisted UART/GND pairs; no bare wire near pot tabs,线束 / 螺丝 / 绝缘小件,淘宝 / 立创商城,10,25,工程预算预估，未获取实时店铺或服务商报价,套

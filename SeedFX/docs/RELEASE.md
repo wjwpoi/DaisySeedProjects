@@ -5,6 +5,7 @@
 - `releases/firmware/daisy/`：应用 BIN/HEX/ELF、固定 v6.4 bootloader。首次 bootloader 刷内部 Flash `0x08000000`；应用刷 `0x90040000`。
 - `releases/firmware/esp32c3/`：bootloader、分区表、应用 BIN/ELF；对应地址为 `0x0`、`0x8000`、`0x10000`。
 - `releases/mainboard-pcb.zip` / `adapter-pcb.zip`：Gerber，包括焊膏层，以及 Excellon 钻孔/钻孔图。
+- `hardware/purchase-bom.csv` / `service-budget.csv`：材料与服务的渠道、数量、单价区间、小计和预估依据；人读版本见 `docs/PURCHASING_PRICES.md`。
 - `hardware/manufacturing/`：原理图 PDF、装配图和贴片位置；主板装配 BOM 明确标记 MIDI DNP，不能把所有贴片坐标都当作需装器件。
 - `mechanical/`：壳体、盖板、2mm 增高隔圈、无线窗口、托盘及总装 STEP/STL；开孔与印刷文件；模块位置和包络检查数据。
 - `releases/licenses/`：libDaisy 和 ESP-IDF 源码提供的许可/NOTICE 文件合集；模型捕获来源单独见 MODELS.md / THIRD_PARTY.md。

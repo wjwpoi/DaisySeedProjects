@@ -1,29 +1,41 @@
 {
   "currency": "CNY",
   "buildQuantity": 1,
-  "basis": "installed-parts planning estimate for one final custom device, not current supplier quotations or the complete project bill",
-  "partsLow": 563.4,
-  "partsHigh": 1076,
+  "basis": "engineering planning allowances for one-device purchases including minimum bare-PCB orders; not live supplier quotations",
+  "partsLow": 608.9,
+  "partsHigh": 1206.5,
+  "servicesLow": 240,
+  "servicesHigh": 800,
+  "projectLow": 848.9,
+  "projectHigh": 2006.5,
   "oneOffPurchasing": {
     "chargeEntireMinimumOrdersToProject": true,
     "shareSetupFeesAcrossDevices": false,
     "extraBareBoardsUse": "repair spares for this same device",
-    "totalProjectCost": "unquoted: installed parts plus full minimum-order, service and delivery charges"
+    "totalProjectCost": "estimated; must be revised against actual supplier quantities and complete quotations",
+    "assemblyAssumption": "one installed set; if SMT MOQ requires additional assembled boards, recalculate the full order",
+    "avoidDuplicateCharges": "do not repurchase factory-supplied sockets; merge labor already included in a complete assembly quote"
   },
+  "included": [
+    "one minimum bare-PCB order for each board",
+    "installed parts",
+    "external 9V supply",
+    "single-device assembly and machining allowances",
+    "panel printing",
+    "shipping and material-pack allowances"
+  ],
   "excluded": [
-    "PCB minimum-order cost beyond the installed-board allowance",
-    "one-time SMT setup or hand-soldering service",
-    "shipping",
-    "RF window and enclosure machining",
-    "repairs or replacement parts during bring-up",
-    "external 9V adapter",
-    "development labor"
+    "soldering/measurement tools",
+    "development labor",
+    "repairs or replacement purchases during bring-up",
+    "extra populated boards beyond the one-set assembly assumption",
+    "entire enclosure machined from raw stock"
   ],
   "costDown": [
     "bring up and finish the same single device",
-    "retain standard enclosure and generic knobs",
-    "compare one-device hand-soldering and SMT service quotes including all setup fees",
-    "commission the generic buck before attaching the MCU",
+    "use a standard enclosure with machining",
+    "compare full one-device SMT and local assembly quotes",
+    "combine tiny printed accessories in one order",
     "omit the MIDI population"
   ]
 }
