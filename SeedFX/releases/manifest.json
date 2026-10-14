@@ -1,9 +1,10 @@
 {
   "version": "v1-engineering",
-  "generatedAt": "2026-10-14T06:07:25.036948+00:00",
+  "generatedAt": "2026-10-14T06:17:22.196569+00:00",
   "referenceRepository": "wjwpoi/DaisySeedProjects",
   "referenceCommit": "8e9f468ab0d35b87fafa33b9da2f017a0e6a865b",
   "physicalTestsExecuted": false,
+  "buildQuantity": 1,
   "flash": {
     "daisyBootloaderAddress": "0x08000000",
     "daisyAppAddress": "0x90040000",
@@ -38,8 +39,8 @@
       "sha256": "94748d47a5f38496ff1ca10e0a6493a92d24486dd2f118d7b4ce92624fa3f55a"
     },
     "README.md": {
-      "bytes": 4157,
-      "sha256": "1d2c6c740efd374ff37fd4a984ec0ec9d4cda390704a8301e6bc333922f885f6"
+      "bytes": 4463,
+      "sha256": "e9847bdc362ef8f3c9de8fcc3cb59b9c91a2f03cb7fca284f5178eb4f074541a"
     },
     "THIRD_PARTY.md": {
       "bytes": 1742,
@@ -50,32 +51,32 @@
       "sha256": "b9910d6ec2c0b1e10d81626969fd837b679c25b779a49277d426ec1f2220425d"
     },
     "docs/HARDWARE.md": {
-      "bytes": 6048,
-      "sha256": "65b730634b8ead6a1756332871d03a7dfe1ee4cdbd57aecec3c3e71280d9f2a4"
+      "bytes": 6430,
+      "sha256": "e110d021320174cc974a55181cf5e7c89773966b55c1ab7a25e161baa564deaa"
     },
     "docs/MODELS.md": {
       "bytes": 2921,
       "sha256": "29d6404c04070212e7060f70c02c2d4fe36f867656e82c40c7e51082bc3e07bc"
     },
     "docs/PRODUCT.md": {
-      "bytes": 4049,
-      "sha256": "73b5e359b126b4b18417d963c7452f8f673f19ad3fcfcc1274d445791f8608db"
+      "bytes": 4292,
+      "sha256": "794a31f7691dfb8eb3bed5bcf76909ab4658b9cf64e2d236818caa4aa6ffd06f"
     },
     "docs/PROTOCOL.md": {
       "bytes": 3242,
       "sha256": "61314d274a8faf403bfb09b7994fcd12b831f5a53bc698253ca0edf910dc2e6b"
     },
     "docs/RELEASE.md": {
-      "bytes": 2740,
-      "sha256": "80fcf3ac720fbef7f862e371cc648cb3267e9395b4feeb04c38a902ed0dd090a"
+      "bytes": 2773,
+      "sha256": "4726650724702a49c138189301bf2ef89caabfbcd2bfaaf7fdab959758d2a3e2"
     },
     "docs/USER_MANUAL.md": {
       "bytes": 2979,
       "sha256": "d3cd6dd53fdafe370a7e32d0640d93834783282ac6e2ecc6473067319ac18a6e"
     },
     "docs/VALIDATION.md": {
-      "bytes": 3954,
-      "sha256": "bfc416f38f970bfd3a09a16c9b9077e3ec349f7ad1ddb1e7c0f7937f6c8a09ff"
+      "bytes": 4017,
+      "sha256": "79359f7e296c5cd9d83c757021bb8a144c526c26d9a0ef4d759f3fe5f6f0e41e"
     },
     "docs/images/panel-preview.png": {
       "bytes": 78804,
@@ -90,8 +91,8 @@
       "sha256": "02d9590fcb01b26d82aa12b6f4b05fb7769a2fc03255abaa7976d3ffccaf98cd"
     },
     "docs/validation.json": {
-      "bytes": 7839,
-      "sha256": "249332b0f383b4eb0aa641848c8940affc8ac984bde01caa448426f9e0f08d4c"
+      "bytes": 8474,
+      "sha256": "a5f855231e8c6a3cf3e7c11ea2fab2c35c439358f60dce186e6d9f892183138b"
     },
     "firmware/audio/Makefile": {
       "bytes": 874,
@@ -170,8 +171,8 @@
       "sha256": "27d3178f7b05ea8a1d5b4c3dac75a896b4377dfeb22e9870306ced3d9a7a9474"
     },
     "hardware/cost-plan.json": {
-      "bytes": 561,
-      "sha256": "f11928bdc2e6b5a073ad5d8c6eec12b9b56e67f3d5931989b659aa71753b8e16"
+      "bytes": 1117,
+      "sha256": "4b10f98e7b76450bd47491bf804984a20cd339b9d79401a4b6de8f2af2e79798"
     },
     "hardware/io-map.csv": {
       "bytes": 913,
@@ -482,8 +483,8 @@
       "sha256": "d56d62e0790a0a6e2db5182b0ef2066f674194c2f0ee8188e52589dd4a82d80a"
     },
     "hardware/purchase-bom.csv": {
-      "bytes": 3099,
-      "sha256": "3d220786cca4241ba833f36e38abd1f3773ca453e76467ca74e0b24c9cc53244"
+      "bytes": 3252,
+      "sha256": "7680e5b8161db083417ba20939c541d90273fd0ff0a5e85df821d2e734f480be"
     },
     "hardware/reports/adapter-drc.json": {
       "bytes": 280,
@@ -926,8 +927,8 @@
       "sha256": "b75110f6bbf909de75a37d6c449d5ad8a4e6da0b5230e9ace480ee808ebedf1a"
     },
     "tools/bom.py": {
-      "bytes": 5838,
-      "sha256": "21479192e122f8b99b0ebb763cfcc462c60276dc6df99c0a00001e170f454466"
+      "bytes": 6631,
+      "sha256": "e8768f2be8dfcac72c432419129c94cffccc45e760053e11950b132babdd5a5b"
     },
     "tools/cad-python.lock": {
       "bytes": 247,
@@ -958,8 +959,8 @@
       "sha256": "421d51ab7c52cd258824f3e657fc14e199629a1c6e2101ef900779e5f4e16dfe"
     },
     "tools/package_release.py": {
-      "bytes": 6033,
-      "sha256": "b3029be463de0b4748e6ba888424eff0e8999bfc6ba638dd7cdc76d82ed5d5aa"
+      "bytes": 6140,
+      "sha256": "bfa8a9c3ecaa1fb4c2147d0536cb68c9003dd8fbf7ac2372e9e447a3de7f98b9"
     },
     "tools/prepare_environment.sh": {
       "bytes": 2957,

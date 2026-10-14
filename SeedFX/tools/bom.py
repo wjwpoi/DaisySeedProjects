@@ -29,7 +29,7 @@ with (ROOT/'hardware/mainboard/assembly-bom.csv').open('w') as f:
 # These are planning allowances, not live prices or supplier quotations.
 parts=[
  ['Daisy Seed Rev7',1,'Electro-Smith Daisy Seed, fitted 2 x 20 pin headers','https://electro-smith.com/products/daisy-seed',240,360,'Audio MCU, codec, SDRAM and QSPI included'],
- ['Main PCB',1,'125B Rev6-derived, FR4 1.6mm, 2 layers, 1oz copper','hardware/mainboard',20,60,'Per board when a 5-board order is shared; setup/assembly separate'],
+ ['Main PCB',1,'125B Rev6-derived, FR4 1.6mm, 2 layers, 1oz copper','hardware/mainboard',20,60,'Installed board allowance only; charge the full supplier minimum order to this single-device project; no sharing assumed'],
  ['Main SMT components',1,'Use assembly-bom.csv and original LCSC selections','hardware/mainboard/assembly-bom.csv',65,120,'DNP MIDI circuit for this UART variant'],
  ['Potentiometers',6,'Alpha RD901F-40-15R1-B10K','https://www.taydaelectronics.com/10k-ohm-linear-taper-potentiometer-round-shaft-pcb-9mm.html',4,8,'B10K linear; round shaft; follow electrical isolation note'],
  ['Encoder',1,'Bourns PEC11R-4220K-S24','https://www.mouser.com/ProductDetail/652-PEC11R-4220K-S24',10,25,'Momentary push switch; 24 detents; 6mm shaft'],
@@ -41,14 +41,28 @@ parts=[
  ['Seed sockets',2,'1x20 female, 2.54mm pitch, low profile','',2,5,'Match the included footprint; no tall stacking sockets'],
  ['Wi-Fi MCU',1,'Seeed Studio XIAO ESP32-C3 with supplied IPEX antenna','https://www.seeedstudio.com/Seeed-XIAO-ESP32C3-p-5431.html',25,50,'USB-C, 4MB flash; D6 GPIO21 TX / D7 GPIO20 RX'],
  ['Wi-Fi buck supply',1,'Mini-360 MP2307DN module, adjusted and locked to 5V; >=0.5A tested continuous output','',5,15,'18x14mm envelope; protected +9V input; commission before attaching XIAO. Fixed 5V Pololu D24V10F5 #2831 is the drop-in premium option'],
- ['UART adapter',1,'32x28mm FR4 board, see adapter BOM','hardware/adapter/bom.csv',10,25,'Shared PCB order allowance; 3.3V logic, 1k series resistors and supply filtering'],
+ ['UART adapter',1,'32x28mm FR4 board, see adapter BOM','hardware/adapter/bom.csv',10,25,'Installed adapter allowance only; full PCB minimum order is a project expense; 3.3V logic, 1k series resistors and supply filtering'],
  ['Case and finish',1,'125B family 66x121.5x40mm black/olive powder-coated metal shell','mechanical/seedfx-case.step',45,90,'Check the blank dimensions before drilling; RF window machining separate'],
  ['Dielectric inserts and tray',1,'PETG/ABS RF insert + insulating tray + 2mm lid spacer + M2 hardware','mechanical',10,30,'No metallic paint/foil over the radio window'],
- ['Panel printing',1,'UV print from panel-print.svg, full-size 66x121.5mm','mechanical/panel-print.svg',25,60,'Small-batch allowance; user artwork can replace the artwork layer'],
+ ['Panel printing',1,'UV print from panel-print.svg, full-size 66x121.5mm','mechanical/panel-print.svg',25,60,'One panel for the final device; user artwork can replace the artwork layer; confirm any one-time print setup fee'],
  ['Harness and small hardware',1,'26-28AWG wire, heatshrink, removable headers, M3x8 lid screws, ground lug','hardware/wiring.csv',10,25,'Short twisted UART/GND pairs; no bare wire near pot tabs'],
 ]
 with (ROOT/'hardware/purchase-bom.csv').open('w') as f:
     w=csv.writer(f);w.writerow(['Item','Quantity','Selected_part_or_specification','Source','Unit_CNY_low_estimate','Unit_CNY_high_estimate','Notes']);w.writerows(parts)
 low=sum(p[1]*p[4] for p in parts);high=sum(p[1]*p[5] for p in parts)
-(ROOT/'hardware/cost-plan.json').write_text(json.dumps({'currency':'CNY','basis':'engineering planning estimate, not current quotations','partsLow':low,'partsHigh':high,'excluded':['shipping','PCB/SMT setup not shared across units','manual assembly','RF window machining','repeated prototypes','external 9V adapter','development labor'],'costDown':['share five-board setup','retain standard enclosure and generic knobs','fixed 5V >=1A buck substitute only after voltage/ripple/transient validation','omit the MIDI population']},ensure_ascii=False,indent=2)+'\n')
-print(f'Planning materials allowance: CNY {low:.0f}–{high:.0f}, exclusions recorded')
+cost={
+    'currency':'CNY',
+    'buildQuantity':1,
+    'basis':'installed-parts planning estimate for one final custom device, not current supplier quotations or the complete project bill',
+    'partsLow':low,'partsHigh':high,
+    'oneOffPurchasing':{
+        'chargeEntireMinimumOrdersToProject':True,
+        'shareSetupFeesAcrossDevices':False,
+        'extraBareBoardsUse':'repair spares for this same device',
+        'totalProjectCost':'unquoted: installed parts plus full minimum-order, service and delivery charges'
+    },
+    'excluded':['PCB minimum-order cost beyond the installed-board allowance','one-time SMT setup or hand-soldering service','shipping','RF window and enclosure machining','repairs or replacement parts during bring-up','external 9V adapter','development labor'],
+    'costDown':['bring up and finish the same single device','retain standard enclosure and generic knobs','compare one-device hand-soldering and SMT service quotes including all setup fees','commission the generic buck before attaching the MCU','omit the MIDI population']
+}
+(ROOT/'hardware/cost-plan.json').write_text(json.dumps(cost,ensure_ascii=False,indent=2)+'\n')
+print(f'One-device installed-parts allowance: CNY {low:.0f}–{high:.0f}; full minimum-order/service costs need quotations')

@@ -10,7 +10,7 @@
 - `releases/licenses/`：libDaisy 和 ESP-IDF 源码提供的许可/NOTICE 文件合集；模型捕获来源单独见 MODELS.md / THIRD_PARTY.md。
 - `releases/verification-logs/`：实际运行的构建、浏览器、制造、CAD 与 AddressSanitizer/UndefinedBehaviorSanitizer 日志。
 
-本包是工程原型交付。实体制造、刷机、听音、延迟/RF/供电/温升和实际器件公差验收尚未执行，详见 VALIDATION.md。用户封面可以替换 `panel-artwork-template.svg` 的 `custom-artwork` 图层。
+本包用于制作并调试唯一一台最终成品。实体制造、刷机、听音、延迟/RF/供电/温升和实际器件公差验收尚未执行，详见 VALIDATION.md。用户封面可以替换 `panel-artwork-template.svg` 的 `custom-artwork` 图层。
 
 ## 从压缩包恢复工程
 
@@ -33,4 +33,4 @@ python3 tools/validate.py
 python3 tools/package_release.py --output /workspace/SeedFX-v1-engineering.zip
 ```
 
-确认 manifest 校验值后，将 `mainboard-pcb.zip` / `adapter-pcb.zip` 交给 PCB 厂，结合装配 BOM、贴片位置和装配图下单；壳体厂用实际采购壳体核对开孔 DXF/CSV 与 STEP。默认图案只用于预览与小批 UV 印刷；收到定制封面后替换图层并重新导出印刷文件。
+确认 manifest 校验值后，将 `mainboard-pcb.zip` / `adapter-pcb.zip` 交给 PCB 厂，结合装配 BOM、贴片位置和装配图下单；壳体厂用实际采购壳体核对开孔 DXF/CSV 与 STEP。默认图案用于预览与该单台设备的 UV 印刷；收到定制封面后替换图层并重新导出印刷文件。

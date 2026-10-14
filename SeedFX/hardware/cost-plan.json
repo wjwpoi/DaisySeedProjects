@@ -1,21 +1,29 @@
 {
   "currency": "CNY",
-  "basis": "engineering planning estimate, not current quotations",
+  "buildQuantity": 1,
+  "basis": "installed-parts planning estimate for one final custom device, not current supplier quotations or the complete project bill",
   "partsLow": 563.4,
   "partsHigh": 1076,
+  "oneOffPurchasing": {
+    "chargeEntireMinimumOrdersToProject": true,
+    "shareSetupFeesAcrossDevices": false,
+    "extraBareBoardsUse": "repair spares for this same device",
+    "totalProjectCost": "unquoted: installed parts plus full minimum-order, service and delivery charges"
+  },
   "excluded": [
+    "PCB minimum-order cost beyond the installed-board allowance",
+    "one-time SMT setup or hand-soldering service",
     "shipping",
-    "PCB/SMT setup not shared across units",
-    "manual assembly",
-    "RF window machining",
-    "repeated prototypes",
+    "RF window and enclosure machining",
+    "repairs or replacement parts during bring-up",
     "external 9V adapter",
     "development labor"
   ],
   "costDown": [
-    "share five-board setup",
+    "bring up and finish the same single device",
     "retain standard enclosure and generic knobs",
-    "fixed 5V >=1A buck substitute only after voltage/ripple/transient validation",
+    "compare one-device hand-soldering and SMT service quotes including all setup fees",
+    "commission the generic buck before attaching the MCU",
     "omit the MIDI population"
   ]
 }
