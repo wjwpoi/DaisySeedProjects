@@ -23,15 +23,16 @@
     "cloudSetupScript": "passed; workspace-local dependencies and signed apt indexes",
     "dependencyNoticePackaging": "passed: 36 framework/dependency notice files",
     "macOSArchiveSmoke": "passed on Linux fixtures: executable modes and symlinks survive extraction; missing execute permission rejected",
-    "auRegistrationControlFlow": "passed with mocked macOS tools: delayed discovery, timeout, missing factory export rejection, exactly one full validation, validator error code preserved"
+    "auRegistrationControlFlow": "passed with mocked macOS tools: delayed discovery, timeout, exactly one full validation, validator error code preserved",
+    "macOSDevelopmentArchive": "passed on native macOS: tar.gz with executable modes and symlinks generated and uploaded"
   },
   "notVerified": [
-    "macOS AU component discovery failed; signing/registration follow-up pending",
     "Windows/macOS DAW scans and physical audio interface checks",
+    "Intel macOS runtime (universal binary built; AU validation ran on the macos-14 arm64 runner)",
     "native protocol registration on Windows/macOS",
     "actual TONE3000 OAuth login, refresh and model download",
     "physical audio interface latency, dropouts and listening",
-    "installer signing and macOS notarization"
+    "installer distribution signing and macOS notarization"
   ],
   "tone3000LiveTest": false,
   "releaseReady": false,
@@ -65,9 +66,12 @@
     "third_party/t3k/Types.h": "963d5d0800ee9ca82f712614f2cfd3f843ee3ba7d51c339aa11216373c0e2551"
   },
   "nativeCI": {
-    "commit": "bd170c8948019b1618264b3edce85c631724f527",
-    "run": "https://github.com/wjwpoi/DaisySeedProjects/actions/runs/38722316646",
-    "Windows": "completed successfully: build, tests, development artifacts",
-    "macOS": "build and tests passed; signed universal arm64/x86_64 AU still absent from auval enumeration; bounded registration wait and headless system-directory installation follow-ups pending"
+    "commit": "4283c774ff262b3751526133e5be3d022f2d372f",
+    "run": "https://github.com/wjwpoi/DaisySeedProjects/actions/runs/38723754252",
+    "observedAt": "2026-10-15T11:21:56.006896+00:00",
+    "Windows": "completed successfully: standalone/VST3 build, core tests, development artifacts",
+    "macOS": "completed successfully: universal standalone/VST3/AU build, core tests, full AU validation, macOS archive and artifact upload",
+    "auDiscovery": "user-directory install, ad-hoc signature verification, registrar refresh, bounded discovery wait before one full auval invocation",
+    "validatedRuntime": "macos-14 arm64 runner; arm64/x86_64 universal binaries built"
   }
 }
