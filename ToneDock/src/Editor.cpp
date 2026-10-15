@@ -244,6 +244,8 @@ void Editor::resized() {
 }
 void Editor::refreshLibrary() {
     try {
+        auto selectedRow=libraryList.getSelectedRow();
+        auto selectedId=selectedRow>=0 && selectedRow<int(filtered.size())?filtered[size_t(selectedRow)].id:juce::String();
         auto all=processor.services->library.entries();auto query=search.getText().trim();auto filter=categoryFilter.getText();auto id=categoryFilter.getSelectedId();
         juce::StringArray categories;for(auto& m:all)categories.addIfNotAlreadyThere(m.category);categories.sort(true);
         categoryFilter.clear(juce::dontSendNotification);categoryFilter.addItem("All models",1);categoryFilter.addItem("Favorites",2);for(int i=0;i<categories.size();++i)categoryFilter.addItem(categories[i],i+3);
@@ -254,7 +256,11 @@ void Editor::refreshLibrary() {
             filtered.push_back(m);
         }
         std::sort(filtered.begin(),filtered.end(),[](const auto& a,const auto& b){return a.name.compareIgnoreCase(b.name)<0;});
-        libraryList.updateContent();version=processor.libraryVersion.load();libraryModified=processor.services->library.directory().getChildFile("library.json").getLastModificationTime().toMilliseconds();repaint();
+        libraryList.updateContent();
+        auto selected=std::find_if(filtered.begin(),filtered.end(),[&](const auto& m){return m.id==selectedId;});
+        if(selected!=filtered.end()){auto row=int(std::distance(filtered.begin(),selected));libraryList.selectRow(row);selectModel(row);}
+        else{libraryList.deselectAllRows();categoryEdit.clear();tagsEdit.clear();favoriteButton.setButtonText("Favorite");}
+        version=processor.libraryVersion.load();libraryModified=processor.services->library.directory().getChildFile("library.json").getLastModificationTime().toMilliseconds();repaint();
     }catch(const std::exception& e){processor.setMessage(e.what());}
 }
 void Editor::selectModel(int row) {

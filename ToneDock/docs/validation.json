@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-15T17:44:47.219817+08:00",
+  "generatedAt": "2026-10-15T17:59:47.417354+08:00",
   "version": "0.1.0-development",
   "platform": "Linux x86_64 cloud",
   "compiler": "GCC 14.2.0",
@@ -7,7 +7,7 @@
     "nativeBuild": "passed: standalone and Linux VST3",
     "automatedSuites": 1,
     "automatedSuitesPassed": 1,
-    "assertionsPassed": 49858,
+    "assertionsPassed": 49860,
     "upstreamReferenceMaximumError": {
       "LSTM": 0,
       "WaveNet": 0,
@@ -35,7 +35,7 @@
   "releaseReady": false,
   "sourceSHA256": {
     "CMakeLists.txt": "e54596f5f6aa3bd5cf46d4cd50fd63e971a4316c9ce07abff531475697e97bbc",
-    "src/Editor.cpp": "71a8513eaf4fd6a567e05f421ace39343248602a86ae477872a95c4a97989e61",
+    "src/Editor.cpp": "255b387e95f610bc52857bcee1b7149bfbc6228234ed77a71a061a7a99d56bab",
     "src/Editor.h": "2e461d65cb860f715e76c34421748d5c1632e48443a68a1ce399cc0a8ea9fecf",
     "src/Engine.cpp": "3bd73227338a8a83f371a80e9be39f905e764499841ae80518d544ab34fda8cb",
     "src/Engine.h": "fcdce4fd6c6ef5c6b12a716b3bbb03c93266bcd6e9deae33a3049f1b537216a1",
@@ -44,7 +44,7 @@
     "src/Main.cpp": "d0b325701759e1a7b3d29a95c3c6b683d09548964d5f9433e17900025576ac8c",
     "src/Processor.cpp": "3ee09792a645cb5cb42babc5c54db7497c50e3fda3b52bc5ef217658bd9c1879",
     "src/Processor.h": "bf1a7cb0d5cafa8ab12bda50e509351ce11bf7877e6fe94938cdd120dbde28cb",
-    "tests/CoreTests.cpp": "61ef43d275292218882e0cd419942205affc116b1196a88d9eb97804b542fbf7",
+    "tests/CoreTests.cpp": "4f447cf346fe1d7964680e065746186f9bd0493df7c0564bc52d37ada1b6d8f5",
     "third_party/t3k/Async.h": "14b2ee69276d1cb74eacbc36ee891652f6e6ac6c8d429e4c2770d763af321f1a",
     "third_party/t3k/AuthFlow.cpp": "4e4a7e396cf484c4514d04dc9cf94c5b60f5896a3849cc880641bff526227f11",
     "third_party/t3k/AuthFlow.h": "7f501d8c240d6b53a592e0fbfea9b9a528b85cdf43af7302a795d5f1de9dac13",

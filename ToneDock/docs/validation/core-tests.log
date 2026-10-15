@@ -1,23 +1,23 @@
-Start testing: Oct 15 09:43 UTC
+Start testing: Oct 15 09:53 UTC
 ----------------------------------------------------------
 1/1 Testing: tonedock-core
 1/1 Test: tonedock-core
 Command: "/workspace/DaisySeedProjects/ToneDock/build/ToneDockTests_artefacts/Release/ToneDockTests"
 Directory: /workspace/DaisySeedProjects/ToneDock/build
-"tonedock-core" start time: Oct 15 09:43 UTC
+"tonedock-core" start time: Oct 15 09:53 UTC
 Output:
 ----------------------------------------------------------
 lstm.nam reference max error 0
 wavenet.nam reference max error 0
 A2.nam reference max error 0
 wavenet_a1_standard.nam reference max error 0
-PASS 49858 checks
+PASS 49860 checks
 <end of output>
-Test time =   0.58 sec
+Test time =   0.54 sec
 ----------------------------------------------------------
 Test Passed.
-"tonedock-core" end time: Oct 15 09:43 UTC
+"tonedock-core" end time: Oct 15 09:53 UTC
 "tonedock-core" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-End testing: Oct 15 09:43 UTC
+End testing: Oct 15 09:53 UTC

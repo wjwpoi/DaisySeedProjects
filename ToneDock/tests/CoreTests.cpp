@@ -99,6 +99,14 @@ int main(){
                 check(stream!=nullptr,"create screenshot file");stream->setPosition(0);stream->truncate();
                 check(juce::PNGImageFormat().writeImageToStream(image,*stream),"render actual native editor screenshot");
             }
+            juce::ListBox* libraryList=nullptr;juce::TextEditor* search=nullptr;
+            for(int i=0;i<editor->getNumChildComponents();++i){auto* child=editor->getChildComponent(i);
+                if(auto* list=dynamic_cast<juce::ListBox*>(child);list && child->getX()<100)libraryList=list;
+                if(auto* text=dynamic_cast<juce::TextEditor*>(child);text && child->getY()==141)search=text;}
+            check(libraryList && search,"native library controls exist");libraryList->selectRow(0);
+            auto extra=directory.getChildFile("extra.nam");extra.replaceWithText(fixture.loadFileAsString().replace("Fixture Amp","AAA Amp").replace("[0.5]","[0.3]"));
+            guiProcessor.services->library.importFile(extra);search->setText("Amp",false);search->onTextChange();
+            check(libraryList->getSelectedRow()==1,"library refresh preserves model identity after reordering");
             auto click=[&](const juce::String& name){for(int i=0;i<editor->getNumChildComponents();++i)if(auto* button=dynamic_cast<juce::TextButton*>(editor->getChildComponent(i));button && button->getButtonText()==name){button->onClick();return;}throw std::runtime_error("UI button missing");};
             auto selected=guiProcessor.engine.chain()[1];
             for(int i=0;i<editor->getNumChildComponents();++i)if(auto* slider=dynamic_cast<juce::Slider*>(editor->getChildComponent(i));slider && slider->getSliderStyle()==juce::Slider::RotaryHorizontalVerticalDrag){slider->setValue(.7,juce::sendNotificationSync);break;}
