@@ -4,10 +4,13 @@ set -euo pipefail
 component=${1:?Path to ToneDock.component is required}
 target="$HOME/Library/Audio/Plug-Ins/Components/ToneDock.component"
 mkdir -p "$(dirname "$target")"
-ditto "$component" "$target"
 # The development bundle uses an ad-hoc signature. Distribution signing is a
 # separate release step; this does not disable macOS security checks.
-codesign --force --sign - --timestamp=none "$target"
+codesign --force --sign - --timestamp=none "$component"
+codesign --verify --deep --strict "$component"
+# Install the signed build output so the validated bundle and uploaded bundle
+# contain the same signature, executable and resources.
+ditto "$component" "$target"
 codesign --verify --deep --strict "$target"
 plutil -p "$target/Contents/Info.plist"
 file "$target/Contents/MacOS/ToneDock"

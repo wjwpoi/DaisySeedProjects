@@ -24,7 +24,7 @@
     "dependencyNoticePackaging": "passed: 36 framework/dependency notice files"
   },
   "notVerified": [
-    "macOS AU validation remains failing; follow-up diagnostics pending",
+    "macOS AU component discovery failed; signing/registration follow-up pending",
     "Windows/macOS DAW scans and physical audio interface checks",
     "native protocol registration on Windows/macOS",
     "actual TONE3000 OAuth login, refresh and model download",
@@ -66,6 +66,6 @@
     "commit": "9fd4c621516a302a47535eb1244d55d2739308b6",
     "run": "https://github.com/wjwpoi/DaisySeedProjects/actions/runs/38717051451",
     "Windows": "completed successfully: build, tests, development artifacts",
-    "macOS": "failed at AU validation step; exact error unavailable behind authenticated logs; deterministic signing/registration and public summaries added for follow-up"
+    "macOS": "build and tests reached AU validation; auval could not find aufx/Tnd1/Tndk (name strings unavailable, version error -50); deterministic signing/registration and public summaries added for follow-up"
   }
 }
