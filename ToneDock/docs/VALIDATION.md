@@ -13,8 +13,9 @@
 | 原生编辑器 | 旋钮、添加、旁通、上移、拖拽、删除检查通过；保存实际组件截图 |
 | 独立软件启动 | Xvfb内启动、生成原生编辑器PNG、正常退出通过 |
 | 云环境复用脚本 | 安装/配置、重复执行、构建和测试通过 |
-| Windows | `9fd4c62` 原生构建与测试通过，开发构建已上传；真实DAW扫描和声卡验收未执行 |
-| macOS | 原生构建与测试已进入AU校验；`auval` 报组件未找到，尚未通过AU验收。签名、注册刷新和公开诊断摘要已加入后续检查 |
+| macOS开发归档 | Linux测试夹具的归档/解压保留可执行权限和符号链接；真实macOS打包待原生流水线验证 |
+| Windows | `e8e639e` 原生构建与测试通过，开发构建已上传；真实DAW扫描和声卡验收未执行 |
+| macOS | `e8e639e` 原生构建与测试通过；加入签名和注册刷新后，AU校验仍以退出码2失败，详细后续错误待确认 |
 | TONE3000 真实账号 | 未执行；依据官方接入代码完成适配，实际公钥、浏览器授权和下载待联调 |
 | 声卡 / DAW 实测 | 未执行；不以云端DSP检查承诺实际端到端延迟或最低可用缓冲 |
 | 安装包 / 签名 / 公证 | 未执行 |
@@ -25,6 +26,6 @@
 
 机器记录见 [validation.json](validation.json)，原始输出见 [核心测试](validation/core-tests.log) 与 [独立软件运行日志](validation/standalone.log)。
 
-原生检查见 [GitHub Actions](https://github.com/wjwpoi/DaisySeedProjects/actions/runs/38717051451)。Windows成功与macOS失败是该次实际结果，不能把macOS编译产物视作已通过AU验收。
+原生检查见 [GitHub Actions](https://github.com/wjwpoi/DaisySeedProjects/actions/runs/38720223032)。Windows成功与macOS失败是该次实际结果，不能把macOS编译产物视作已通过AU验收。
 
 首轮macOS错误为 `Cannot get Component's Name strings`、版本查询 `-50` 和 `FATAL ERROR: didn't find the component`，说明失败发生在组件发现阶段，尚未进入音频校验。生成器输出的组件声明为 `aufx / Tnd1 / Tndk`，与校验命令一致；签名或注册缓存是否为实际原因，仍须以后续macOS运行结果确认。

@@ -14,6 +14,8 @@ pwsh -File ToneDock/packaging/register-protocol.ps1 -Executable 'C:\Your Folder\
 
 ## macOS
 
+从Actions下载开发构建后，先解压外层artifact ZIP，再解压其中的 `ToneDock-macOS-development.tar.gz`。内层归档保留应用可执行权限和bundle内的符号链接。
+
 把 `ToneDock.app` 复制到 `~/Applications` 或 `/Applications`，正常启动一次使系统登记 `tonedock` 协议。AU 的整个 `.component` 放入 `~/Library/Audio/Plug-Ins/Components/`，VST3 放入 `~/Library/Audio/Plug-Ins/VST3/`。重启 DAW 并重新扫描。
 
 开发版本未签名、公证；本工程不提供关闭 Gatekeeper 的脚本。正式安装包、开发者签名、公证和宿主验收需在 macOS 完成。

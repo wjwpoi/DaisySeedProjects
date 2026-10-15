@@ -31,4 +31,12 @@ if summary:
         output.write(f'## {args.label}\n\nExit code: **{result}**\n\n```text\n')
         output.write(''.join(tail)[-24000:].replace('```',"'''"))
         output.write('\n```\n')
+if result:
+    # Annotations are visible in the public run overview even when detailed
+    # logs or step summaries require a GitHub login.
+    def escape(value):
+        return value.replace('%', '%25').replace('\r', '%0D').replace('\n', '%0A')
+    title = escape(args.label).replace(':', '%3A').replace(',', '%2C')
+    detail = escape(f'Exit code: {result}\n' + ''.join(tail)[-6000:])
+    print(f'::error title={title}::{detail}', flush=True)
 sys.exit(result)

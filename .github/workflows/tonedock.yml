@@ -33,12 +33,16 @@ jobs:
       - name: Validate AU
         if: runner.os == 'macOS'
         run: python ToneDock/tools/ci_step.py "Validate AU" -- bash ToneDock/tools/validate_au.sh ToneDock/build/ToneDock_artefacts/Release/AU/ToneDock.component
+      - name: Archive macOS bundles with executable permissions
+        if: runner.os == 'macOS'
+        run: python ToneDock/tools/ci_step.py "Archive macOS bundles" -- python ToneDock/tools/package_macos.py --build ToneDock/build
       - uses: actions/upload-artifact@v4
         if: failure()
         with:
           name: ToneDock-${{ runner.os }}-diagnostics
           path: ToneDock/build/ci-logs/
       - uses: actions/upload-artifact@v4
+        if: runner.os == 'Windows'
         with:
           name: ToneDock-${{ runner.os }}-development
           path: |
@@ -48,4 +52,11 @@ jobs:
             ToneDock/packaging/
             ToneDock/build/notices/
             ToneDock/README.md
+            ToneDock/docs/
+          if-no-files-found: error
+      - uses: actions/upload-artifact@v4
+        if: runner.os == 'macOS'
+        with:
+          name: ToneDock-macOS-development
+          path: ToneDock/build/ToneDock-macOS-development.tar.gz
           if-no-files-found: error
