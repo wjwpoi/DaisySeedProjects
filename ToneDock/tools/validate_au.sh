@@ -14,6 +14,14 @@ ditto "$component" "$target"
 codesign --verify --deep --strict "$target"
 plutil -p "$target/Contents/Info.plist"
 file "$target/Contents/MacOS/ToneDock"
+for architecture in arm64 x86_64; do
+    echo "Checking exported AU factory for $architecture"
+    if ! nm -arch "$architecture" -gU "$target/Contents/MacOS/ToneDock" |
+        awk '$NF == "_ToneDockAUFactory" {print; found=1} END {exit !found}'; then
+        echo "Missing ToneDockAUFactory export for $architecture" >&2
+        exit 1
+    fi
+done
 # This is an isolated CI user's registrar, never the user's desktop session.
 killall AudioComponentRegistrar 2>/dev/null || true
 touch "$target"
@@ -38,6 +46,7 @@ for (( attempt=1; attempt<=30; ++attempt )); do
 done
 if [[ "$discovered" != true ]]; then
     cat "$component_list"
+    otool -L "$target/Contents/MacOS/ToneDock" || true
     echo "AudioComponentRegistrar did not discover aufx / Tnd1 / Tndk within 30 seconds" >&2
     exit 2
 fi

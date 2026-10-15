@@ -23,7 +23,7 @@
     "cloudSetupScript": "passed; workspace-local dependencies and signed apt indexes",
     "dependencyNoticePackaging": "passed: 36 framework/dependency notice files",
     "macOSArchiveSmoke": "passed on Linux fixtures: executable modes and symlinks survive extraction; missing execute permission rejected",
-    "auRegistrationControlFlow": "passed with mocked macOS tools: delayed discovery, discovery timeout, exactly one full validation, validator error code preserved"
+    "auRegistrationControlFlow": "passed with mocked macOS tools: delayed discovery, timeout, missing factory export rejection, exactly one full validation, validator error code preserved"
   },
   "notVerified": [
     "macOS AU component discovery failed; signing/registration follow-up pending",
@@ -65,9 +65,9 @@
     "third_party/t3k/Types.h": "963d5d0800ee9ca82f712614f2cfd3f843ee3ba7d51c339aa11216373c0e2551"
   },
   "nativeCI": {
-    "commit": "e8e639edea941498f2c104d9b89c4b6a73068bfd",
-    "run": "https://github.com/wjwpoi/DaisySeedProjects/actions/runs/38720223032",
+    "commit": "bd170c8948019b1618264b3edce85c631724f527",
+    "run": "https://github.com/wjwpoi/DaisySeedProjects/actions/runs/38722316646",
     "Windows": "completed successfully: build, tests, development artifacts",
-    "macOS": "native build and tests passed; AU validation still failed with exit code 2 after ad-hoc signing and registrar refresh; detailed follow-up logs pending"
+    "macOS": "build and tests passed; signed universal arm64/x86_64 AU still absent from auval enumeration; bounded registration wait and headless system-directory installation follow-ups pending"
   }
 }

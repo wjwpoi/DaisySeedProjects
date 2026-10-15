@@ -30,9 +30,12 @@ jobs:
         run: python ToneDock/tools/ci_step.py "Audio and library tests" -- ctest --test-dir ToneDock/build -C Release --output-on-failure
       - name: Package dependency notices
         run: python ToneDock/tools/package_notices.py --build ToneDock/build
+      - name: Prepare system AU directory for the headless CI runner
+        if: runner.os == 'macOS'
+        run: sudo install -d -m 755 -o "$(id -un)" /Library/Audio/Plug-Ins/Components/ToneDock.component
       - name: Validate AU
         if: runner.os == 'macOS'
-        run: python ToneDock/tools/ci_step.py "Validate AU" -- bash ToneDock/tools/validate_au.sh ToneDock/build/ToneDock_artefacts/Release/AU/ToneDock.component
+        run: python ToneDock/tools/ci_step.py "Validate AU" -- bash ToneDock/tools/validate_au.sh ToneDock/build/ToneDock_artefacts/Release/AU/ToneDock.component /Library/Audio/Plug-Ins/Components/ToneDock.component
       - name: Archive macOS bundles with executable permissions
         if: runner.os == 'macOS'
         run: python ToneDock/tools/ci_step.py "Archive macOS bundles" -- python ToneDock/tools/package_macos.py --build ToneDock/build
