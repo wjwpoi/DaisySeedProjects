@@ -25,17 +25,19 @@ jobs:
         if: runner.os == 'macOS'
         run: cmake -S ToneDock -B ToneDock/build -DCMAKE_BUILD_TYPE=Release -DCMAKE_OSX_ARCHITECTURES='arm64;x86_64' -DBUILD_TESTING=ON
       - name: Build standalone and plugins
-        run: cmake --build ToneDock/build --config Release --parallel 2
+        run: python ToneDock/tools/ci_step.py "Build standalone and plugins" -- cmake --build ToneDock/build --config Release --parallel 2
       - name: Audio and library tests
-        run: ctest --test-dir ToneDock/build -C Release --output-on-failure
+        run: python ToneDock/tools/ci_step.py "Audio and library tests" -- ctest --test-dir ToneDock/build -C Release --output-on-failure
       - name: Package dependency notices
         run: python ToneDock/tools/package_notices.py --build ToneDock/build
       - name: Validate AU
         if: runner.os == 'macOS'
-        run: |
-          mkdir -p "$HOME/Library/Audio/Plug-Ins/Components"
-          cp -R ToneDock/build/ToneDock_artefacts/Release/AU/ToneDock.component "$HOME/Library/Audio/Plug-Ins/Components/"
-          auval -v aufx Tnd1 Tndk
+        run: python ToneDock/tools/ci_step.py "Validate AU" -- bash ToneDock/tools/validate_au.sh ToneDock/build/ToneDock_artefacts/Release/AU/ToneDock.component
+      - uses: actions/upload-artifact@v4
+        if: failure()
+        with:
+          name: ToneDock-${{ runner.os }}-diagnostics
+          path: ToneDock/build/ci-logs/
       - uses: actions/upload-artifact@v4
         with:
           name: ToneDock-${{ runner.os }}-development

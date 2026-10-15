@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-15T17:59:47.417354+08:00",
+  "generatedAt": "2026-10-15T18:25:57.124184+08:00",
   "version": "0.1.0-development",
   "platform": "Linux x86_64 cloud",
   "compiler": "GCC 14.2.0",
@@ -24,8 +24,8 @@
     "dependencyNoticePackaging": "passed: 36 framework/dependency notice files"
   },
   "notVerified": [
-    "Windows build and DAW VST3 scan",
-    "macOS universal build and AU validation",
+    "macOS AU validation remains failing; follow-up diagnostics pending",
+    "Windows/macOS DAW scans and physical audio interface checks",
     "native protocol registration on Windows/macOS",
     "actual TONE3000 OAuth login, refresh and model download",
     "physical audio interface latency, dropouts and listening",
@@ -61,5 +61,11 @@
     "third_party/t3k/T3KConfig.h": "732105b2c7c88eced3cdf50d2dda3a548e9367945efcf881fea9633c91964293",
     "third_party/t3k/Types.cpp": "43df1787fd99934554e1243f1e79290b8cef130fc2ae053fbaa7e2300da0f300",
     "third_party/t3k/Types.h": "963d5d0800ee9ca82f712614f2cfd3f843ee3ba7d51c339aa11216373c0e2551"
+  },
+  "nativeCI": {
+    "commit": "9fd4c621516a302a47535eb1244d55d2739308b6",
+    "run": "https://github.com/wjwpoi/DaisySeedProjects/actions/runs/38717051451",
+    "Windows": "completed successfully: build, tests, development artifacts",
+    "macOS": "failed at AU validation step; exact error unavailable behind authenticated logs; deterministic signing/registration and public summaries added for follow-up"
   }
 }
