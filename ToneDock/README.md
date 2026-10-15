@@ -35,7 +35,7 @@ cmake --build ToneDock/build --config Release --parallel 2
 ctest --test-dir ToneDock/build -C Release --output-on-failure
 ```
 
-产物位于 `build/ToneDockApp_artefacts/<配置>/` 和 `build/ToneDock_artefacts/<配置>/{VST3,AU}/`。未签名构建用于开发测试；正式分发的签名、公证和安装验收尚未完成。参见 [安装与网页唤起](docs/INSTALL.md)。
+产物位于 `build/ToneDockApp_artefacts/<配置>/` 和 `build/ToneDock_artefacts/<配置>/{VST3,AU}/`。构建用于开发测试，CI为AU添加ad-hoc签名；正式分发的签名、公证和安装验收尚未完成。参见 [安装与网页唤起](docs/INSTALL.md)。
 
 ## 使用
 

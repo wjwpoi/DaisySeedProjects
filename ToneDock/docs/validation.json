@@ -22,7 +22,8 @@
     "standaloneLaunchAndExit": "passed",
     "cloudSetupScript": "passed; workspace-local dependencies and signed apt indexes",
     "dependencyNoticePackaging": "passed: 36 framework/dependency notice files",
-    "macOSArchiveSmoke": "passed on Linux fixtures: executable modes and symlinks survive extraction; missing execute permission rejected"
+    "macOSArchiveSmoke": "passed on Linux fixtures: executable modes and symlinks survive extraction; missing execute permission rejected",
+    "auRegistrationControlFlow": "passed with mocked macOS tools: delayed discovery, discovery timeout, exactly one full validation, validator error code preserved"
   },
   "notVerified": [
     "macOS AU component discovery failed; signing/registration follow-up pending",
