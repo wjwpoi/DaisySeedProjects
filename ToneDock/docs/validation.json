@@ -1,0 +1,65 @@
+{
+  "generatedAt": "2026-10-15T17:44:47.219817+08:00",
+  "version": "0.1.0-development",
+  "platform": "Linux x86_64 cloud",
+  "compiler": "GCC 14.2.0",
+  "checks": {
+    "nativeBuild": "passed: standalone and Linux VST3",
+    "automatedSuites": 1,
+    "automatedSuitesPassed": 1,
+    "assertionsPassed": 49858,
+    "upstreamReferenceMaximumError": {
+      "LSTM": 0,
+      "WaveNet": 0,
+      "A2": 0,
+      "A1 Standard": 0
+    },
+    "resamplingRatesHz": [
+      44100,
+      96000
+    ],
+    "nativeEditorActions": "passed: knob, add, bypass, up, drag, delete",
+    "standaloneLaunchAndExit": "passed",
+    "cloudSetupScript": "passed; workspace-local dependencies and signed apt indexes",
+    "dependencyNoticePackaging": "passed: 36 framework/dependency notice files"
+  },
+  "notVerified": [
+    "Windows build and DAW VST3 scan",
+    "macOS universal build and AU validation",
+    "native protocol registration on Windows/macOS",
+    "actual TONE3000 OAuth login, refresh and model download",
+    "physical audio interface latency, dropouts and listening",
+    "installer signing and macOS notarization"
+  ],
+  "tone3000LiveTest": false,
+  "releaseReady": false,
+  "sourceSHA256": {
+    "CMakeLists.txt": "e54596f5f6aa3bd5cf46d4cd50fd63e971a4316c9ce07abff531475697e97bbc",
+    "src/Editor.cpp": "71a8513eaf4fd6a567e05f421ace39343248602a86ae477872a95c4a97989e61",
+    "src/Editor.h": "2e461d65cb860f715e76c34421748d5c1632e48443a68a1ce399cc0a8ea9fecf",
+    "src/Engine.cpp": "3bd73227338a8a83f371a80e9be39f905e764499841ae80518d544ab34fda8cb",
+    "src/Engine.h": "fcdce4fd6c6ef5c6b12a716b3bbb03c93266bcd6e9deae33a3049f1b537216a1",
+    "src/Library.cpp": "98a19b72821f1aceec3c9dc5cec5cebd2665743a86a0ed007933e8627babfcab",
+    "src/Library.h": "e6ebe845cc3459c933f6bb07b17be5611e50d6333659a2a06c14ef7d86deb489",
+    "src/Main.cpp": "d0b325701759e1a7b3d29a95c3c6b683d09548964d5f9433e17900025576ac8c",
+    "src/Processor.cpp": "3ee09792a645cb5cb42babc5c54db7497c50e3fda3b52bc5ef217658bd9c1879",
+    "src/Processor.h": "bf1a7cb0d5cafa8ab12bda50e509351ce11bf7877e6fe94938cdd120dbde28cb",
+    "tests/CoreTests.cpp": "61ef43d275292218882e0cd419942205affc116b1196a88d9eb97804b542fbf7",
+    "third_party/t3k/Async.h": "14b2ee69276d1cb74eacbc36ee891652f6e6ac6c8d429e4c2770d763af321f1a",
+    "third_party/t3k/AuthFlow.cpp": "4e4a7e396cf484c4514d04dc9cf94c5b60f5896a3849cc880641bff526227f11",
+    "third_party/t3k/AuthFlow.h": "7f501d8c240d6b53a592e0fbfea9b9a528b85cdf43af7302a795d5f1de9dac13",
+    "third_party/t3k/Client.cpp": "9c5e99ef19c5a1dd79e0bc4fa2c7784b28c3ccc1e8f5154f6c423b26d60ffc30",
+    "third_party/t3k/Client.h": "ce40b1ad89b1b8a99f4842dea0400bf6bcd33cdd0f0dbc8d27fac7ac8f057f33",
+    "third_party/t3k/Http.cpp": "4f334cc4859b2d214b83be14116da6d9ae8dd2b767f413ad6d196cdd7925c542",
+    "third_party/t3k/Http.h": "a0f49484505ab4bc2887db954a5ef4aea7cd32dd5cd06bbd2201abb7c49ca535",
+    "third_party/t3k/LoopbackServer.cpp": "5f4dc5fcda3676a407f18ad9d18154d77f0ce3ec74d65d88d17307f297069ff4",
+    "third_party/t3k/LoopbackServer.h": "b5b0fe460c7b2a0158fbff1676f9f15659dad9922ac9813ee32f142443c50bfe",
+    "third_party/t3k/OAuth.cpp": "31afeb0963580a51d7d4882d640299fe67d12e765339ebbe422d309732797e59",
+    "third_party/t3k/OAuth.h": "2bc0e175b970e9a65234243fed88fc6dc47471079067c975233aa63859ebafbb",
+    "third_party/t3k/SecureStore.cpp": "3fadf8b458293f4baa9765b1e9a1f661d0e409d3899704e9ac9a4e8b749335b8",
+    "third_party/t3k/SecureStore.h": "430055a457e18573afe29c9d5b3eccaf435cc5f32c755d1ae5198105963c4b91",
+    "third_party/t3k/T3KConfig.h": "732105b2c7c88eced3cdf50d2dda3a548e9367945efcf881fea9633c91964293",
+    "third_party/t3k/Types.cpp": "43df1787fd99934554e1243f1e79290b8cef130fc2ae053fbaa7e2300da0f300",
+    "third_party/t3k/Types.h": "963d5d0800ee9ca82f712614f2cfd3f843ee3ba7d51c339aa11216373c0e2551"
+  }
+}

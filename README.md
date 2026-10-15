@@ -1,4 +1,7 @@
 # Daisy Seed Projects
+
+当前开发方向：[ToneDock 桌面 NAM 软件效果器](ToneDock/README.md)，面向 Windows / macOS 的独立软件与 VST3 / AU 插件，包含模型库、TONE3000 导入与可编辑效果链。[SeedFX 硬件方案](SeedFX/README.md) 自 2026-10-15 起暂缓，保留已有工程，不进入采购。
+
 This is a demo of a pedal board I put together using 3 of my custom Daisy Seed based guitar pedals. I designed and built the hardware and programmed the software. Everything shown here is open source and all the code, pcb files, and basic instructions on how to build the pedals, can be found on these pages.
 
 [![Demo Video](https://img.youtube.com/vi/ZkLnS43acQo/0.jpg)](https://www.youtube.com/watch?v=ZkLnS43acQo)

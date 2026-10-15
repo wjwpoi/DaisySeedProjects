@@ -1,0 +1,49 @@
+name: ToneDock desktop
+on:
+  push:
+    paths: ['ToneDock/**', '.github/workflows/tonedock.yml']
+  pull_request:
+    paths: ['ToneDock/**', '.github/workflows/tonedock.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  desktop:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [windows-latest, macos-14]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: false
+      - name: Configure Windows
+        if: runner.os == 'Windows'
+        run: cmake -S ToneDock -B ToneDock/build -A x64 -DBUILD_TESTING=ON
+      - name: Configure macOS universal
+        if: runner.os == 'macOS'
+        run: cmake -S ToneDock -B ToneDock/build -DCMAKE_BUILD_TYPE=Release -DCMAKE_OSX_ARCHITECTURES='arm64;x86_64' -DBUILD_TESTING=ON
+      - name: Build standalone and plugins
+        run: cmake --build ToneDock/build --config Release --parallel 2
+      - name: Audio and library tests
+        run: ctest --test-dir ToneDock/build -C Release --output-on-failure
+      - name: Package dependency notices
+        run: python ToneDock/tools/package_notices.py --build ToneDock/build
+      - name: Validate AU
+        if: runner.os == 'macOS'
+        run: |
+          mkdir -p "$HOME/Library/Audio/Plug-Ins/Components"
+          cp -R ToneDock/build/ToneDock_artefacts/Release/AU/ToneDock.component "$HOME/Library/Audio/Plug-Ins/Components/"
+          auval -v aufx Tnd1 Tndk
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ToneDock-${{ runner.os }}-development
+          path: |
+            ToneDock/build/ToneDockApp_artefacts/Release/
+            ToneDock/build/ToneDock_artefacts/Release/VST3/
+            ToneDock/build/ToneDock_artefacts/Release/AU/
+            ToneDock/packaging/
+            ToneDock/build/notices/
+            ToneDock/README.md
+          if-no-files-found: error

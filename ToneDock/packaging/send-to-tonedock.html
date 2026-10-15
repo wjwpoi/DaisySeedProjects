@@ -1,0 +1,8 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>发送到 ToneDock</title><style>body{max-width:640px;margin:12vh auto;padding:24px;background:#111715;color:#ecf2e8;font:16px/1.7 system-ui}input{box-sizing:border-box;width:100%;padding:14px;background:#1b2420;color:inherit;border:1px solid #52674e;border-radius:8px}button,a{display:inline-block;margin:18px 0;padding:10px 18px;background:#bfeb83;color:#111715;border:0;border-radius:8px;text-decoration:none}small{color:#93a79a}</style>
+<h1>把模型带回 ToneDock</h1><p>粘贴 TONE3000 tone 页面链接，生成本机软件唤起链接。</p>
+<input id="tone" placeholder="https://www.tone3000.com/tones/your-tone-42"><button id="make">生成链接</button>
+<p id="result" role="status"></p><small>需要先安装并注册 ToneDock。登录和下载由软件通过官方 API 完成；此页面不接收账户信息。</small>
+<script>
+document.querySelector('#make').onclick=()=>{const result=document.querySelector('#result');result.replaceChildren();try{const url=new URL(document.querySelector('#tone').value.trim());if(url.protocol!=='https:'||!['www.tone3000.com','tone3000.com'].includes(url.hostname))throw Error();const match=url.pathname.match(/^\/tones\/(?:[^/]*-)?([1-9][0-9]{0,8})\/?$/);if(!match)throw Error();const a=document.createElement('a');a.href='tonedock://tone/'+match[1];a.textContent='在 ToneDock 中打开';result.append(a);}catch{result.textContent='请使用有效的 TONE3000 tone 页面链接。'}};
+</script></html>
